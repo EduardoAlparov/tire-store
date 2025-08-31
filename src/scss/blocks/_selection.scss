@@ -1,0 +1,255 @@
+.selection {
+    color: var(--White, #FFF);
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-flow: row;
+        gap: 2.4rem;
+
+        padding: 2.4rem;
+
+        background-color: var(--Black, #141414);
+        border-radius: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            grid-template-columns: 1fr 32rem;
+            grid-auto-flow: column;
+            gap: 2.4rem;
+
+            padding: unset;
+
+            background-color: transparent;
+            border-radius: unset;
+        }
+    }
+
+    &__black-main {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            padding: 3.6rem 4.8rem;
+
+            background-color: var(--Black, #141414);
+            border-radius: 2.4rem;
+
+        }
+    }
+
+    &__red-button {
+        display: grid;
+        grid-auto-flow: column;
+        place-items: center stretch;
+        padding: 1.2rem 1rem;
+        height: 4rem;
+
+        color: var(--White, #FFF);
+        background-color: var(--Red, #D42111);
+        border-radius: 0.8rem;
+
+        transition-property: background;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        @include breakpointMF(laptop) {
+            place-items: center;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            aspect-ratio: 1;
+            padding: unset;
+
+            height: unset;
+            border-radius: 2.4rem;
+
+            @include hover {
+                background-color: var(--Dark-red, #A50D0D);
+
+                &>span {
+                    opacity: 0;
+                }
+
+                &>svg {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include h2;
+
+
+        &>svg {
+            width: 2rem;
+            height: 2rem;
+            margin-left: auto;
+
+            @include breakpointMF(laptop) {
+                width: 12.8rem;
+                height: 12.8rem;
+                margin-left: unset;
+                opacity: 0;
+            }
+        }
+
+        &>span,
+        &>svg {
+            transition-property: opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+
+            @include breakpointMF(laptop) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+        }
+    }
+
+    &__head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4.8rem;
+    }
+
+    &__title {
+        @include h2;
+    }
+
+    &__navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            gap: 3.6rem 1.6rem;
+        }
+
+        &.selection__list--hiddden {
+            display: none;
+        }
+    }
+
+    &__item {
+        &.selection__item--third {
+            flex: 1 1 100%;
+
+            @include breakpointMF(laptop) {
+                flex: 1 1 calc(100% / 3 - (1.6rem *2 / 3));
+            }
+        }
+
+        &.selection__item--full {
+            flex: 1 1 100%;
+
+            &:has(.selection__item-text) {
+                display: flex;
+                align-items: flex-end;
+                min-height: 4rem;
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 0.8rem;
+    }
+
+    &__checkboxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    &__checkbox-label {
+        display: grid;
+        place-items: center;
+        grid-auto-flow: column;
+        gap: 0.8rem;
+
+        height: 4.8rem;
+        padding: 1.2rem 1.5rem;
+
+        white-space: nowrap;
+
+        @include b2;
+
+        color: var(--Grey-2, #B3B3B3);
+        border-radius: 0.8rem;
+
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+        &>svg {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+
+            filter: grayscale(1) brightness(0.7);
+        }
+
+        @include hover {
+            color: var(--White, #FFF);
+
+            &>svg {
+                filter: grayscale(1) brightness(1);
+            }
+        }
+    }
+
+    &__checkbox {
+        &:checked {
+            &+.selection__checkbox-label {
+                color: var(--Black, #141414);
+                background-color: var(--White, #FFF);
+                backdrop-filter: blur(5px);
+
+                &>svg {
+                    filter: grayscale(0) brightness(1);
+                }
+            }
+        }
+    }
+
+    &__item-text {
+        color: var(--Grey-1, #666);
+    }
+}
+
+.tab {
+    display: grid;
+    place-items: center;
+
+    height: 4.8rem;
+    padding: 1.2rem 1.6rem;
+
+    color: var(--Grey-2, #B3B3B3);
+    text-align: center;
+
+    border: 2px solid transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 0.8rem;
+
+    @include b2;
+
+    &.tab--active {
+        border-color: var(--Red, #D42111);
+        pointer-events: none;
+    }
+
+    @include hover {
+        color: var(--White, #FFF);
+    }
+}

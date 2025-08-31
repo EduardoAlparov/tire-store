@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+
+    &__link {
+        display: block;
+        color: var(--Grey-2, #B3B3B3);
+        white-space: nowrap;
+
+        @include t2;
+
+        @include hover {
+            color: var(--Dark-gray, #242424);
+        }
+    }
+}

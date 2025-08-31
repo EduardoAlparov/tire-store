@@ -1,0 +1,32 @@
+.footer-menu {
+    &__title {
+        margin-bottom: 1.2rem;
+
+        @include breakpointMF(laptop) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        color: var(--Grey-2, #B3B3B3);
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        white-space: nowrap;
+
+        @include hover {
+            color: var(--White, #FFF);
+        }
+    }
+}

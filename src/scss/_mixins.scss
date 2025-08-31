@@ -1,0 +1,378 @@
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+@mixin noHighlight() {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin font($size: 1.6rem, $style: normal, $weight: 400, $spacing: 0, $line-height: 1.5) {
+    font-family: var(--font-family, Arial);
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    line-height: $line-height;
+    user-select: text;
+}
+
+@mixin h1 {
+    @include font(3.6rem, italic, 900, 0.04em, 80%);
+    text-transform: uppercase;
+
+    @include breakpointMF(laptop) {
+        @include font(6.4rem, italic, 900, 0.04em, 80%);
+    }
+}
+
+
+@mixin h2 {
+    @include font(2rem, italic, 900, 0.04em, 1.1);
+    text-transform: uppercase;
+
+    @include breakpointMF(laptop) {
+        @include font(3.6rem, italic, 900, 0.04em, 1.1);
+    }
+}
+
+@mixin h3 {
+    @include font(1.6rem, normal, 700, 0.02em, 1.2);
+
+    @include breakpointMF(laptop) {
+        @include font(2.4rem, normal, 700, 0.02em, 1.2);
+    }
+}
+
+
+@mixin t1 {
+    @include font(1.6rem, normal, 400, 0, 1.4);
+
+    @include breakpointMF(laptop) {
+        @include font(2rem, normal, 400, 0, 1.4);
+    }
+}
+
+@mixin t2 {
+    @include font(1.4rem, normal, 400, 0, 1.5);
+
+    @include breakpointMF(laptop) {
+        @include font(1.6rem, normal, 400, 0, 1.5);
+    }
+}
+
+@mixin t3 {
+    @include font(1rem, normal, 400, 0, 1.5);
+
+    @include breakpointMF(laptop) {
+        @include font(1.2rem, normal, 400, 0, 1.5);
+    }
+}
+
+@mixin b1 {
+    @include font(1.4rem, italic, 900, 0.04em, 1.2);
+    text-transform: uppercase;
+
+    @include breakpointMF(laptop) {
+        @include font(1.6rem, italic, 900, 0.04em, 1.2);
+    }
+}
+
+@mixin b2 {
+    @include font(1.4rem, normal, 500, 0.02em, 1.2);
+
+    @include breakpointMF(laptop) {
+        @include font(1.6rem, normal, 500, 0.02em, 1.2);
+    }
+}
+
+@mixin b3 {
+    @include font(1rem, normal, 500, 0.02em, 1.2);
+
+    @include breakpointMF(laptop) {
+        @include font(1.2rem, normal, 500, 0.02em, 1.2);
+    }
+}
+
+
+@mixin visuallyHidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+@mixin hoverActive {
+    &:hover {
+        .no-touch & {
+            @content;
+        }
+    }
+
+    &:active {
+        .touch & {
+            @content;
+        }
+    }
+}
+
+@mixin hover {
+    @media (hover: none) {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        &:active {
+            @content;
+        }
+    }
+
+    @media (-ms-high-contrast: none),
+    (-ms-high-contrast: active),
+    (-moz-touch-enabled: 0),
+    (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin fullpageBG {
+    position: relative;
+    background: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        @content;
+    }
+}
+
+@mixin noScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar * {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+@mixin customScrollbar {
+    scrollbar-color: var(--primary-color) white;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        background-color: white;
+        width: 0.6rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+
+@mixin mobileHorizontalScroll {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: calc(-1 * var(--content-padding));
+    margin-right: calc(-1 * var(--content-padding));
+    position: relative;
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+    white-space: nowrap;
+
+    &>* {
+        flex-shrink: 0;
+    }
+
+    &::after {
+        content: '';
+        width: var(--content-padding);
+        flex-shrink: 0;
+        height: 1px;
+    }
+}
+
+@mixin centeredAbsolute {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+@mixin hiddenByDefault {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+@mixin breakpoint($class) {
+    @if $class ==large-desktop {
+        @media only screen and (max-width: (1600px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==desktop {
+        @media only screen and (max-width: (1400px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==laptop {
+        @media only screen and (max-width: (1200px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==tablet {
+        @media only screen and (max-width: (1024px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==portrait-tablet {
+        @media only screen and (max-width: (992px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==small-tablet {
+        @media only screen and (max-width: (769px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==mobile {
+        @media only screen and (max-width: (640px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==small-mobile {
+        @media only screen and (max-width: (576px)) {
+            @content;
+        }
+    }
+
+    @else if $class ==supersmall-mobile {
+        @media only screen and (max-width: (370px)) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpointMF($class) {
+    @if $class ==large-desktop {
+        @media only screen and (min-width: 1401px) {
+            @content;
+        }
+    }
+
+    @else if $class ==desktop {
+        @media only screen and (min-width: 1201px) {
+            @content;
+        }
+    }
+
+    @else if $class ==laptop {
+        @media only screen and (min-width: 1025px) {
+            @content;
+        }
+    }
+
+    @else if $class ==portrait-tablet {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $class ==tablet {
+        @media only screen and (min-width: 769px) {
+            @content;
+        }
+    }
+
+    @else if $class ==small-tablet {
+        @media only screen and (min-width: 641px) {
+            @content;
+        }
+    }
+
+    @else if $class ==mobile {
+        @media only screen and (min-width: 577px) {
+            @content;
+        }
+    }
+
+    @else if $class ==small-mobile {
+        @media only screen and (min-width: 359px) {
+            @content;
+        }
+    }
+}
+
+@mixin maxSizeText($size) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $size;
+    -webkit-box-orient: vertical;
+}

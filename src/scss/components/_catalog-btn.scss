@@ -1,0 +1,47 @@
+.catalog-btn {
+    @include b1;
+
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    gap: 1.2rem;
+
+    padding: 1.2rem 1.5rem;
+
+    color: var(--White, #FFF);
+    background-color: var(--Red, #D42111);
+    border-radius: 0.8rem;
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        grid-column: 1 / 2;
+        grid-row: 1;
+
+        fill: var(--White, #fff);
+
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    .icon-close {
+        opacity: 0;
+    }
+
+    &.catalog-btn--active {
+        background-color: var(--Black, #141414);
+
+        .icon-menu {
+            opacity: 0;
+        }
+
+        .icon-close {
+            opacity: 1;
+        }
+    }
+}

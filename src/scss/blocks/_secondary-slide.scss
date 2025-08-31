@@ -1,0 +1,16 @@
+.secondary-slide {
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+
+    opacity: 0.5;
+
+    &__desc {
+        @include t3;
+        color: var(--White, #FFF);
+    }
+
+    &.swiper-slide {
+        flex-direction: row;
+    }
+}

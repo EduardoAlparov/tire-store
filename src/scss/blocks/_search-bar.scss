@@ -1,0 +1,92 @@
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    gap: 0.8rem;
+
+    &__input-body {
+        position: relative;
+        flex: 1 1 100%;
+
+        &>input[type="text"],
+        &>input[type="email"],
+        &>input[type="search"] {
+            height: 100%;
+            width: 100%;
+            padding: 1.2rem 1.6rem;
+
+            background-color: var(--Light-Grey, #F2F2F2);
+            border-radius: 0.8rem;
+            border: 1px solid transparent;
+
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+
+            @include placeholder {
+                color: var(--Grey-2, #B3B3B3);
+            }
+
+            &:is(:valid) {
+                +input[type="reset"] {
+                    opacity: 1;
+                }
+            }
+
+            &:focus {
+                border-color: var(--Red, #D42111);
+                caret-color: var(--Red, #D42111);
+            }
+        }
+
+        &>input[type="reset"] {
+            position: absolute;
+            top: 50%;
+            right: 2.4rem;
+
+            width: 2.4rem;
+            height: 2.4rem;
+            transform: translateY(-50%);
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M17.6569%2016.2427L13.4142%2012.0001L17.6569%207.75744L16.2426%206.34323L12%2010.5859L7.75736%206.34323L6.34315%207.75744L10.5858%2012.0001L6.34315%2016.2427L7.75736%2017.6569L12%2013.4143L16.2426%2017.6569L17.6569%2016.2427Z%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+
+            transition-property: opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            cursor: pointer;
+        }
+
+        &.subscription__input-body {
+
+            &>input[type="text"],
+            &>input[type="email"],
+            &>input[type="search"] {
+                padding: 1.4rem 1.6rem;
+            }
+        }
+    }
+
+
+    &>button {
+        display: grid;
+        place-items: center;
+        height: 4.8rem;
+        padding-inline: 3.6rem;
+
+        background-color: var(--Red, #D42111);
+        border-radius: 0.8rem;
+
+        .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            fill: var(--White, #fff);
+        }
+
+        @include hover {
+            background-color: var(--Black, #141414);
+        }
+    }
+}

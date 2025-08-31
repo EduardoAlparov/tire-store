@@ -1,0 +1,87 @@
+.button {
+    @include b1;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    gap: 1.2rem;
+
+    width: max-content;
+    padding: 1.4rem 1.5rem;
+
+    color: var(--White, #FFF);
+    background-color: var(--Red, #D42111);
+    border-radius: 0.8rem;
+    white-space: nowrap;
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &>svg {
+        position: absolute;
+        top: 50%;
+        right: 1.6rem;
+
+        width: 2.4rem;
+        height: 2.4rem;
+        transform: translateY(-50%);
+
+        fill: var(--White, #fff);
+
+        transition-property: right;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    &>span {
+        padding-right: 4rem;
+
+        transition-property: padding;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        white-space: nowrap;
+    }
+
+    &.button--outlined {
+        color: var(--Red, #D42111);
+
+        background-color: transparent;
+        border: 2px solid var(--Red, #D42111);
+
+        &>svg {
+            fill: var(--Red, #D42111);
+        }
+
+        @include hover {
+            color: var(--Dark-red, #A50D0D);
+            background-color: transparent;
+            border-color: var(--Dark-red, #A50D0D);
+
+            &>svg {
+                right: calc(100% - 4rem);
+            }
+
+            &>span {
+                padding-right: 0;
+                padding-left: 4rem;
+            }
+        }
+    }
+
+    @include hover {
+        background: var(--Dark-red, #A50D0D);
+
+        &>svg {
+            right: calc(100% - 4rem);
+        }
+
+        &>span {
+            padding-right: 0;
+            padding-left: 4rem;
+        }
+    }
+}

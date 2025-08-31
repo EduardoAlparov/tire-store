@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: local("SF Pro Display Regular"),
+        url("../assets/fonts/SF-Pro-Display-Regular.otf") format("otf"),
+        url("../assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    src: local("SF Pro Display Medium"),
+        url("../assets/fonts/SF-Pro-Display-Medium.otf") format("otf"),
+        url("../assets/fonts/SF-Pro-Display-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    src: local("SF Pro Display Semibold"),
+        url("../assets/fonts/SF-Pro-Display-Semibold.otf") format("otf"),
+        url("../assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    src: local("SF Pro Display Bold"),
+        url("../assets/fonts/SF-Pro-Display-Bold.otf") format("otf"),
+        url("../assets/fonts/SF-Pro-Display-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: italic;
+    font-weight: 900;
+    src: local("SF Pro Display BlackItalic"),
+        url("../assets/fonts/SF-Pro-Display-BlackItalic.otf") format("otf"),
+        url("../assets/fonts/SF-Pro-Display-BlackItalic.woff2") format("woff2");
+}

@@ -1,0 +1,414 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="section home">
+    <div class="home__background">
+        <picture>
+            <source media="(max-aspect-ratio: 4/3)" type="image/webp" srcset="./img/home/slide-m.webp" />
+            <source media="(min-aspect-ratio: 4/3)" type="image/webp" srcset="./img/home/slide.webp" />
+            <source media="(max-aspect-ratio: 4/3)" srcset="./img/home/slide-m.jpg" />
+            <img class="lazy" src="./img/home/slide.jpg" alt="">
+        </picture>
+    </div>
+
+    <div class="home__site-container">
+        <div class="home__body">
+            <div class="home__swiper swiper js-home-swiper">
+                <ul class="home__swiper-wrapper swiper-wrapper">
+                    <li class="home__swiper-slide swiper-slide home-slide">
+                        <div class="home-slide__body">
+                            <div class="home-slide__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/home/wheel.webp" />
+                                    <img class="lazy" src="./img/home/wheel.png" alt="image">
+                                </picture>
+                            </div>
+                            <div class="home-slide__heading">
+                                <h2 class="home-slide__title">
+                                    WestLake SL309
+                                </h2>
+
+                                <ul class="home-slide__tags">
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#sun"></use>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            Легкогрузовые
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            185/75
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            R16C
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            104/102R
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-slide__info">
+                                <p class="home-slide__text">
+                                    Дизайн протектора этой шины характеризуется наличием отдельно стоящих блоков.
+                                    В центральной части они расположены продольно, создавая хорошую курсовую
+                                    устойчивость, а также снижая сопротивление качению. Дизайн плечевых зон содержит
+                                    более крупные протекторные элементы. Поперечное расположение в паре с высокой
+                                    жесткостью позволяет этим блокам придавать шине устойчивость при маневрировании,
+                                    а также эффективность при ускорении и торможении.
+                                </p>
+
+                                <a href="#" class="home-slide__link button">
+                                    <span>Подробнее</span>
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#bx-arrow"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="home__swiper-slide swiper-slide home-slide">
+                        <div class="home-slide__body">
+                            <div class="home-slide__image">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/home/wheel.webp" />
+                                    <img class="lazy" src="./img/home/wheel.png" alt="image">
+                                </picture>
+                            </div>
+                            <div class="home-slide__heading">
+                                <h2 class="home-slide__title">
+                                    WestLake SL410
+                                </h2>
+
+                                <ul class="home-slide__tags">
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#sun"></use>
+                                            </svg>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="home-slide__tag tag">
+                                            Легкогрузовые
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-slide__info">
+                                <p class="home-slide__text">
+                                    Дизайн протектора этой шины характеризуется наличием отдельно стоящих блоков.
+                                    В центральной части они расположены продольно, создавая хорошую курсовую
+                                    устойчивость, а также снижая сопротивление качению. Дизайн плечевых зон содержит
+                                    более крупные протекторные элементы. Поперечное расположение в паре с высокой
+                                    жесткостью позволяет этим блокам придавать шине устойчивость при маневрировании,
+                                    а также эффективность при ускорении и торможении.
+                                </p>
+
+                                <a href="#" class="home-slide__link button">
+                                    <span>Подробнее</span>
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#bx-arrow"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="home__navigation-line">
+                    <div class="home__secondary-swiper swiper js-home-secondary-swiper">
+                        <ul class="home__secondary-swiper-wrapper swiper-wrapper">
+                            <li class="home__secondary-swiper-slide swiper-slide secondary-slide">
+                                <div class="secondary-slide__logo">
+                                    <svg width="17.3rem" height="3.6rem" aria-hidden="true" class="icon">
+                                        <use xlink:href="#west"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="secondary-slide__desc">
+                                    Компания West Lake входит в состав предприятия Goodride — одной из самых известных
+                                    корпораций Китая. West Lake — одна из самых старых компаний, производящих шины для
+                                    грузовых и легковых автомобилей во всем мире. Основал компанию в 1958 году китайский
+                                    предприниматель Хангжоу. Именно тогда и начинает история компании, в течение которой
+                                    West Lake доказала свою конкурентоспособность всему миру.
+                                </p>
+                            </li>
+                            <li class="home__secondary-swiper-slide swiper-slide secondary-slide">
+                                <div class="secondary-slide__logo">
+                                    <svg width="17.3rem" height="3.6rem" aria-hidden="true" class="icon">
+                                        <use xlink:href="#west"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="secondary-slide__desc">
+                                    Компания West Lake входит в состав предприятия Goodride — одной из самых известных
+                                    корпораций Китая. West Lake — одна из самых старых компаний, производящих шины для
+                                    грузовых и легковых автомобилей во всем мире. Основал компанию в 1958 году китайский
+                                    предприниматель Хангжоу. Именно тогда и начинает история компании, в течение которой
+                                    West Lake доказала свою конкурентоспособность всему миру.
+                                    Компания West Lake входит в состав предприятия Goodride — одной из самых известных
+                                    корпораций Китая. West Lake — одна из самых старых компаний, производящих шины для
+                                    грузовых и легковых автомобилей во всем мире. Основал компанию в 1958 году китайский
+                                    предприниматель Хангжоу. Именно тогда и начинает история компании, в течение которой
+                                    West Lake доказала свою конкурентоспособность всему миру.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="home__swiper-navigation">
+                        <button type="button" class="home__swiper-btn carousel-btn carousel-btn--prev">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#bx-arrow-prev"></use>
+                            </svg>
+                        </button>
+                        <div class="home__swiper-pagination">
+
+                        </div>
+                        <button type="button" class="home__swiper-btn carousel-btn carousel-btn--next">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#bx-arrow-next"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--double">
+    <div class="section__selection selection">
+        <div class="selection__site-container">
+            <form action="" class="selection__grid">
+
+                <div class="selection__black-main">
+                    <div class="selection__head">
+                        <h2 class="selection__title">
+                            Подбор шин
+                        </h2>
+                        <div class="selection__navbar">
+                            <button type="button" class="selection__tab tab js-navbar-tab"
+                                data-navbutton="for-selection-size">
+                                По размеру
+                            </button>
+                            <button type="button" class="selection__tab tab tab--active js-navbar-tab"
+                                data-navbutton="for-selection-brand">
+                                По автомобилю
+                            </button>
+                        </div>
+                    </div>
+                    <div class="selection__body">
+                        <ul class="selection__list selection__list--hiddden" data-navwindow="for-selection-size">
+                            <li class="selection__item selection__item--third">
+                                <span class="selection__label">
+                                    Ширина
+                                </span>
+                                <div class="selection__input-wrapper input-box">
+                                    <input type="number" name="selection-width" id="selection-width" value="205">
+                                </div>
+                            </li>
+                            <li class="selection__item selection__item--third">
+                                <span class="selection__label">
+                                    Профиль
+                                </span>
+                                <div class="selection__input-wrapper input-box">
+                                    <input type="number" name="selection-profile" id="selection-profile" value="55">
+                                </div>
+                            </li>
+                            <li class="selection__item selection__item--third">
+                                <span class="selection__label">
+                                    Диаметр
+                                </span>
+                                <div class="selection__input-wrapper input-box">
+                                    <input type="number" name="selection-diameter" id="selection-diameter" value="16">
+                                </div>
+                            </li>
+                            <li class="selection__item selection__item--full selection__checkboxes">
+                                <div class="selection__checkbox-wrapper">
+                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                        name="selection-type" id="selection-type-all">
+                                    <label for="selection-type-all" class="selection__checkbox-label">
+                                        Все
+                                    </label>
+                                </div>
+
+                                <div class="selection__checkbox-wrapper">
+                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                        name="selection-type" id="selection-type-summer">
+                                    <label for="selection-type-summer" class="selection__checkbox-label">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#type-summer"></use>
+                                        </svg>
+                                        Летние
+                                    </label>
+                                </div>
+
+                                <div class="selection__checkbox-wrapper">
+                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                        name="selection-type" id="selection-type-multi">
+                                    <label for="selection-type-multi" class="selection__checkbox-label">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#type-multi"></use>
+                                        </svg>
+                                        Всесезонные
+                                    </label>
+                                </div>
+
+                                <div class="selection__checkbox-wrapper">
+                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                        name="selection-type" id="selection-type-winter">
+                                    <label for="selection-type-winter" class="selection__checkbox-label">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#type-winter"></use>
+                                        </svg>
+                                        Зимние
+                                    </label>
+                                </div>
+
+                                <div class="selection__checkbox-wrapper">
+                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                        name="selection-type" id="selection-type-stud">
+                                    <label for="selection-type-stud" class="selection__checkbox-label">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#type-s"></use>
+                                        </svg>
+                                        Шипованные
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="selection__list" data-navwindow="for-selection-size">
+                            <li class="selection__item selection__item--third">
+                                <span class="selection__label">
+                                    Выберите марку автомобиля
+                                </span>
+                                <div class="selection__input-wrapper">
+                                    <div class="select">
+                                        <button class="select__current" type="button">Выбор</button>
+                                        <div class="select__dropdown">
+                                            <ul class="select__list">
+                                                <li class="select__item select__item--first-hidden">
+                                                    <label class="select__label" for="radio-select-brand-1">
+                                                        <input type="radio" name="brand-select"
+                                                            id="radio-select-brand-1">
+                                                        <span class="select__text">
+                                                            Выбор
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-brand-2">
+                                                        <input type="radio" name="brand-select"
+                                                            id="radio-select-brand-2">
+                                                        <span class="select__text">
+                                                            Выбор 1
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-brand-3">
+                                                        <input type="radio" name="brand-select"
+                                                            id="radio-select-brand-3">
+                                                        <span class="select__text">
+                                                            Выбор 2
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="selection__item selection__item--third">
+                                <span class="selection__label">
+                                    Профиль
+                                </span>
+                                <div class="selection__input-wrapper input-box">
+                                    <input type="number" name="selection-profile" id="selection-profile" value="55">
+                                </div>
+                            </li>
+                            <li class="selection__item selection__item--third">
+                                <span class="selection__label">
+                                    Диаметр
+                                </span>
+                                <div class="selection__input-wrapper input-box">
+                                    <input type="number" name="selection-diameter" id="selection-diameter" value="16">
+                                </div>
+                            </li>
+                            <li class="selection__item selection__item--full">
+                                <p class="selection__item-text">
+                                    Укажите марку, модель и год выпуска автомобиля и мы подберем для вас лучшее решение!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#" target="_blank" class="selection__red-button">
+                    <span>Подобрать</span>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                </a>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="section__carousel-section carousel-section">
+        <div class="carousel-section__site-container">
+            <div class="carousel-section__header">
+                <h2 class="carousel-section__title">
+                    Лучшие предложения на шины
+                </h2>
+                <div class="carousel-section__navigation">
+                    <button type="button" class="carousel-section__btn-prev carousel-btn carousel-btn--prev">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="carousel-section__btn-next carousel-btn carousel-btn--next">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-section__body"></div>
+
+            <a href="#" class="carousel-section__link button button--outlined">
+                <span>Смотреть&nbsp;все</span>
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#bx-arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

@@ -1,0 +1,69 @@
+<div class="subscription">
+    <div class="subscription__image">
+        <svg aria-hidden="true" class="icon icon-desktop">
+            <use xlink:href="#sub"></use>
+        </svg>
+        <svg aria-hidden="true" class="icon icon-mobile">
+            <use xlink:href="#sub-m"></use>
+        </svg>
+    </div>
+
+    <div class="subscription__site-container">
+        <div class="subscription__body">
+            <div class="subscription__info">
+                <div class="subscription__top">
+                    <h2 class="subscription__title">
+                        Будьте в курсе
+                    </h2>
+                    <p class="subscription__text">
+                        Подпишитесь на&nbsp;последние обновления и&nbsp;узнавайте
+                        о&nbsp;новинках и&nbsp;специальных предложениях&nbsp;первыми!
+                    </p>
+                </div>
+                <form action="" class="subscription__bottom js-email-form">
+                    <div class="subscription__input-box">
+                        <label>Email</label>
+                        <div class="subscription__input-body search-bar__input-body">
+                            <input type="email" name="email-supscribe" id="email-supscribe-id" required
+                                pattern="^\S+@\S+\.\S+$"
+                                oninvalid="this.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.')"
+                                onchange="this.setCustomValidity('')" placeholder="example@email.com">
+                            <input type="reset" value="">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="subscription__button simple-btn simple-btn--black">
+                        Отправить
+                    </button>
+
+                    <p class="subscription__agreement">
+                        Нажимая отправить вы соглашаетесь с нашей политикой обработки персональных данных.
+                    </p>
+                </form>
+            </div>
+
+            <div class="subscription__info subscription__info--congratulate">
+                <div class="subscription__top">
+                    <h2 class="subscription__title">
+                        Поздравляем!
+                    </h2>
+                    <p class="subscription__text">
+                        Ваша подписка на&nbsp;последние обновлени оформлена.
+                    </p>
+
+                    <button type="button"
+                        class="subscription__button subscription__button--reset simple-btn simple-btn--black">
+                        отлично
+                    </button>
+                </div>
+            </div>
+
+            <div class="subscription__picture">
+                <picture>
+                    <source type="image/webp" srcset="./img/sub.webp" />
+                    <img class="lazy" src="./img/sub.png" alt="image">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>

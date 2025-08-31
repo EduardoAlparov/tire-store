@@ -1,0 +1,87 @@
+.page-footer {
+    overflow: hidden;
+    color: var(--White, #FFF);
+
+    &__main {
+        padding-block: 2.4rem 8rem;
+
+        color: var(--White, #FFF);
+        background: var(--Black, #141414);
+
+        @include breakpointMF(laptop) {
+            padding-block: 4.8rem;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-areas: "f-logo"
+            "f-menus"
+            "f-contacts"
+            "f-partners";
+        grid-template-columns: 100%;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            grid-template-areas: "f-logo f-menus f-menus f-contacts"
+                "f-partners f-menus f-menus f-contacts"
+                "f-partners f-menus f-menus f-contacts";
+            gap: 0 7rem;
+            grid-template-columns: 36rem 0.5fr 0.5fr 36rem;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__logo {
+        grid-area: f-logo;
+
+        &.logo {
+            place-items: flex-start;
+        }
+    }
+
+    &__menus {
+        grid-area: f-menus;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            justify-content: space-around;
+            gap: 4rem;
+        }
+    }
+
+    &__menu {
+        flex: 0 1 100%;
+
+        @include breakpointMF(laptop) {
+            flex: 0 1 36rem;
+        }
+    }
+
+    &__partners {
+        grid-area: f-partners;
+        align-self: end;
+    }
+
+    &__contacts {
+        grid-area: f-contacts;
+    }
+
+    &__copyright {
+        color: var(--Grey-1, #666);
+    }
+
+    &__divider {
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid var(--Dark-gray, #242424);
+
+        @include breakpointMF(laptop) {
+            padding-bottom: unset;
+            border: none;
+        }
+    }
+}

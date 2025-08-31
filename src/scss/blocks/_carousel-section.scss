@@ -1,0 +1,39 @@
+.carousel-section {
+    &__site-container {
+        position: relative;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include h2;
+    }
+
+    &__link {
+        width: 100%;
+        margin-top: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            position: absolute;
+            top: 0;
+            right: 16.6rem;
+
+            width: unset;
+            margin-top: unset;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        @include breakpoint(tablet) {
+            @include visuallyHidden();
+        }
+    }
+}

@@ -1,0 +1,230 @@
+.page-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 2000;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.6rem;
+    align-items: stretch;
+    width: 100%;
+    padding-block: 1.6rem;
+
+    @include breakpointMF(laptop) {
+        flex-direction: column;
+        gap: unset;
+
+        padding-block: unset;
+    }
+
+    &__top-line {
+        overflow: hidden;
+        background-color: var(--White, #FFF);
+
+        @include breakpointMF(laptop) {
+            padding-block: 1.2rem;
+            background-color: var(--Light-Grey, #F2F2F2);
+        }
+    }
+
+    &__main-line {
+        position: relative;
+
+        background-color: var(--White, #FFF);
+
+        @include breakpointMF(laptop) {
+            padding-block: 2rem;
+        }
+    }
+
+    &__catalog {
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        display: none;
+
+        padding-block: 3.6rem;
+        background-color: var(--White, #FFF);
+    }
+
+    &__site-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+        }
+    }
+
+    &__info {
+        display: none;
+        align-items: center;
+        gap: 3.6rem;
+
+        @include breakpointMF(laptop) {
+            display: flex;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        &.page-header__phone {
+            gap: 0.8rem;
+        }
+
+        &.page-header__address {
+            gap: 1.6rem;
+        }
+    }
+
+    &__phone {
+        &>span {
+            color: var(--Grey-2, #B3B3B3);
+        }
+
+        &>a {
+            position: relative;
+            display: block;
+
+            color: var(--Blue, #0AF);
+            transition: color 0.3s ease;
+
+            &::before {
+                position: absolute;
+                top: calc(100% + 0px);
+                left: 50%;
+                transform: translateX(-50%);
+
+                width: 100%;
+                height: 1px;
+
+                background-color: var(--Blue, #0AF);
+
+                transition: background-color 0.3s ease;
+                content: "";
+            }
+
+
+            @include hover {
+                color: var(--Orange, #ff8000);
+
+                &::before {
+                    background-color: var(--Orange, #ff8000);
+                }
+            }
+        }
+    }
+
+    &__address {
+        &>div {
+            color: var(--Grey-1, #666);
+        }
+
+        &>span {
+            color: var(--Grey-2, #B3B3B3);
+        }
+    }
+
+    &__cell {
+        &.page-header__search-bar {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__search-bar {
+        &.search-bar {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: flex;
+            }
+        }
+    }
+
+    &__control-bar {
+        &.control-bar {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: flex;
+            }
+        }
+    }
+
+    &__btn-menu {
+        &.btn-menu {
+            display: flex;
+
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+    }
+
+    &.page-header--fixed {
+        position: fixed;
+
+        animation: transAnim 0.4s ease-out 1 forwards;
+
+
+        @include breakpointMF(laptop) {
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        .page-header__breadcrumbs {
+            display: none;
+        }
+    }
+}
+
+@keyframes slideBodyFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes transAnim {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes transAnimReverse {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

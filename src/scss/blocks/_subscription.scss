@@ -1,0 +1,177 @@
+.subscription {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, #A50D0D 0%, #D42111 100%);
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+
+        display: grid;
+        place-items: center;
+
+        .icon-desktop {
+            width: 100%;
+            aspect-ratio: 4.13 / 1;
+        }
+
+        .icon-mobile {
+            width: 100%;
+            aspect-ratio: 0.34 / 1;
+        }
+
+        .icon-mobile {
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+
+        .icon-desktop {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+            }
+        }
+    }
+
+    &__site-container {
+        position: relative;
+        z-index: 100;
+    }
+
+    &__body {
+        display: flex;
+        align-items: stretch;
+        min-height: 41rem;
+
+        @include breakpointMF(laptop) {
+            min-height: 47rem;
+        }
+
+        &.subscription--is-validate {
+            .subscription__info {
+                display: none;
+
+                &.subscription__info--congratulate {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__info {
+        flex: 1 1 100%;
+        padding-block: 3.6rem 2.4rem;
+
+        @include breakpointMF(laptop) {
+            flex: 0 1 83.6rem;
+            padding-block: 6.1rem;
+        }
+
+        &.subscription__info--congratulate {
+            display: none;
+            justify-content: center;
+        }
+    }
+
+    &__info,
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            align-items: flex-start;
+            gap: 3.6rem;
+        }
+    }
+
+    &__title {
+        @include h1;
+    }
+
+    &__text {
+        max-width: 37ch;
+        text-align: center;
+        @include t1;
+
+        @include breakpointMF(laptop) {
+            max-width: 40ch;
+            text-align: left;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2.4rem;
+        width: 100%;
+
+        @include breakpointMF(laptop) {
+            justify-content: unset;
+            gap: 3.6rem 2.4rem;
+            width: unset;
+        }
+    }
+
+    &__agreement {
+        max-width: 46ch;
+        text-align: center;
+        @include t3;
+
+        @include breakpointMF(laptop) {
+            text-align: left;
+        }
+    }
+
+    &__input-box {
+        flex: 1 1 100%;
+
+        &>label {
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        &.search-bar__input-body {
+
+            &>input[type="text"],
+            &>input[type="search"] {
+                background-color: var(--Light-Grey, #F2F2F2);
+            }
+        }
+    }
+
+    &__button {
+        flex: 1 1 100%;
+
+        @include breakpointMF(laptop) {
+            flex: unset;
+        }
+    }
+
+    &__picture {
+        position: relative;
+        display: none;
+
+        img {
+            display: block;
+
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @include breakpointMF(laptop) {
+            display: block;
+        }
+    }
+}

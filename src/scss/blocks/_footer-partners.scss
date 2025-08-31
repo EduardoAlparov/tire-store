@@ -1,0 +1,46 @@
+.footer-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    @include breakpointMF(laptop) {
+        gap: 3.6rem;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        order: 2;
+        margin-top: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            order: 1;
+            margin-top: unset;
+        }
+    }
+
+    &__partner {
+        height: 2.4rem;
+        width: auto;
+
+        .icon {
+            height: 100%;
+        }
+    }
+
+    &__policy {
+        width: max-content;
+
+        order: 1;
+
+        @include breakpointMF(laptop) {
+            order: 2;
+        }
+    }
+
+    &__copyright {
+        order: 3;
+    }
+}

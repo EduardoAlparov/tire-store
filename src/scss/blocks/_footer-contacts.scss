@@ -1,0 +1,27 @@
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    &__label {
+        display: block;
+
+        color: var(--Grey-1, #666);
+    }
+
+    &__button {
+        margin-top: 2.4rem;
+    }
+
+    &__phone,
+    &__email {
+        margin-top: 0.8rem;
+    }
+
+    &__phone {
+        display: block;
+        color: var(--White, #FFF);
+        @include h3;
+    }
+}

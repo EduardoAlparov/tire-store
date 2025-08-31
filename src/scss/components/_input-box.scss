@@ -1,0 +1,30 @@
+.input-box {
+    &>input {
+        height: 100%;
+        width: 100%;
+        padding: 1.2rem 1.6rem;
+
+        background-color: var(--Light-Grey, #F2F2F2);
+        border-radius: 0.8rem;
+        border: 1px solid transparent;
+
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        @include placeholder {
+            color: var(--Grey-2, #B3B3B3);
+        }
+
+        &:is(:valid) {
+            +input[type="reset"] {
+                opacity: 1;
+            }
+        }
+
+        &:focus {
+            border-color: var(--Red, #D42111);
+            caret-color: var(--Red, #D42111);
+        }
+    }
+}

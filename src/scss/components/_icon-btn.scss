@@ -1,0 +1,64 @@
+.icon-btn {
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+    gap: 0.5rem;
+    min-width: 9.6rem;
+
+    &>svg {
+        width: 2.4rem;
+        height: 2.5rem;
+
+        fill: var(--Black, #141414);
+
+        transition-property: fill;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    &>span {
+        color: var(--Black, #141414);
+        text-align: center;
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        @include b2;
+    }
+
+    &.icon-btn--with-counter[data-counter] {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 1.2rem;
+
+            display: grid;
+            place-items: center;
+
+            min-width: 2rem;
+            height: 2rem;
+
+            background: var(--Red, #D42111);
+            border-radius: 0.4rem;
+
+            color: var(--White, #FFF);
+            text-align: center;
+            content: attr(data-counter);
+
+            @include b3;
+        }
+    }
+
+
+    @include hover {
+        &>svg {
+            fill: var(--Red, #D42111);
+        }
+
+        &>span {
+            color: var(--Red, #D42111);
+        }
+    }
+}

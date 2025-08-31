@@ -1,0 +1,247 @@
+.home {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    min-height: 83.6rem;
+
+    &__background {
+        position: absolute;
+        inset: 0;
+        top: var(--header-height);
+        pointer-events: none;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::before {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+            content: ""
+        }
+    }
+
+    &__site-container {
+        @extend ._intro-padding-top;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        flex: 1;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        flex: 1;
+    }
+
+    &__swiper {
+        &.swiper {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            flex: 1;
+            width: 100%;
+            padding-block: 2.4rem;
+
+            @include breakpointMF(laptop) {
+                padding-block: unset;
+            }
+        }
+    }
+
+    &__swiper-wrapper {
+        &.swiper-wrapper {
+            align-items: center;
+            flex: 1;
+
+            @include breakpointMF(laptop) {
+                padding-bottom: 6rem;
+            }
+        }
+    }
+
+    &__swiper-slide {
+        &.swiper-slide {
+            position: static;
+        }
+    }
+
+    &__navigation-line {
+        position: absolute;
+        bottom: 2.4rem;
+        left: 0;
+        right: 0;
+        z-index: 500;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 3.6rem;
+        height: 4rem;
+
+        @include breakpointMF(laptop) {
+            bottom: 0;
+            justify-content: space-between;
+            height: unset;
+        }
+    }
+
+    &__swiper-btn {
+        &.carousel-btn {
+            @include breakpoint(tablet) {
+                @include visuallyHidden();
+            }
+        }
+    }
+
+    &__swiper-navigation {
+        display: flex;
+        align-items: center;
+        gap: 3.6rem;
+
+        @include breakpointMF(laptop) {
+            padding-block: 6.4rem;
+        }
+    }
+
+    &__swiper-pagination {
+        --swiper-pagination-color: var(--White, #FFF);
+        --swiper-pagination-left: auto;
+        --swiper-pagination-right: 1rem;
+        --swiper-pagination-bottom: 1rem;
+        --swiper-pagination-top: auto;
+        --swiper-pagination-fraction-color: inherit;
+        --swiper-pagination-progressbar-bg-color: transparent;
+        --swiper-pagination-progressbar-size: 0;
+        --swiper-pagination-bullet-size: 1rem;
+        --swiper-pagination-bullet-width: 1rem;
+        --swiper-pagination-bullet-height: 1rem;
+        --swiper-pagination-bullet-inactive-color: transparent;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+        --swiper-pagination-bullet-opacity: 1;
+        --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+        --swiper-pagination-bullet-vertical-gap: 0.5rem;
+
+        min-width: 9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .swiper-pagination-bullet {
+            border: 1px solid var(--White, #FFF);
+
+            &.swiper-pagination-bullet-active {
+                border-color: transparent
+            }
+        }
+    }
+
+    &__secondary-swiper {
+        &.swiper {
+            @include breakpoint(tablet) {
+                @include visuallyHidden();
+            }
+        }
+    }
+}
+
+.home-slide {
+    color: var(--White, #FFF);
+
+    &__body {
+        display: grid;
+        grid-template-areas: "h-heading"
+            "h-image"
+            "h-info";
+        gap: 2.4rem 0;
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+        justify-content: center;
+
+        @include breakpointMF(laptop) {
+            display: grid;
+            grid-template-areas: "h-image h-heading"
+                "h-image h-info";
+            gap: 3.6rem 17.5rem;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 40.9rem 85rem;
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        grid-area: h-image;
+    }
+
+    &__heading {
+        grid-area: h-heading;
+
+        @include breakpointMF(laptop) {
+            padding-top: 3.8rem;
+        }
+    }
+
+    &__info {
+        grid-area: h-info;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            gap: 3.6rem;
+            padding-bottom: 3.8rem;
+        }
+    }
+
+    &__title {
+        @include h1;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 2.4rem;
+    }
+
+    &__text {
+        @include breakpoint(tablet) {
+            @include maxSizeText(3);
+        }
+    }
+}
+
+.tag {
+    @include t3;
+
+    display: grid;
+    place-items: center;
+    padding: 0.3rem 0.8rem;
+    height: 2.4rem;
+
+    background-color: var(--Black, #141414);
+    border-radius: 0.4rem;
+
+    .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
