@@ -1,4 +1,9 @@
 .footer-menu {
+
+    @include breakpoint(tablet) {
+        max-width: 100%;
+    }
+
     &__title {
         margin-bottom: 1.2rem;
 
@@ -12,6 +17,14 @@
         flex-direction: row;
         align-items: flex-start;
         gap: 1.6rem;
+
+        @include breakpoint(tablet) {
+            overflow: auto;
+            margin-inline: -1.6rem;
+            padding-inline: 1.6rem;
+
+            @include noScrollbar();
+        }
 
         @include breakpointMF(laptop) {
             flex-direction: column;

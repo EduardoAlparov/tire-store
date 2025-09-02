@@ -6,7 +6,7 @@
     grid-auto-flow: column;
     gap: 1.2rem;
 
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.6rem;
 
     color: var(--White, #FFF);
     background-color: var(--Red, #D42111);
@@ -24,9 +24,9 @@
 
         fill: var(--White, #fff);
 
-        transition-property: opacity;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
+        transition-property: transform, opacity;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in-out;
     }
 
     .icon-close {
@@ -38,6 +38,7 @@
 
         .icon-menu {
             opacity: 0;
+            transform: rotateY(90deg);
         }
 
         .icon-close {

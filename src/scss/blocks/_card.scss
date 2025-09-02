@@ -1,0 +1,217 @@
+.card {
+    background: var(--White, #FFF);
+    border: 0 solid var(--White, #FFF);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
+
+    @include breakpointMF(laptop) {
+        border-width: 0.8rem;
+        box-shadow: none;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 16rem 16rem;
+
+        max-width: 16rem;
+
+        @include breakpointMF(laptop) {
+            max-width: 28.4rem;
+            grid-template-rows: 26.8rem 23.7rem;
+        }
+    }
+
+    &__top {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__picture {
+        flex-grow: 1;
+        // aspect-ratio: 1;
+
+        // background-color: var(--Light-Grey, #F2F2F2);
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            width: 60%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__tags {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    &__controls {
+        position: absolute;
+        top: calc(100% + 1.2rem);
+        right: 0rem;
+        z-index: 300;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        @include breakpointMF(laptop) {
+            top: 0rem;
+            gap: 0.8rem;
+        }
+    }
+
+    &__center,
+    &__chars,
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.2rem;
+        }
+    }
+
+    &__bottom {
+        align-items: stretch;
+        padding: 12.5px 8px;
+
+        @include breakpointMF(laptop) {
+            padding: 2.4rem;
+        }
+    }
+
+    &__center {
+        padding-right: 3.8rem;
+
+        @include breakpointMF(laptop) {
+            padding-right: unset;
+        }
+    }
+
+    &__prices {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.2rem;
+        }
+    }
+
+    &__actual-price,
+    &__discont-price,
+    &__old-price {
+        white-space: nowrap;
+
+        &::after {
+            content: " \20BD";
+        }
+    }
+
+    &__actual-price,
+    &__discont-price {
+        @include h3;
+    }
+
+    &__discont-price {
+        color: var(--Red, #D42111);
+    }
+
+    &__old-price {
+        @include t2;
+        color: var(--Grey-2, #B3B3B3);
+        text-decoration-line: line-through;
+    }
+
+    &__chars {
+        gap: 0.4rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.2rem;
+        }
+    }
+
+
+    &__desc {
+        @include maxSizeText(2);
+        @include t3;
+        text-transform: uppercase;
+        color: inherit;
+
+        @include breakpointMF(laptop) {
+            @include t2;
+        }
+    }
+
+    &__features {
+        display: flex;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+    }
+
+    &__type {
+        @include t3;
+
+        display: grid;
+        place-items: center;
+
+        height: 2.4rem;
+        padding-inline: 0.8rem;
+
+        color: var(--Grey-1, #666);
+        background: var(--Light-Grey, #F2F2F2);
+        border-radius: 0.4rem;
+    }
+
+
+
+    &:not(.card--discount) {
+
+        .card__old-price,
+        .card__discont-price {
+            display: none;
+        }
+
+        .card-feature--red {
+            display: none;
+        }
+    }
+
+    &.card--discount {
+
+        .card__actual-price {
+            display: none;
+        }
+
+        .card__old-price,
+        .card__discont-price {
+            display: block;
+        }
+
+        .card-feature--green {
+            display: none;
+        }
+    }
+}

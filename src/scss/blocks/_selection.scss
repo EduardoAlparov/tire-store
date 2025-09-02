@@ -40,15 +40,19 @@
     }
 
     &__red-button {
+        position: relative;
+
         display: grid;
         grid-auto-flow: column;
         place-items: center stretch;
-        padding: 1.2rem 1rem;
+        padding: 0.8rem 1.2rem;
         height: 4rem;
 
         color: var(--White, #FFF);
         background-color: var(--Red, #D42111);
         border-radius: 0.8rem;
+
+        @include b1;
 
         transition-property: background;
         transition-duration: 0.3s;
@@ -64,21 +68,24 @@
             height: unset;
             border-radius: 2.4rem;
 
+            @include h2;
+
             @include hover {
                 background-color: var(--Dark-red, #A50D0D);
 
                 &>span {
-                    opacity: 0;
+                    @include breakpointMF(laptop) {
+                        opacity: 0;
+                        transform: translateX(150%) translateY(-50%) scale(0.5);
+                    }
                 }
 
                 &>svg {
                     opacity: 1;
+                    transform: translateX(-50%) translateY(-50%) scale(1);
                 }
             }
         }
-
-        @include h2;
-
 
         &>svg {
             width: 2rem;
@@ -86,22 +93,32 @@
             margin-left: auto;
 
             @include breakpointMF(laptop) {
+                order: 1;
                 width: 12.8rem;
                 height: 12.8rem;
                 margin-left: unset;
+                transform: translateX(-150%) translateY(-50%) scale(0.5);
                 opacity: 0;
+            }
+        }
+
+        &>span {
+            @include breakpointMF(laptop) {
+                order: 2;
+                transform: translateX(-50%) translateY(-50%) scale(1);
             }
         }
 
         &>span,
         &>svg {
-            transition-property: opacity;
-            transition-duration: 0.3s;
+            transition-property: transform, opacity;
+            transition-duration: 0.4s;
             transition-timing-function: ease;
 
             @include breakpointMF(laptop) {
-                grid-column: 1 / 2;
-                grid-row: 1 / 2;
+                position: absolute;
+                left: 50%;
+                top: 50%;
             }
         }
     }
@@ -166,6 +183,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.8rem;
+
+        @include breakpoint(mobile) {
+            justify-content: space-between;
+        }
     }
 
     &__checkbox-label {
@@ -189,6 +210,12 @@
         transition-timing-function: ease;
         cursor: pointer;
 
+        @include breakpoint(tablet) {
+            height: 4rem;
+            aspect-ratio: 1;
+            padding: unset;
+        }
+
         &>svg {
             width: 2.4rem;
             height: 2.4rem;
@@ -198,6 +225,12 @@
             transition-timing-function: ease;
 
             filter: grayscale(1) brightness(0.7);
+        }
+
+        &>span {
+            @include breakpoint(tablet) {
+                display: none;
+            }
         }
 
         @include hover {

@@ -25,6 +25,46 @@
         }
     }
 
+    &.simple-btn--icon {
+        width: 4rem;
+        height: 4rem;
+
+        padding: 0;
+
+        .icon-active {
+            opacity: 1;
+        }
+
+        .icon-close {
+            opacity: 0;
+        }
+
+        &.simple-btn--active {
+            .icon-active {
+                opacity: 0;
+            }
+
+            .icon-close {
+                opacity: 1;
+            }
+
+            &.simple-btn--black {
+                background-color: var(--Light-Grey, #F2F2F2);
+
+                .icon-close {
+                    fill: var(--Black, #141414);
+                }
+            }
+        }
+    }
+
+    &>svg {
+        width: 2rem;
+        height: 2rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
     @include hover {
         background-color: var(--Dark-red, #A50D0D);
     }

@@ -70,6 +70,9 @@
                                 </p>
 
                                 <a href="#" class="home-slide__link button">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#bx-arrow"></use>
+                                    </svg>
                                     <span>Подробнее</span>
                                     <svg aria-hidden="true" class="icon">
                                         <use xlink:href="#bx-arrow"></use>
@@ -117,6 +120,9 @@
                                 </p>
 
                                 <a href="#" class="home-slide__link button">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#bx-arrow"></use>
+                                    </svg>
                                     <span>Подробнее</span>
                                     <svg aria-hidden="true" class="icon">
                                         <use xlink:href="#bx-arrow"></use>
@@ -173,11 +179,17 @@
                             <svg aria-hidden="true" class="icon">
                                 <use xlink:href="#bx-arrow-prev"></use>
                             </svg>
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#bx-arrow-prev"></use>
+                            </svg>
                         </button>
                         <div class="home__swiper-pagination">
 
                         </div>
                         <button type="button" class="home__swiper-btn carousel-btn carousel-btn--next">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#bx-arrow-next"></use>
+                            </svg>
                             <svg aria-hidden="true" class="icon">
                                 <use xlink:href="#bx-arrow-next"></use>
                             </svg>
@@ -211,7 +223,7 @@
                         </div>
                     </div>
                     <div class="selection__body">
-                        <ul class="selection__list selection__list--hiddden" data-navwindow="for-selection-size">
+                        <ul class="selection__list display-none" data-navwindow="for-selection-size">
                             <li class="selection__item selection__item--third">
                                 <span class="selection__label">
                                     Ширина
@@ -238,65 +250,65 @@
                             </li>
                             <li class="selection__item selection__item--full selection__checkboxes">
                                 <div class="selection__checkbox-wrapper">
-                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
-                                        name="selection-type" id="selection-type-all">
+                                    <input class="selection__checkbox visually-hidden" hidden type="radio"
+                                        name="selection-type" id="selection-type-all" checked>
                                     <label for="selection-type-all" class="selection__checkbox-label">
                                         Все
                                     </label>
                                 </div>
 
                                 <div class="selection__checkbox-wrapper">
-                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                    <input class="selection__checkbox visually-hidden" hidden type="radio"
                                         name="selection-type" id="selection-type-summer">
                                     <label for="selection-type-summer" class="selection__checkbox-label">
                                         <svg aria-hidden="true" class="icon">
                                             <use xlink:href="#type-summer"></use>
                                         </svg>
-                                        Летние
+                                        <span>Летние</span>
                                     </label>
                                 </div>
 
                                 <div class="selection__checkbox-wrapper">
-                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                    <input class="selection__checkbox visually-hidden" hidden type="radio"
                                         name="selection-type" id="selection-type-multi">
                                     <label for="selection-type-multi" class="selection__checkbox-label">
                                         <svg aria-hidden="true" class="icon">
                                             <use xlink:href="#type-multi"></use>
                                         </svg>
-                                        Всесезонные
+                                        <span>Всесезонны</span>
                                     </label>
                                 </div>
 
                                 <div class="selection__checkbox-wrapper">
-                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                    <input class="selection__checkbox visually-hidden" hidden type="radio"
                                         name="selection-type" id="selection-type-winter">
                                     <label for="selection-type-winter" class="selection__checkbox-label">
                                         <svg aria-hidden="true" class="icon">
                                             <use xlink:href="#type-winter"></use>
                                         </svg>
-                                        Зимние
+                                        <span>Зимние</span>
                                     </label>
                                 </div>
 
                                 <div class="selection__checkbox-wrapper">
-                                    <input class="selection__checkbox visually-hidden" hidden type="checkbox"
+                                    <input class="selection__checkbox visually-hidden" hidden type="radio"
                                         name="selection-type" id="selection-type-stud">
                                     <label for="selection-type-stud" class="selection__checkbox-label">
                                         <svg aria-hidden="true" class="icon">
                                             <use xlink:href="#type-s"></use>
                                         </svg>
-                                        Шипованные
+                                        <span>Шипованные</span>
                                     </label>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="selection__list" data-navwindow="for-selection-size">
+                        <ul class="selection__list" data-navwindow="for-selection-brand">
                             <li class="selection__item selection__item--third">
                                 <span class="selection__label">
                                     Выберите марку автомобиля
                                 </span>
                                 <div class="selection__input-wrapper">
-                                    <div class="select">
+                                    <div class="selection__select select js-select">
                                         <button class="select__current" type="button">Выбор</button>
                                         <div class="select__dropdown">
                                             <ul class="select__list">
@@ -343,18 +355,126 @@
                             </li>
                             <li class="selection__item selection__item--third">
                                 <span class="selection__label">
-                                    Профиль
+                                    Выберите модель
                                 </span>
-                                <div class="selection__input-wrapper input-box">
-                                    <input type="number" name="selection-profile" id="selection-profile" value="55">
+                                <div class="selection__input-wrapper">
+                                    <div class="selection__select select js-select">
+                                        <button class="select__current" type="button">Выбор</button>
+                                        <div class="select__dropdown">
+                                            <ul class="select__list">
+                                                <li class="select__item select__item--first-hidden">
+                                                    <label class="select__label" for="radio-select-model-1">
+                                                        <input type="radio" name="model-select"
+                                                            id="radio-select-model-1">
+                                                        <span class="select__text">
+                                                            Выбор
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-model-2">
+                                                        <input type="radio" name="model-select"
+                                                            id="radio-select-model-2">
+                                                        <span class="select__text">
+                                                            Модель 1
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-model-3">
+                                                        <input type="radio" name="model-select"
+                                                            id="radio-select-model-3">
+                                                        <span class="select__text">
+                                                            Модель 2
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-model-4">
+                                                        <input type="radio" name="model-select"
+                                                            id="radio-select-model-4">
+                                                        <span class="select__text">
+                                                            Модель 3
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li class="selection__item selection__item--third">
                                 <span class="selection__label">
-                                    Диаметр
+                                    Выберите год выпуска и двигатель
                                 </span>
-                                <div class="selection__input-wrapper input-box">
-                                    <input type="number" name="selection-diameter" id="selection-diameter" value="16">
+                                <div class="selection__input-wrapper">
+                                    <div class="selection__select select js-select">
+                                        <button class="select__current" type="button">Выбор</button>
+                                        <div class="select__dropdown">
+                                            <ul class="select__list">
+                                                <li class="select__item select__item--first-hidden">
+                                                    <label class="select__label" for="radio-select-engine-1">
+                                                        <input type="radio" name="engine-select"
+                                                            id="radio-select-engine-1">
+                                                        <span class="select__text">
+                                                            Выбор
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-engine-2">
+                                                        <input type="radio" name="engine-select"
+                                                            id="radio-select-engine-2">
+                                                        <span class="select__text">
+                                                            Год 1
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-engine-3">
+                                                        <input type="radio" name="engine-select"
+                                                            id="radio-select-engine-3">
+                                                        <span class="select__text">
+                                                            Год 2
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-engine-4">
+                                                        <input type="radio" name="engine-select"
+                                                            id="radio-select-engine-4">
+                                                        <span class="select__text">
+                                                            Год 3
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li class="selection__item selection__item--full">
@@ -377,7 +497,7 @@
         </div>
     </div>
 
-    <div class="section__carousel-section carousel-section">
+    <div class="section__carousel-section carousel-section js-carousels-swiper" data-slides-count="6">
         <div class="carousel-section__site-container">
             <div class="carousel-section__header">
                 <h2 class="carousel-section__title">
@@ -388,8 +508,14 @@
                         <svg aria-hidden="true" class="icon">
                             <use xlink:href="#bx-arrow-prev"></use>
                         </svg>
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-prev"></use>
+                        </svg>
                     </button>
                     <button type="button" class="carousel-section__btn-next carousel-btn carousel-btn--next">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-next"></use>
+                        </svg>
                         <svg aria-hidden="true" class="icon">
                             <use xlink:href="#bx-arrow-next"></use>
                         </svg>
@@ -397,9 +523,44 @@
                 </div>
             </div>
 
-            <div class="carousel-section__body"></div>
+            <div class="carousel-section__body">
+                <div class="carousel-section__swiper swiper">
+                    <ul class="carousel-section__swiper-wrappper swiper-wrapper">
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=true}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=false}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=true}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=false}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=true}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=false}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=true}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=false}}
+                        </li>
+                        <li class="carousel-section__swiper-slide swiper-slide">
+                            {{>card discountCard=true}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <a href="#" class="carousel-section__link button button--outlined">
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#bx-arrow"></use>
+                </svg>
                 <span>Смотреть&nbsp;все</span>
                 <svg aria-hidden="true" class="icon">
                     <use xlink:href="#bx-arrow"></use>
@@ -409,6 +570,200 @@
     </div>
 </section>
 
+<section class="section section__carousel-section carousel-section js-carousels-swiper" data-slides-count="4">
+    <div class="carousel-section__site-container">
+        <div class="carousel-section__header">
+            <h2 class="carousel-section__title">
+                Акции
+            </h2>
+            <div class="carousel-section__navigation">
+                <button type="button" class="carousel-section__btn-prev carousel-btn carousel-btn--prev">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                </button>
+                <button type="button" class="carousel-section__btn-next carousel-btn carousel-btn--next">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel-section__body">
+            <div class="carousel-section__swiper swiper">
+                <ul class="carousel-section__swiper-wrappper swiper-wrapper">
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link promoNews=true}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link promoNews=true}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link promoNews=true}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link promoNews=true}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link promoNews=true}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link promoNews=true}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="carousel-section__link button button--outlined">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+            <span>Смотреть&nbsp;все</span>
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<section class="section  carousel-section js-carousels-swiper" data-slides-count="6">
+    <div class="carousel-section__site-container">
+        <div class="carousel-section__header">
+            <h2 class="carousel-section__title">
+                Новые поступления
+            </h2>
+            <div class="carousel-section__navigation">
+                <button type="button" class="carousel-section__btn-prev carousel-btn carousel-btn--prev">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                </button>
+                <button type="button" class="carousel-section__btn-next carousel-btn carousel-btn--next">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel-section__body">
+            <div class="carousel-section__swiper swiper">
+                <ul class="carousel-section__swiper-wrappper swiper-wrapper">
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="carousel-section__link button button--outlined">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+            <span>Смотреть&nbsp;все</span>
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<section class="section section__carousel-section carousel-section js-carousels-swiper" data-slides-count="4">
+    <div class="carousel-section__site-container">
+        <div class="carousel-section__header">
+            <h2 class="carousel-section__title">
+                Новости
+            </h2>
+            <div class="carousel-section__navigation">
+                <button type="button" class="carousel-section__btn-prev carousel-btn carousel-btn--prev">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                </button>
+                <button type="button" class="carousel-section__btn-next carousel-btn carousel-btn--next">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel-section__body">
+            <div class="carousel-section__swiper swiper">
+                <ul class="carousel-section__swiper-wrappper swiper-wrapper">
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>news-link}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="carousel-section__link button button--outlined">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+            <span>Смотреть&nbsp;все</span>
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+        </a>
+    </div>
+</section>
 
 {{/content}}
 {{/extend}}

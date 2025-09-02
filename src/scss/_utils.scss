@@ -2,6 +2,12 @@
     @include visuallyHidden();
 }
 
+[class] {
+    &.display-none {
+        display: none;
+    }
+}
+
 .no-scroll {
     overflow-y: scroll;
     position: fixed;
@@ -9,6 +15,7 @@
     height: 100%;
     left: 0;
     top: 0;
+
     body {
         height: auto;
         overflow: hidden;

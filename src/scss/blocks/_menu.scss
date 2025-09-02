@@ -3,10 +3,22 @@
     align-items: center;
     gap: 3.6rem;
 
+
+    @include breakpoint(tablet) {
+        overflow: auto;
+        margin-inline: -1.6rem;
+        padding-inline: 1.6rem;
+
+        @include noScrollbar();
+    }
+
+
     &__link {
         display: block;
         color: var(--Grey-2, #B3B3B3);
         white-space: nowrap;
+
+        transition: color, 0.3s, ease-out;
 
         @include t2;
 

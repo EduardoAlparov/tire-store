@@ -5,11 +5,10 @@
 
     display: grid;
     place-items: center;
-    grid-auto-flow: column;
-    gap: 1.2rem;
 
     width: max-content;
-    padding: 1.4rem 1.5rem;
+    height: 4rem;
+    overflow: hidden;
 
     color: var(--White, #FFF);
     background-color: var(--Red, #D42111);
@@ -20,30 +19,55 @@
     transition-duration: 0.3s;
     transition-timing-function: ease;
 
-    &>svg {
-        position: absolute;
-        top: 50%;
-        right: 1.6rem;
-
-        width: 2.4rem;
-        height: 2.4rem;
-        transform: translateY(-50%);
-
-        fill: var(--White, #fff);
-
-        transition-property: right;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
+    @include breakpointMF(laptop) {
+        height: 4.8rem;
+        padding: 1.4rem 0rem;
     }
 
     &>span {
-        padding-right: 4rem;
+        transform: translateX(-2.4rem);
+    }
 
-        transition-property: padding;
+    &>svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        width: 2rem;
+        height: 2rem;
+        transform: translateX(-2.4rem) translateY(-50%);
+
+        fill: var(--White, #fff);
+
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        @include breakpointMF(laptop) {
+            left: 0;
+
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    &>span {
+        padding-inline: 4rem;
+
+        transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: ease;
 
         white-space: nowrap;
+
+        &+svg {
+            left: unset;
+            right: 0;
+
+            @include breakpointMF(laptop) {
+                right: 0;
+            }
+        }
     }
 
     &.button--outlined {
@@ -60,28 +84,18 @@
             color: var(--Dark-red, #A50D0D);
             background-color: transparent;
             border-color: var(--Dark-red, #A50D0D);
-
-            &>svg {
-                right: calc(100% - 4rem);
-            }
-
-            &>span {
-                padding-right: 0;
-                padding-left: 4rem;
-            }
         }
     }
 
     @include hover {
         background: var(--Dark-red, #A50D0D);
 
-        &>svg {
-            right: calc(100% - 4rem);
+        &>span {
+            transform: translateX(2.4rem);
         }
 
-        &>span {
-            padding-right: 0;
-            padding-left: 4rem;
+        &>svg {
+            transform: translateX(2.4rem) translateY(-50%);
         }
     }
 }

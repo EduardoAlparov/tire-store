@@ -1,0 +1,45 @@
+.card-checkbox {
+    display: grid;
+    place-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+
+
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    cursor: pointer;
+
+    @include breakpointMF(laptop) {
+        width: 4.8rem;
+        height: 4.8rem;
+
+        background-color: var(--Light-Grey, #F2F2F2);
+        border-radius: 0.8rem;
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--Grey-1, #666);
+
+        transition-property: fill;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        @include breakpointMF(laptop) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    &.card-checkbox--active {
+        background-color: var(--Dark-red, #A50D0D);
+
+        .card-checkbox__icon {
+            fill: var(--White, #fff);
+        }
+    }
+}

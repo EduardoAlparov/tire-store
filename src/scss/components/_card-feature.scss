@@ -1,0 +1,40 @@
+.card-feature {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 0.4rem;
+
+    padding: 0.4rem;
+
+    color: var(--White, #FFF);
+    @include b3;
+
+    background-color: var(--Black, #141414);
+    border-radius: 0.4rem;
+
+    .icon {
+        width: 12px;
+        height: 12px;
+
+        @include breakpointMF(laptop) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    &.card-feature--red {
+        background-color: var(--Red, #D42111);
+    }
+
+    &.card-feature--orange {
+        background-color: var(--Orange, #FF8000);
+    }
+
+    &.card-feature--blue {
+        background-color: var(--Blue, #0AF);
+    }
+
+    &.card-feature--green {
+        background-color: var(--Green, #52CC52);
+    }
+}

@@ -17,11 +17,7 @@ export default () => {
     })
 
     innersCatalogBtns.forEach( (innerBtn) => {
-        innerBtn.addEventListener('mouseenter', (e) => {
-            e.preventDefault();
-
-            innerBtn.click();
-
+        innerBtn.addEventListener('click', (e) => {
             const ELEMENT_CLASS = 'header-catalog__button';
             const ACTIVE_CLASS = 'header-catalog__button--active';
             const activeItem = innerBtn.parentElement.parentElement.querySelector(`.${ELEMENT_CLASS}.${ACTIVE_CLASS}`);

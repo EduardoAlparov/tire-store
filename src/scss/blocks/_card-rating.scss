@@ -1,0 +1,90 @@
+.card-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+
+    &__value {
+        @include b3;
+
+        @include breakpointMF(laptop) {
+            display: none;
+        }
+    }
+
+    &__counter {
+        white-space: nowrap;
+
+        stroke: var(--Blue, #0AF);
+
+        @include breakpointMF(laptop) {
+            margin-right: auto;
+        }
+    }
+
+    &__counter-text {
+        @include breakpointMF(laptop) {
+            display: none;
+        }
+    }
+
+    &__stars {
+        --precntage: 0%;
+        position: relative;
+
+        width: max-content;
+
+        position: relative;
+        z-index: 100;
+
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        width: max-content;
+
+        @include breakpoint(tablet) {
+            margin-right: auto;
+        }
+    }
+
+    &__star {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        background: linear-gradient(to right, var(--Yellow, #ffd400) 0%, var(--Yellow, #ffd400) var(--precntage), var(--Light-Grey, #f2f2f2) var(--precntage));
+        mask-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20%3E%0A%20%20%3Cpath%20d%3D%22M4.51574%2012.323L3.02574%2018.775C2.93374%2019.174%203.09374%2019.589%203.43174%2019.822C3.60274%2019.94%203.80074%2020%203.99974%2020C4.19274%2020%204.38674%2019.944%204.55474%2019.832L9.99974%2016.202L15.4447%2019.832C15.7927%2020.064%2016.2497%2020.055%2016.5897%2019.808C16.9277%2019.561%2017.0767%2019.128%2016.9617%2018.726L15.1327%2012.326L19.6687%208.244C19.9657%207.976%2020.0747%207.558%2019.9467%207.18C19.8177%206.802%2019.4767%206.536%2019.0787%206.504L13.3777%206.05L10.9107%200.589C10.7497%200.23%2010.3927%200%209.99974%200C9.60674%200%209.24974%200.23%209.08874%200.589L6.62174%206.05L0.920742%206.503C0.528742%206.534%200.191742%206.791%200.059742%207.16C-0.074258%207.529%200.0217421%207.942%200.301742%208.216L4.51574%2012.323Z%22%20%2F%3E%0A%3C%2Fsvg%3E');
+
+        @include breakpoint(tablet) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+
+        &.stars__item--active {
+            background: linear-gradient(to right, var(--Yellow, #ffd400) 0%, var(--Yellow, #ffd400) 100%, var(--Light-Grey, #f2f2f2) 100%);
+        }
+
+        &.card-rating__star--big {
+            .stars__item {
+                width: 4.8rem;
+                height: 4.8rem;
+
+                @include breakpoint(small-tablet) {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            @include breakpoint(tablet) {
+                @include visuallyHidden();
+            }
+        }
+    }
+}

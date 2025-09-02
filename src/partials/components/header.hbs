@@ -57,13 +57,13 @@
 
     <div class="page-header__main-line">
         <nav class="page-header__site-container">
-            <a href="/" class="page-header__cell page-header__logo logo">
+            <a href="/" class="page-header__logo logo">
                 <svg aria-hidden="true" class="icon">
                     <use xlink:href="#logo"></use>
                 </svg>
             </a>
 
-            <button type="button" class="page-header__cell page-header__catalog-open catalog-btn js-open-catalog">
+            <button type="button" class="page-header__catalog-open catalog-btn js-open-catalog">
                 <svg aria-hidden="true" class="icon icon-menu">
                     <use xlink:href="#bx-menu"></use>
                 </svg>
@@ -75,7 +75,7 @@
                 Каталог
             </button>
 
-            <form class="page-header__cell page-header__search-bar search-bar">
+            <form class="page-header__search-bar search-bar">
                 <div class="search-bar__input-body">
                     <input type="search" name="searchbar" id="" required placeholder="Найти...">
                     <input type="reset" value="">
@@ -87,7 +87,7 @@
                 </button>
             </form>
 
-            <ul class="page-header__cell page-header__control-bar control-bar">
+            <ul class="page-header__control-bar control-bar">
                 <li class="control-bar__item">
                     <a href="#" class="control-bar__link icon-btn">
                         <svg aria-hidden="true" class="icon">
@@ -129,6 +129,25 @@
                     </a>
                 </li>
             </ul>
+
+            <div class="page-header__mobile-controls">
+                <button class="page-header__mobile-search simple-btn simple-btn--icon simple-btn--black">
+                    <svg aria-hidden="true" class="icon icon-active">
+                        <use xlink:href="#bx-search"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon icon-close">
+                        <use xlink:href="#bx-close"></use>
+                    </svg>
+                </button>
+                <button class="page-header__burger-menu simple-btn simple-btn--icon ">
+                    <svg aria-hidden="true" class="icon icon-active">
+                        <use xlink:href="#bx-menu"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon icon-close">
+                        <use xlink:href="#bx-close"></use>
+                    </svg>
+                </button>
+            </div>
         </nav>
 
         <div class="page-header__catalog header-catalog">

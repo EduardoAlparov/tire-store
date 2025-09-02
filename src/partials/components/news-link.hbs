@@ -1,0 +1,42 @@
+{{#if promoNews}}
+<a href="#" class="news-link news-link--promo">
+    <div class="news-link__picture">
+        <picture>
+            <source type="image/webp" srcset="./img/carousel/news.webp" />
+            <img class="lazy" src="./img/carousel/news.jpg" alt="image">
+        </picture>
+    </div>
+    <div class="news-link__info">
+        <p class="news-link__text">
+            Краткое описание акции в одну или максимум в две строки
+        </p>
+        <span class="news-link__date">
+            05 мая 2015 — 05 мая 2030
+        </span>
+    </div>
+</a>
+{{else}}
+<a href="#" class="news-link">
+    <div class="news-link__picture">
+        <picture>
+            <source type="image/webp" srcset="./img/carousel/track.webp" />
+            <img class="lazy" src="./img/carousel/track.jpg" alt="image">
+        </picture>
+    </div>
+    <div class="news-link__info">
+        <p class="news-link__text">
+            Компания Michelin представила новую линейку шин для грузовиков, 
+            разработанную с использованием передовых технологий. Эти шины 
+            отличаются улучшенной топливной экономичностью и увеличенным 
+            сроком службы, что делает их идеальным выбором для коммерческих перевозчиков
+            Компания Michelin представила новую линейку шин для грузовиков, 
+            разработанную с использованием передовых технологий. Эти шины 
+            отличаются улучшенной топливной экономичностью и увеличенным 
+            сроком службы, что делает их идеальным выбором для коммерческих перевозчиков
+        </p>
+        <span class="news-link__date">
+            28 мая 2024
+        </span>
+    </div>
+</a>
+{{/if}}

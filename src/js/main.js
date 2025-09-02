@@ -17,6 +17,9 @@ import openCatalog from './openCatalog';
 import homeSwiper from './homeSwiper';
 import emailFormSubmit from './emailFormSubmit';
 import typesNavbarsToggle from './typesNavbarsToggle';
+import renderRating from './renderRating';
+import carouselSwiper from './carouselSwiper';
+import selectContol from './selectContol';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
     homeSwiper();
     emailFormSubmit();
     typesNavbarsToggle();
+    renderRating();
+    carouselSwiper();
+    selectContol();
 });
 
 document.addEventListener('lazyloaded', () => {

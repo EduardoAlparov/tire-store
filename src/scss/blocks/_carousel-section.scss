@@ -15,7 +15,6 @@
 
     &__link {
         width: 100%;
-        margin-top: 2.4rem;
 
         @include breakpointMF(laptop) {
             position: absolute;
@@ -34,6 +33,47 @@
 
         @include breakpoint(tablet) {
             @include visuallyHidden();
+        }
+    }
+
+    &__body {
+        @include breakpointMF(laptop) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            margin-inline: -100%;
+            padding-inline: 100%;
+            padding-block: 2.4rem;
+
+            @include breakpointMF(laptop) {
+                padding-block: 2.4rem 0;
+            }
+        }
+    }
+
+    &__swiper-slide {
+        &.swiper-slide {
+            &>.card {
+                .card__grid {
+                    max-width: unset;
+                    grid-template-rows: 0.5fr auto;
+                }
+
+                .card__top {
+                    aspect-ratio: 1;
+                }
+
+                .card__bottom {
+                    // aspect-ratio: 1;
+                }
+            }
+
+            &>.news-link {
+                max-width: unset;
+            }
         }
     }
 }

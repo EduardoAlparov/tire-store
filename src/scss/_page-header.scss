@@ -135,10 +135,8 @@
         }
     }
 
-    &__cell {
-        &.page-header__search-bar {
-            flex: 1 1 100%;
-        }
+    &__search-bar {
+        flex: 1 1 100%;
     }
 
     &__search-bar {
@@ -161,13 +159,23 @@
         }
     }
 
-    &__btn-menu {
-        &.btn-menu {
-            display: flex;
+    &__catalog-open {
+        &.catalog-btn {
+            display: none;
 
             @include breakpointMF(laptop) {
-                display: none;
+                display: grid;
             }
+        }
+    }
+
+    &__mobile-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            display: none;
         }
     }
 

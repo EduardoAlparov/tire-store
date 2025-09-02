@@ -10,7 +10,7 @@ export default () => {
 
         if(innerCarousel) {
             innerSwiper = new Swiper(innerCarousel, {
-                speed: 600,
+                speed: 800,
                 allowTouchMove: false,
                 modules: [EffectCreative],
 
@@ -29,21 +29,21 @@ export default () => {
         }
 
         const swiper = new Swiper(homeCarousel, {
-            speed: 600,
+            speed: 800,
             modules: [EffectCreative, Navigation, Pagination, Controller],
 
-            effect: 'creative',
-            creativeEffect: {
-                perspective: true,
-                prev: {
-                    opacity: 0,
-                    scale: 0.8
-                },
-                next: {
-                    opacity: 0,
-                    scale: 0.8
-                },
-            },
+            // effect: 'creative',
+            // creativeEffect: {
+            //     perspective: true,
+            //     prev: {
+            //         opacity: 0,
+            //         scale: 0.8
+            //     },
+            //     next: {
+            //         opacity: 0,
+            //         scale: 0.8
+            //     },
+            // },
 
             navigation: {
                 disabledClass: 'carousel-btn--disabled',
@@ -60,6 +60,12 @@ export default () => {
                 inverse: false,
                 control: innerSwiper
             },
+
+            breakpoints: {
+                1201: {
+
+                },
+            }
         });
     })
 }
