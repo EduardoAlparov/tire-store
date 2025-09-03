@@ -49,31 +49,28 @@
             padding-block: 2.4rem;
 
             @include breakpointMF(laptop) {
-                padding-block: 2.4rem 0;
+                padding-block: 2.4rem 2.4rem;
+                margin-block: 0 -2.4rem;
             }
         }
     }
 
-    &__swiper-slide {
-        &.swiper-slide {
-            &>.card {
-                .card__grid {
-                    max-width: unset;
-                    grid-template-rows: 0.5fr auto;
-                }
-
-                .card__top {
-                    aspect-ratio: 1;
-                }
-
-                .card__bottom {
-                    // aspect-ratio: 1;
-                }
-            }
-
-            &>.news-link {
+    &__card {
+        &.card {
+            .card__grid {
                 max-width: unset;
+                grid-template-rows: 0.5fr auto;
             }
+
+            .card__top {
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+    &__news-link {
+        &.news-link {
+            max-width: unset;
         }
     }
 }

@@ -1,7 +1,6 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-
 <section class="section home">
     <div class="home__background">
         <picture>
@@ -311,6 +310,14 @@
                                     <div class="selection__select select js-select">
                                         <button class="select__current" type="button">Выбор</button>
                                         <div class="select__dropdown">
+                                            <div class="select__header">
+                                                <div class="select__title">
+                                                    Выберите марку автомобиля
+                                                </div>
+                                                <svg aria-hidden="true" class="select__header-close icon">
+                                                    <use xlink:href="#bx-close"></use>
+                                                </svg>
+                                            </div>
                                             <ul class="select__list">
                                                 <li class="select__item select__item--first-hidden">
                                                     <label class="select__label" for="radio-select-brand-1">
@@ -349,6 +356,9 @@
                                                     </label>
                                                 </li>
                                             </ul>
+                                            <button type="button" class="select__accept simple-btn">
+                                                Подтвердить
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -361,6 +371,15 @@
                                     <div class="selection__select select js-select">
                                         <button class="select__current" type="button">Выбор</button>
                                         <div class="select__dropdown">
+                                            <div class="select__header">
+                                                <div class="select__title">
+                                                    Выберите модель
+                                                </div>
+
+                                                <svg aria-hidden="true" class="select__header-close icon">
+                                                    <use xlink:href="#bx-close"></use>
+                                                </svg>
+                                            </div>
                                             <ul class="select__list">
                                                 <li class="select__item select__item--first-hidden">
                                                     <label class="select__label" for="radio-select-model-1">
@@ -411,6 +430,9 @@
                                                     </label>
                                                 </li>
                                             </ul>
+                                            <button type="button" class="select__accept simple-btn">
+                                                Подтвердить
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -423,6 +445,15 @@
                                     <div class="selection__select select js-select">
                                         <button class="select__current" type="button">Выбор</button>
                                         <div class="select__dropdown">
+                                            <div class="select__header">
+                                                <div class="select__title">
+                                                    Выберите год выпуска и двигатель
+                                                </div>
+
+                                                <svg aria-hidden="true" class="select__header-close icon">
+                                                    <use xlink:href="#bx-close"></use>
+                                                </svg>
+                                            </div>
                                             <ul class="select__list">
                                                 <li class="select__item select__item--first-hidden">
                                                     <label class="select__label" for="radio-select-engine-1">
@@ -473,6 +504,9 @@
                                                     </label>
                                                 </li>
                                             </ul>
+                                            <button type="button" class="select__accept simple-btn">
+                                                Подтвердить
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -527,31 +561,31 @@
                 <div class="carousel-section__swiper swiper">
                     <ul class="carousel-section__swiper-wrappper swiper-wrapper">
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=true}}
+                            {{>card discountCard=true cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=false}}
+                            {{>card discountCard=false cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=true}}
+                            {{>card discountCard=true cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=false}}
+                            {{>card discountCard=false cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=true}}
+                            {{>card discountCard=true cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=false}}
+                            {{>card discountCard=false cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=true}}
+                            {{>card discountCard=true cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=false}}
+                            {{>card discountCard=false cardClass="carousel-section__card"}}
                         </li>
                         <li class="carousel-section__swiper-slide swiper-slide">
-                            {{>card discountCard=true}}
+                            {{>card discountCard=true cardClass="carousel-section__card"}}
                         </li>
                     </ul>
                 </div>
@@ -600,22 +634,22 @@
             <div class="carousel-section__swiper swiper">
                 <ul class="carousel-section__swiper-wrappper swiper-wrapper">
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link promoNews=true}}
+                        {{>news-link promoNews=true newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link promoNews=true}}
+                        {{>news-link promoNews=true newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link promoNews=true}}
+                        {{>news-link promoNews=true newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link promoNews=true}}
+                        {{>news-link promoNews=true newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link promoNews=true}}
+                        {{>news-link promoNews=true newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link promoNews=true}}
+                        {{>news-link promoNews=true newsClass="carousel-section__news-link"}}
                     </li>
                 </ul>
             </div>
@@ -663,28 +697,28 @@
             <div class="carousel-section__swiper swiper">
                 <ul class="carousel-section__swiper-wrappper swiper-wrapper">
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>card discountCard=false}}
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
                     </li>
                 </ul>
             </div>
@@ -732,22 +766,22 @@
             <div class="carousel-section__swiper swiper">
                 <ul class="carousel-section__swiper-wrappper swiper-wrapper">
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link}}
+                        {{>news-link newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link}}
+                        {{>news-link newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link}}
+                        {{>news-link newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link}}
+                        {{>news-link newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link}}
+                        {{>news-link newsClass="carousel-section__news-link"}}
                     </li>
                     <li class="carousel-section__swiper-slide swiper-slide">
-                        {{>news-link}}
+                        {{>news-link newsClass="carousel-section__news-link"}}
                     </li>
                 </ul>
             </div>

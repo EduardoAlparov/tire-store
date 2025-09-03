@@ -13,16 +13,18 @@
     width: 100%;
     padding-block: 1.6rem;
 
+    background-color: var(--White, #FFF);
+
     @include breakpointMF(laptop) {
         flex-direction: column;
         gap: unset;
 
         padding-block: unset;
+
     }
 
     &__top-line {
         overflow: hidden;
-        background-color: var(--White, #FFF);
 
         @include breakpointMF(laptop) {
             padding-block: 1.2rem;
@@ -32,8 +34,6 @@
 
     &__main-line {
         position: relative;
-
-        background-color: var(--White, #FFF);
 
         @include breakpointMF(laptop) {
             padding-block: 2rem;
@@ -139,16 +139,6 @@
         flex: 1 1 100%;
     }
 
-    &__search-bar {
-        &.search-bar {
-            display: none;
-
-            @include breakpointMF(laptop) {
-                display: flex;
-            }
-        }
-    }
-
     &__control-bar {
         &.control-bar {
             display: none;
@@ -194,6 +184,45 @@
         }
     }
 }
+
+.page-header {
+    &__main-line {
+        .page-header__site-container {
+            @include breakpoint(tablet) {
+                flex-wrap: wrap;
+                gap: 1.2rem;
+            }
+        }
+    }
+
+    &__logo {
+        @include breakpoint(tablet) {
+            order: 1;
+        }
+    }
+
+    &__mobile-controls {
+        order: 2;
+    }
+
+    &__search-bar {
+        &.search-bar {
+            @include breakpoint(tablet) {
+                order: 3;
+                flex: 1 1 100%;
+                display: none;
+            }
+
+
+            &>button[type="submit"] {
+                @include breakpoint(tablet) {
+                    @include visuallyHidden();
+                }
+            }
+        }
+    }
+}
+
 
 @keyframes slideBodyFromTop {
     0% {

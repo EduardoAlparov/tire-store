@@ -4,9 +4,19 @@
     border-radius: 0.8rem;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
 
+
+
     @include breakpointMF(laptop) {
         border-width: 0.8rem;
         box-shadow: none;
+
+        transition-property: box-shadow;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        @include hover {
+            box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
+        }
     }
 
     &__grid {
@@ -32,9 +42,6 @@
 
     &__picture {
         flex-grow: 1;
-        // aspect-ratio: 1;
-
-        // background-color: var(--Light-Grey, #F2F2F2);
 
         img {
             position: absolute;

@@ -1,0 +1,51 @@
+.mobile-navigation {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+
+    @include breakpointMF(laptop) {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+
+        padding: 0.8rem 1.6rem 1.6rem;
+
+        background-color: var(--White, #FFF);
+        border-top: 1px solid var(--Light-Grey, #F2F2F2);
+    }
+
+    &__link {
+        flex: 1 1 100%;
+        min-width: unset;
+
+        &.icon-btn {
+            @include b3;
+            gap: 0.4rem;
+            padding-inline: 6px;
+
+
+            .icon {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &.icon-btn--with-counter {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}

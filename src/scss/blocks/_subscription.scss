@@ -155,23 +155,78 @@
         }
     }
 
-    &__picture {
+    &__pictures {
         position: relative;
         display: none;
-
-        img {
-            display: block;
-
-            width: 100%;
-            max-width: unset;
-            min-height: 100%;
-
-            object-fit: cover;
-            object-position: center;
-        }
+        flex: 1 1 auto;
 
         @include breakpointMF(laptop) {
             display: block;
+        }
+    }
+
+    &__picture-top,
+    &__picture-bottom {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            left: 50%;
+
+            display: block;
+            width: 100%;
+            max-width: unset;
+            object-fit: contain;
+            object-position: center;
+
+            transition-property: transform;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-out;
+        }
+    }
+
+    &__picture-top {
+        top: 0;
+        z-index: 200;
+
+        img {
+            top: 0;
+            width: 143%;
+            transform: translateX(-56%) translateY(-3rem);
+            object-position: top center;
+        }
+    }
+
+    &__picture-bottom {
+        bottom: 0;
+        z-index: 100;
+
+        img {
+            bottom: 0;
+            width: 110%;
+            transform: translateX(-50%) translateY(3rem);
+            object-position: bottom center;
+        }
+    }
+}
+
+.subscription__body {
+    @include hover {
+        .subscription__picture-top {
+            img {
+                transform: translateX(-56%) translateY(0);
+            }
+        }
+
+        .subscription__picture-bottom {
+            img {
+                transform: translateX(-50%) translateY(0);
+            }
         }
     }
 }

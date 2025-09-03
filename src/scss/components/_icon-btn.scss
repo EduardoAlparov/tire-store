@@ -51,6 +51,16 @@
         }
     }
 
+    &.icon-btn--active {
+        &>svg {
+            fill: var(--Red, #D42111);
+        }
+
+        &>span {
+            color: var(--Red, #D42111);
+        }
+    }
+
 
     @include hover {
         &>svg {

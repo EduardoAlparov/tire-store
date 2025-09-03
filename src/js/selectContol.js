@@ -3,10 +3,10 @@ export default () => {
 
 	selects.forEach((select) => {
 		select.addEventListener('click', () => {
-			select.classList.toggle('select--open');
+			select.classList.add('select--open');
 
 			window.addEventListener('click', (e) => {
-				if(!e.target.closest('.select')) {
+				if(  (!e.target.closest('.select__current') || !e.target.closest('.select') || e.target.closest('.select__header-close') || e.target.closest('.select__accept'))) {
 					selects.forEach((select) => {
 						select.classList.remove('select--open');
 					})
@@ -24,7 +24,7 @@ export default () => {
 				const text = e.target.nextElementSibling.textContent;
 				current.textContent = text;
 
-				select.classList.remove('select--open');
+				// select.classList.remove('select--open');
 			})
 		})
 	})

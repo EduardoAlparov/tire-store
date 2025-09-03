@@ -12,24 +12,36 @@
     background-color: var(--Red, #D42111);
     border-radius: 0.8rem;
 
-    transition-property: background, color;
+    transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease;
 
     &.simple-btn--black {
         background-color: var(--Black, #141414);
 
-        @include hover {
-            background-color: var(--White, #FFF);
-            color: var(--Black, #141414);
+        &:not(.simple-btn--icon) {
+            @include hover {
+                background-color: var(--White, #FFF);
+                color: var(--Black, #141414);
+            }
         }
     }
+
 
     &.simple-btn--icon {
         width: 4rem;
         height: 4rem;
-
         padding: 0;
+
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+
+        .icon {
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+        }
 
         .icon-active {
             opacity: 1;
@@ -61,12 +73,16 @@
     &>svg {
         width: 2rem;
         height: 2rem;
+
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+
+        pointer-events: none;
     }
 
-    @include hover {
-        background-color: var(--Dark-red, #A50D0D);
+    &:not(.simple-btn--icon) {
+        @include hover {
+            background-color: var(--Dark-red, #A50D0D);
+        }
     }
-
 }

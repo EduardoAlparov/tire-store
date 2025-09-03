@@ -1,5 +1,5 @@
 {{#if promoNews}}
-<a href="#" class="news-link news-link--promo">
+<a href="#" class="{{#if newsClass}}{{newsClass}}{{/if}} news-link news-link--promo">
     <div class="news-link__picture">
         <picture>
             <source type="image/webp" srcset="./img/carousel/news.webp" />
@@ -16,7 +16,7 @@
     </div>
 </a>
 {{else}}
-<a href="#" class="news-link">
+<a href="#" class="{{#if newsClass}}{{newsClass}}{{/if}} news-link">
     <div class="news-link__picture">
         <picture>
             <source type="image/webp" srcset="./img/carousel/track.webp" />

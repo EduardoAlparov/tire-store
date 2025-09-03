@@ -25,7 +25,7 @@
                         <label>Email</label>
                         <div class="subscription__input-body search-bar__input-body">
                             <input type="email" name="email-supscribe" id="email-supscribe-id" required
-                                pattern="^\S+@\S+\.\S+$"
+                                pattern="^\S+@\S+\.\S+$" autocomplete="off"
                                 oninvalid="this.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.')"
                                 onchange="this.setCustomValidity('')" placeholder="example@email.com">
                             <input type="reset" value="">
@@ -58,11 +58,21 @@
                 </div>
             </div>
 
-            <div class="subscription__picture">
-                <picture>
-                    <source type="image/webp" srcset="./img/sub.webp" />
-                    <img class="lazy" src="./img/sub.png" alt="image">
-                </picture>
+            <div class="subscription__pictures">
+                <div class="subscription__picture-top">
+                    <picture>
+                        <source type="image/avif" srcset="img/sub-top.avif">
+                        <source type="image/webp" srcset="./img/sub-top.webp" />
+                        <img class="lazy" src="./img/sub-top.png" alt="image">
+                    </picture>
+                </div>
+                <div class="subscription__picture-bottom">
+                    <picture>
+                        <source type="image/avif" srcset="img/sub-bottom.avif">
+                        <source type="image/webp" srcset="./img/sub-bottom.webp" />
+                        <img class="lazy" src="./img/sub-bottom.png" alt="image">
+                    </picture>
+                </div>
             </div>
         </div>
     </div>

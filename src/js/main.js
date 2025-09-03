@@ -14,6 +14,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import setHeaderPadding from './setHeaderPadding';
 import openCatalog from './openCatalog';
+import openMobileSearch from './openMobileSearch';
 import homeSwiper from './homeSwiper';
 import emailFormSubmit from './emailFormSubmit';
 import typesNavbarsToggle from './typesNavbarsToggle';
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setHeaderPadding();
     openCatalog();
+    openMobileSearch();
     homeSwiper();
     emailFormSubmit();
     typesNavbarsToggle();

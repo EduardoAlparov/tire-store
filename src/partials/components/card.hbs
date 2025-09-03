@@ -1,5 +1,5 @@
 {{#if discountCard}}
-<div class="card card--discount">
+<div class="{{#if cardClass}}{{cardClass}}{{/if}} card card--discount">
     <div class="card__grid">
         <div class="card__top">
             <div class="card__picture">
@@ -98,7 +98,7 @@
     </div>
 </div>
 {{else}}
-<div class="card ">
+<div class="{{#if cardClass}}{{cardClass}}{{/if}} card">
     <div class="card__grid">
         <div class="card__top">
             <div class="card__picture">

@@ -12,6 +12,52 @@
 
         width: 100%;
         padding-top: 0.8rem;
+
+        @include breakpoint(tablet) {
+            position: fixed;
+            inset: 0;
+            z-index: 4000;
+
+            padding: 2.4rem 2.4rem 8rem;
+
+            flex-direction: column;
+            align-items: stretch;
+            gap: 2.4rem;
+
+            border-radius: 16px;
+            background: var(--White, #FFF);
+        }
+    }
+
+    &__title {
+        @include h3;
+
+        color: var(--Black, #141414);
+    }
+
+    &__accept {
+        width: 100%;
+
+        @include breakpointMF(laptop) {
+            display: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+            width: 2rem;
+            height: 2rem;
+
+            fill: var(--Grey-2, #b3b3b3);
+        }
+
+        @include breakpointMF(laptop) {
+            display: none;
+        }
     }
 
     &__list {
@@ -20,14 +66,24 @@
         align-items: stretch;
         overflow: hidden;
 
-        background-color: var(--White, #FFF);
-        border-radius: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            background-color: var(--White, #FFF);
+            border-radius: 0.8rem;
+        }
+
+        @include breakpoint(tablet) {
+            gap: 0.8rem;
+            flex-grow: 1;
+        }
     }
 
     &__item {
         &:not(:first-child) {
             .select__label {
-                border-top: 1px solid var(--Black-10, rgba(5, 4, 3, 0.10));
+                @include breakpointMF(laptop) {
+                    border-top: 1px solid var(--Black-10, rgba(5, 4, 3, 0.10));
+                }
             }
         }
 
@@ -51,13 +107,47 @@
         transition-property: background, border;
         cursor: pointer;
 
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 1.6rem;
+
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            transform: translateY(-50%);
+
+            border: 2px solid var(--Grey-2, #B3B3B3);
+            border-radius: 100%;
+
+            content: none;
+
+            @include breakpoint(tablet) {
+                content: "";
+            }
+        }
+
         @include breakpointMF(laptop) {
             height: 4.8rem;
             padding: 1.2rem 1.6rem;
         }
 
+        @include breakpoint(tablet) {
+            position: relative;
+            border-radius: 8px;
+            background-color: var(--Light-Grey, #F2F2F2);
+        }
+
         &:has(input[type="radio"]:checked) {
             background-color: var(--Light-Grey, #F2F2F2);
+
+            &::after {
+                border-width: 0;
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D42111%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M8.00006%2011.587L5.70106%209.29197L4.28906%2010.708L8.00206%2014.413L14.7081%207.70697L13.2941%206.29297L8.00006%2011.587Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
 
         &>input[type="checkbox"],
@@ -86,7 +176,7 @@
     }
 
     &__tick {
-        display: block;
+        display: none;
         flex-shrink: 0;
 
         width: 2.4rem;
@@ -96,6 +186,10 @@
         transition: var(--transition);
         transition-property: opacity;
         opacity: 0;
+
+        @include breakpointMF(laptop) {
+            display: block;
+        }
     }
 
     &__current {
@@ -153,10 +247,16 @@
 
         .select__dropdown {
             display: block;
+
+            @include breakpoint(tablet) {
+                display: flex;
+            }
         }
 
         .select__list {
-            animation: slideDown 0.3s ease 0s 1 forwards;
+            @include breakpointMF(laptop) {
+                animation: slideDown 0.3s ease 0s 1 forwards;
+            }
         }
     }
 }
