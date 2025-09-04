@@ -1,4 +1,17 @@
 body {
+    background-color: var(--Light-Grey, #F2F2F2);
+
+    &.main-page {
+        background-color: var(--White, #FFF);
+    }
+
+    &.catalog-page {
+        .page-footer {
+            .subscription {
+                display: none;
+            }
+        }
+    }
 
     &.mobile-search-open,
     &.catalog-is-open {

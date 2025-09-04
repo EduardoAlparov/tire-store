@@ -21,6 +21,7 @@ import typesNavbarsToggle from './typesNavbarsToggle';
 import renderRating from './renderRating';
 import carouselSwiper from './carouselSwiper';
 import selectContol from './selectContol';
+import catalogPageControl from './catalogPageControl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderRating();
     carouselSwiper();
     selectContol();
+    catalogPageControl();
 });
 
 document.addEventListener('lazyloaded', () => {

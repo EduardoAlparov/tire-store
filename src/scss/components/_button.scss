@@ -25,44 +25,53 @@
     }
 
     &>span {
-        transform: translateX(-2.4rem);
+
+        @include breakpointMF(laptop) {
+            transform: translateX(-2.4rem);
+        }
     }
 
     &>svg {
         position: absolute;
-        left: 0;
+        right: 101%;
         top: 50%;
+        transform: translateY(-50%);
 
         width: 2rem;
         height: 2rem;
-        transform: translateX(-2.4rem) translateY(-50%);
 
         fill: var(--White, #fff);
-
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: ease;
 
         @include breakpointMF(laptop) {
             left: 0;
+            right: unset;
 
             width: 2.4rem;
             height: 2.4rem;
+
+            transform: translateX(-2.4rem) translateY(-50%);
         }
     }
 
     &>span {
-        padding-inline: 4rem;
+        padding-inline: 1.2rem 4.4rem;
 
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: ease;
 
+        @include breakpointMF(laptop) {
+            padding-inline: 4rem;
+        }
+
         white-space: nowrap;
 
         &+svg {
             left: unset;
-            right: 0;
+            right: 1.2rem;
 
             @include breakpointMF(laptop) {
                 right: 0;
@@ -72,12 +81,25 @@
 
     &.button--outlined {
         color: var(--Red, #D42111);
-
         background-color: transparent;
         border: 2px solid var(--Red, #D42111);
 
+        &>span {
+            justify-self: flex-start;
+
+            @include b2;
+            font-weight: 500;
+            text-transform: none;
+        }
+
         &>svg {
             fill: var(--Red, #D42111);
+        }
+
+
+        @include breakpointMF(laptop) {
+            height: 4.8rem;
+            padding: 1.2rem 0rem;
         }
 
         @include hover {
@@ -88,14 +110,17 @@
     }
 
     @include hover {
-        background: var(--Dark-red, #A50D0D);
 
-        &>span {
-            transform: translateX(2.4rem);
-        }
+        @include breakpointMF(laptop) {
+            background: var(--Dark-red, #A50D0D);
 
-        &>svg {
-            transform: translateX(2.4rem) translateY(-50%);
+            &>span {
+                transform: translateX(2.4rem);
+            }
+
+            &>svg {
+                transform: translateX(2.4rem) translateY(-50%);
+            }
         }
     }
 }

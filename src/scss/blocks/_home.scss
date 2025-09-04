@@ -95,10 +95,14 @@
         gap: 3.6rem;
         height: 4rem;
 
+        pointer-events: none;
+
         @include breakpointMF(laptop) {
             bottom: 0;
             justify-content: space-between;
             height: unset;
+
+            pointer-events: all;
         }
     }
 

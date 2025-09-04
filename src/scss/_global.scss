@@ -207,8 +207,8 @@ th {
 
 
 ::selection {
-    color: white;
-    background-color: var(--primary-color);
+    color: var(--Dark-gray, #242424);
+    background-color: var(--Grey-2, #b3b3b3);
     -webkit-text-fill-color: white;
 }
 

@@ -33,3 +33,11 @@
         display: none !important;
     }
 }
+
+._round-white-frame {
+    @include breakpointMF(laptop) {
+        padding: 3.6rem 2.4rem;
+        background-color: var(--White, #FFF);
+        border-radius: 2.4rem;
+    }
+}

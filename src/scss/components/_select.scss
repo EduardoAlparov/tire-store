@@ -259,6 +259,25 @@
             }
         }
     }
+
+    &.select--grey {
+
+        .select__list,
+        .select__current {
+            @include breakpointMF(laptop) {
+                background-color: var(--Light-Grey, #F2F2F2);
+            }
+        }
+
+        .select__label {
+            @include breakpointMF(laptop) {
+                @include hoverActive() {
+                    background-color: var(--Grey-2, #B3B3B3);
+                }
+
+            }
+        }
+    }
 }
 
 @keyframes slideDown {

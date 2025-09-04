@@ -1,0 +1,62 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+
+    @include breakpointMF(laptop) {
+        gap: 1.6rem;
+    }
+
+    &>i {
+        display: grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+
+        background-color: var(--Light-Grey, #F2F2F2);
+        border: 1px solid var(--Grey-2, #B3B3B3);
+        border-radius: 0.4rem;
+
+        transition-property: background;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+
+        @include breakpointMF(laptop) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            fill: var(--White, #FFF);
+            opacity: 0;
+
+            transition-property: fill, opacity;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+        }
+    }
+
+    &>span {
+        @include t2;
+    }
+
+    &>input[type="checkbox"] {
+        @include visuallyHidden();
+
+        &:checked {
+            &+i {
+                background-color: var(--Green, #52CC52);
+
+                .icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}

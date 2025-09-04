@@ -1,0 +1,46 @@
+.selection-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    flex-shrink: 0;
+    height: 2.4rem;
+    padding-inline: 0.4rem;
+
+    color: var(--Grey-1, #666);
+    background-color: var(--Light-Grey, #F2F2F2);
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    @include breakpointMF(laptop) {
+        gap: 0.8rem;
+
+        height: 3.6rem;
+        padding-inline: 0.8rem;
+
+        @include hover {
+            background-color: var(--Grey-2, #B3B3B3);
+        }
+    }
+
+    &__value {
+        @include b3;
+        white-space: nowrap;
+    }
+
+    &__icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        flex-shrink: 0;
+        fill: var(--Grey-1, #666);
+
+        @include breakpointMF(laptop) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+}

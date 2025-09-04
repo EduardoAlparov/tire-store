@@ -291,29 +291,3 @@
         }
     }
 }
-
-.tab {
-    display: grid;
-    place-items: center;
-
-    height: 4.8rem;
-    padding: 1.2rem 1.6rem;
-
-    color: var(--Grey-2, #B3B3B3);
-    text-align: center;
-
-    border: 2px solid transparent;
-    backdrop-filter: blur(5px);
-    border-radius: 0.8rem;
-
-    @include b2;
-
-    &.tab--active {
-        border-color: var(--Red, #D42111);
-        pointer-events: none;
-    }
-
-    @include hover {
-        color: var(--White, #FFF);
-    }
-}

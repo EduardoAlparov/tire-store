@@ -22,3 +22,8 @@ npm run dev
 ```bash
 npm run build
 ```
+
+# Ссылки на верстку
+# - общие:
+## Страница - [Главная.](https://eduardoalparov.github.io/tire-store/)
+## Страница - [Каталог.](https://eduardoalparov.github.io/tire-store/catalog.html)
