@@ -5,7 +5,7 @@ export default () => {
         tab.addEventListener('click', (e) => {
             e.preventDefault();
 
-            const ELEMENT_CLASS = 'selection__tab';
+            const ELEMENT_CLASS = 'js-navbar-tab';
             const ACTIVE_CLASS = 'tab--active';
             const dataValue = tab.dataset.navbutton;
             const activeItem = tab.parentElement.querySelector(`.${ELEMENT_CLASS}.${ACTIVE_CLASS}`);

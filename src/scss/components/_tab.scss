@@ -1,5 +1,7 @@
 .tab {
     display: grid;
+    grid-auto-flow: column;
+    gap: 0.5ch;
     place-items: center;
 
     height: 4.8rem;
@@ -19,6 +21,10 @@
     white-space: nowrap;
 
     @include b2;
+
+    &__count {
+        @extend ._counter;
+    }
 
     &.tab--active {
         border-color: var(--Red, #D42111);

@@ -192,7 +192,14 @@
         border-radius: 0.4rem;
     }
 
-
+    &__card-checkbox {
+        &.card-checkbox {
+            @include breakpoint(tablet) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
 
     &:not(.card--discount) {
 

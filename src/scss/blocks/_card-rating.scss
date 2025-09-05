@@ -1,13 +1,16 @@
 .card-rating {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 0.8rem;
 
     &__value {
         @include b3;
 
         @include breakpointMF(laptop) {
+            display: none;
+        }
+
+        @include breakpoint(tablet) {
             display: none;
         }
     }
@@ -22,11 +25,7 @@
         }
     }
 
-    &__counter-text {
-        @include breakpointMF(laptop) {
-            display: none;
-        }
-    }
+    &__counter-text {}
 
     &__stars {
         --precntage: 0%;
@@ -42,10 +41,6 @@
         gap: 0.4rem;
 
         width: max-content;
-
-        @include breakpoint(tablet) {
-            margin-right: auto;
-        }
     }
 
     &__star {
@@ -80,10 +75,46 @@
                 }
             }
         }
+    }
 
-        &:not(:first-child) {
+    &__tag {
+        margin-right: 0.8rem;
+
+        &.card-feature {
+            @include breakpointMF(laptop) {
+                height: 2.4rem;
+                padding-inline: 0.8rem;
+            }
+        }
+    }
+
+    &:not(.card-rating--expand) {
+        justify-content: space-between;
+
+        .card-rating__value {
             @include breakpoint(tablet) {
-                @include visuallyHidden();
+                display: block;
+            }
+        }
+
+        .card-rating__stars {
+
+            @include breakpoint(tablet) {
+                margin-right: auto;
+            }
+        }
+
+        .card-rating__star {
+            &:not(:first-child) {
+                @include breakpoint(tablet) {
+                    @include visuallyHidden();
+                }
+            }
+        }
+
+        .card-rating__counter-text {
+            @include breakpointMF(laptop) {
+                display: none;
             }
         }
     }

@@ -22,6 +22,7 @@ import renderRating from './renderRating';
 import carouselSwiper from './carouselSwiper';
 import selectContol from './selectContol';
 import catalogPageControl from './catalogPageControl';
+import productSwiper from './productSwiper';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     carouselSwiper();
     selectContol();
     catalogPageControl();
+    productSwiper();
 });
 
 document.addEventListener('lazyloaded', () => {

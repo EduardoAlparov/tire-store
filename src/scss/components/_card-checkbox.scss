@@ -2,10 +2,9 @@
     display: grid;
     place-items: center;
 
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     flex-shrink: 0;
-
 
     transition-property: background;
     transition-duration: 0.3s;
@@ -40,6 +39,16 @@
 
         .card-checkbox__icon {
             fill: var(--White, #fff);
+        }
+    }
+
+    &.card-checkbox--oulined {
+        background-color: transparent;
+        border: 1px solid var(--Black, #141414);
+        border-radius: 0.8rem;
+
+        .card-checkbox__icon {
+            fill: var(--Black, #141414);
         }
     }
 }

@@ -3,8 +3,8 @@
     place-content: center;
     place-items: center;
 
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 4rem;
+    height: 4rem;
     flex-shrink: 0;
     overflow: hidden;
 
@@ -16,6 +16,11 @@
     transition-duration: 0.3s;
     transition-timing-function: ease;
     cursor: pointer;
+
+    @include breakpointMF(laptop) {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
 
     .icon {
         width: 2.4rem;

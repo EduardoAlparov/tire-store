@@ -39,4 +39,10 @@
         max-width: 100%;
         // overflow: hidden;
     }
+
+    &__product-ordering {
+        position: sticky;
+        top: 10rem;
+        align-self: flex-start;
+    }
 }
