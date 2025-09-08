@@ -169,6 +169,18 @@
         }
     }
 
+    &__breadcrumbs {
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 0;
+        right: 0;
+        display: none;
+
+        @include breakpointMF(laptop) {
+            display: block;
+        }
+    }
+
     &.page-header--fixed {
         position: fixed;
 

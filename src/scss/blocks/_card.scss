@@ -4,8 +4,6 @@
     border-radius: 0.8rem;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
 
-
-
     @include breakpointMF(laptop) {
         border-width: 0.8rem;
         box-shadow: none;
@@ -164,6 +162,8 @@
     &__desc {
         @include maxSizeText(2);
         @include t3;
+        height: 2lh;
+
         text-transform: uppercase;
         color: inherit;
 
@@ -207,10 +207,6 @@
         .card__discont-price {
             display: none;
         }
-
-        .card-feature--red {
-            display: none;
-        }
     }
 
     &.card--discount {
@@ -222,10 +218,6 @@
         .card__old-price,
         .card__discont-price {
             display: block;
-        }
-
-        .card-feature--green {
-            display: none;
         }
     }
 }

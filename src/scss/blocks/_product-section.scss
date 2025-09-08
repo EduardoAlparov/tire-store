@@ -23,6 +23,16 @@
                 align-items: stretch;
             }
         }
+
+        .grid-layout__container--mobile-grid {
+            @include breakpoint(tablet) {
+                display: grid;
+                grid-template-areas: "product-info"
+                    "product-order"
+                    "product-about";
+                grid-template-columns: 100%;
+            }
+        }
     }
 
     &__back-header {
@@ -47,121 +57,6 @@
         display: flex;
         align-items: center;
         gap: 0.8rem;
-    }
-}
-
-.product-ordering {
-    @extend ._round-white-frame;
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.6rem;
-
-
-    @include breakpoint(tablet) {
-        align-self: stretch;
-        padding: 2.4rem 1.6rem;
-        background-color: var(--White, #FFF);
-        border-radius: 1.6rem;
-    }
-
-    @include breakpoint(mobile) {
-        max-width: unset;
-    }
-
-    @include breakpointMF(laptop) {
-        gap: 2.4rem;
-    }
-
-    &__name {
-        @include h3;
-
-        margin-bottom: 0.8rem;
-    }
-
-    &__article {
-        @include t2;
-        color: var(--Grey-2, #B3B3B3);
-    }
-
-    &__rating {
-        margin-top: 1.2rem;
-
-        @include breakpointMF(laptop) {
-            margin-top: 2.4rem;
-        }
-    }
-
-    &__header {
-
-        .product-ordering__rating,
-        .product-ordering__name {
-            @include breakpointMF(laptop) {
-                display: none;
-            }
-        }
-    }
-
-    &__controls {
-        padding-bottom: 1.6rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-
-        @include breakpointMF(laptop) {
-            padding-bottom: 2.4rem;
-        }
-    }
-
-    &__delivery-status,
-    &__availability-status {
-        @include t2;
-        display: block;
-    }
-
-    &__availability-status {
-        color: var(--Green, #52CC52);
-        margin-bottom: 0.8rem;
-    }
-
-    &__delivery-status {
-        color: var(--Orange, #FF8000);
-    }
-
-    &__place {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        width: 100%;
-        height: 4rem;
-        padding: 0.9rem 1.2rem;
-        margin-top: 0.8rem;
-
-        background-color: var(--Light-Grey, #F2F2F2);
-        border-radius: 0.8rem;
-        color: var(--Green, #52CC52);
-        @include t2;
-
-        @include breakpointMF(laptop) {
-            height: 4.8rem;
-            padding: 1.2rem 1.6rem;
-        }
-    }
-
-    &__availability-count {
-        display: inline-flex;
-        gap: 0.5ch;
-
-        &::after {
-            content: "шт."
-        }
-
-        &.product-ordering__availability-count--symbol {
-            &::before {
-                content: "\003E";
-            }
-
-        }
     }
 }
 
@@ -250,81 +145,6 @@
     }
 }
 
-.ordering-controls {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.8rem;
-
-    @include breakpointMF(mobile) {
-        grid-template-columns: 0.5fr auto;
-    }
-
-    @include breakpointMF(laptop) {
-        gap: 1.6rem;
-        grid-template-columns: 1fr auto;
-    }
-
-    &__main-cell {
-        display: grid;
-        place-content: stretch;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-
-        &>input[type="checkbox"] {
-            @include visuallyHidden();
-
-            &:checked {
-                &~.ordering-controls__to-cart-button {
-                    display: none;
-                }
-
-                &~.ordering-controls__counter {
-                    display: flex;
-                }
-            }
-        }
-    }
-
-    &__counter,
-    &__to-cart-button {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-
-    &__counter {
-        display: none;
-        align-items: stretch;
-        gap: 0.8rem;
-    }
-
-    &__input {
-        flex: 1 1 100%;
-
-        &>input {
-            width: 100%;
-            height: 100%;
-
-            @include b2;
-
-            color: var(--Black, #141414);
-            text-align: center;
-
-            background-color: var(--Light-Grey, #F2F2F2);
-            border-radius: 0.8rem;
-        }
-    }
-
-    &__cell {
-        display: flex;
-        align-items: stretch;
-        gap: 0.8rem;
-
-        @include breakpointMF(laptop) {
-            gap: 1.6rem;
-        }
-    }
-}
-
 .product-carousel {
     display: flex;
     flex-direction: column;
@@ -389,19 +209,18 @@
         width: 100%;
         transform: translateX(-50%);
 
-        --swiper-pagination-color: var(--Grey-2, #B3B3B3);
-        ;
+        --swiper-pagination-color: var(--Dark-gray, #242424);
         --swiper-pagination-left: auto;
         --swiper-pagination-right: 4px;
         --swiper-pagination-bottom: 4px;
         --swiper-pagination-top: auto;
         --swiper-pagination-fraction-color: inherit;
-        --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+        --swiper-pagination-progressbar-bg-color: var(--Grey-2, #B3B3B3);
         --swiper-pagination-progressbar-size: 4px;
         --swiper-pagination-bullet-size: 8px;
         --swiper-pagination-bullet-width: 8px;
         --swiper-pagination-bullet-height: 8px;
-        --swiper-pagination-bullet-inactive-color: #000;
+        --swiper-pagination-bullet-inactive-color: var(--Dark-gray, #242424);
         --swiper-pagination-bullet-inactive-opacity: 0.2;
         --swiper-pagination-bullet-opacity: 1;
         --swiper-pagination-bullet-horizontal-gap: 4px;
@@ -465,6 +284,7 @@
     display: flex;
     align-items: stretch;
     flex-direction: column;
+    overflow: hidden;
     gap: 2.4rem;
 
     @include breakpointMF(laptop) {
@@ -479,6 +299,29 @@
     }
 
     &__navbar {
+        &.selection__navbar {
+            @include breakpoint(tablet) {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow: auto;
+                margin-inline: -1.6% -1.6%;
+                padding-inline: 1.6% 1.6%;
+
+                @include noScrollbar();
+            }
+        }
+
+        .selection__tab {
+            &.tab {
+                &.tab--active {
+
+                    @include breakpoint(tablet) {
+                        order: -1;
+                    }
+                }
+            }
+        }
+
         .tab {
             color: var(--Grey-1, #666);
 
@@ -613,23 +456,13 @@
         }
     }
 
-}
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
 
-.review-item {
-    &__body {
-        display: flex;
-        align-items: stretch;
-        flex-direction: column;
-        gap: 1.6rem;
-
-        padding: 2.4rem 1.6rem;
-        background-color: var(--Light-Grey, #F2F2F2);
-        border-radius: 1.2rem;
-
-        @include breakpointMF(laptop) {
-            gap: 2.4rem;
-            padding: 2.4rem;
-            border-radius: 1.6rem;
+            @include breakpointMF(laptop) {
+                margin-bottom: 1.6rem;
+            }
         }
     }
 }

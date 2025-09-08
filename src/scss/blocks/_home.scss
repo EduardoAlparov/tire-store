@@ -163,6 +163,10 @@
             }
         }
     }
+
+    &.home--no-height {
+        min-height: unset;
+    }
 }
 
 .home-slide {

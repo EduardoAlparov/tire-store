@@ -33,7 +33,7 @@
         </div>
 
         <div class="product-section__layout grid-layout">
-            <div class="grid-layout__container">
+            <div class="grid-layout__container grid-layout__container--mobile-grid">
                 <div class="grid-layout__small-cell grid-layout__product-ordering product-ordering">
                     <div class="product-ordering__header">
                         <p class="product-ordering__name">
@@ -74,18 +74,19 @@
                         <div class="ordering-controls__main-cell">
                             <input type="checkbox" name="hidden-input-for-toggle-counter" id="input-for-toggle-counter">
 
-                            <div class="ordering-controls__counter">
-                                <button
-                                    class="ordering-controls__minus ordering-controls__btn card-checkbox card-checkbox--oulined">
+                            <div class="ordering-controls__counter js-order-counter">
+                                <button type="button"
+                                    class="ordering-controls__minus ordering-controls__btn card-checkbox">
                                     <svg aria-hidden="true" class="card-checkbox__icon">
                                         <use xlink:href="#bx-minus"></use>
                                     </svg>
                                 </button>
                                 <div class="ordering-controls__input">
-                                    <input type="number" name="order-counter-input" id="order-counter-input" value="1">
+                                    <input disabled type="number" name="order-counter-input" id="order-counter-input"
+                                        value="1">
                                 </div>
-                                <button
-                                    class="ordering-controls__plus ordering-controls__btn card-checkbox card-checkbox--oulined">
+                                <button type="button"
+                                    class="ordering-controls__plus ordering-controls__btn card-checkbox">
                                     <svg aria-hidden="true" class="card-checkbox__icon">
                                         <use xlink:href="#bx-plus"></use>
                                     </svg>
@@ -96,18 +97,24 @@
                                 В корзину
                             </label>
                         </div>
+
                         <div class="ordering-controls__cell">
-                            <button type="button" class="ordering-controls__checkbox card-checkbox">
+                            <label type="button" class="ordering-controls__checkbox card-checkbox">
+                                <input type="checkbox" name="add-to-favorite" id="">
                                 <svg aria-hidden="true" class="card-checkbox__icon">
                                     <use xlink:href="#bx-heart"></use>
                                 </svg>
-                            </button>
+                                <svg aria-hidden="true" class="card-checkbox__icon card-checkbox__icon--stroke">
+                                    <use xlink:href="#bx-heart-stroke"></use>
+                                </svg>
+                            </label>
 
-                            <button type="button" class="ordering-controls__checkbox card-checkbox">
+                            <label type="button" class="ordering-controls__checkbox card-checkbox">
+                                <input type="checkbox" name="add-to-compare" id="">
                                 <svg aria-hidden="true" class="card-checkbox__icon">
                                     <use xlink:href="#bx-bar-chart"></use>
                                 </svg>
-                            </button>
+                            </label>
                         </div>
                     </div>
 
@@ -134,491 +141,1044 @@
                     </div>
                 </div>
 
-                <div class="grid-layout__big-cell grid-layout__product-info product-info">
-                    <div class="product-info__grid">
-                        <div class="product-info__carousel product-carousel js-product-carousel">
-                            <div class="product-carousel__main-swiper swiper">
-                                <ul class="product-carousel__swiper-wrapper swiper-wrapper">
-                                    <li class="product-carousel__swiper-slide swiper-slide">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/carousel/wheel.webp" />
-                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
-                                        </picture>
-                                    </li>
-                                    <li class="product-carousel__swiper-slide swiper-slide">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/carousel/wheel.webp" />
-                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
-                                        </picture>
-                                    </li>
-                                </ul>
+                <div class="grid-layout__big-cell grid-layout__big-cell--contents">
+                    <div class="grid-layout__product-info product-info">
+                        <div class="product-info__grid">
+                            <div class="product-info__carousel product-carousel js-product-carousel">
+                                <div class="product-carousel__main-swiper swiper">
+                                    <ul class="product-carousel__swiper-wrapper swiper-wrapper">
+                                        <li class="product-carousel__swiper-slide swiper-slide">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                                                <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                            </picture>
+                                        </li>
+                                        <li class="product-carousel__swiper-slide swiper-slide">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                                                <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                            </picture>
+                                        </li>
+                                    </ul>
 
-                                <div class="product-carousel__pagination">
-                                    <div class="swiper-pagination">
-
+                                    <div class="product-carousel__pagination">
+                                        <div class="swiper-pagination"></div>
                                     </div>
+                                </div>
+
+                                <div class="product-carousel__thumbs-swiper swiper js-carousels-thumbs">
+                                    <ul class="product-carousel__swiper-wrapper swiper-wrapper">
+                                        <li class="product-carousel__thumb-slide swiper-slide">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                                                <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                            </picture>
+                                        </li>
+                                        <li class="product-carousel__thumb-slide swiper-slide">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                                                <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                            </picture>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
 
-                            <div class="product-carousel__thumbs-swiper swiper js-carousels-thumbs">
-                                <ul class="product-carousel__swiper-wrapper swiper-wrapper">
-                                    <li class="product-carousel__thumb-slide swiper-slide">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/carousel/wheel.webp" />
-                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
-                                        </picture>
-                                    </li>
-                                    <li class="product-carousel__thumb-slide swiper-slide">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/carousel/wheel.webp" />
-                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
-                                        </picture>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="product-info__table product-info__table--desktop">
-                            <div class="product-info__header product-ordering__header">
-                                <p class="product-ordering__name">
-                                    WESTLAKE 710/70R42 173A8/173B
-                                </p>
-                                <p class="product-ordering__article">
-                                    Артикул: 04603720196280
-                                </p>
-                                <div class="product-ordering__rating card-rating card-rating--expand" data-rating="4.5">
-                                    <div class="card-rating__tag card-feature card-feature--red">Хит</div>
-                                    <span class="card-rating__value">
-                                        4.5
-                                    </span>
-                                    <ul class="card-rating__stars">
-                                        <li class="card-rating__star"></li>
-                                        <li class="card-rating__star"></li>
-                                        <li class="card-rating__star"></li>
-                                        <li class="card-rating__star"></li>
-                                        <li class="card-rating__star"></li>
-                                    </ul>
-
-                                    <a href="#" class="card-rating__counter blue-link">
-                                        999
-                                        <span class="card-rating__counter-text">
-                                            отзывов
+                            <div class="product-info__table product-info__table--desktop">
+                                <div class="product-info__header product-ordering__header">
+                                    <p class="product-ordering__name">
+                                        WESTLAKE 710/70R42 173A8/173B
+                                    </p>
+                                    <p class="product-ordering__article">
+                                        Артикул: 04603720196280
+                                    </p>
+                                    <div class="product-ordering__rating card-rating card-rating--expand"
+                                        data-rating="4.5">
+                                        <div class="card-rating__tag card-feature card-feature--red">Хит</div>
+                                        <span class="card-rating__value">
+                                            4.5
                                         </span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <ul class="product-info__list">
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Категория:</span>
-                                    <span class="product-info__item-value">
-                                        Легкогрузовые
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Бренд:</span>
-                                    <span class="product-info__item-value">
-                                        Westlake
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Модель:</span>
-                                    <span class="product-info__item-value">
-                                        SL309
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Профиль:</span>
-                                    <span class="product-info__item-value">
-                                        185.00
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Ширина шины:</span>
-                                    <span class="product-info__item-value">
-                                        75.00
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Диаметр:</span>
-                                    <span class="product-info__item-value">
-                                        16C
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Вес:</span>
-                                    <span class="product-info__item-value">
-                                        12 кг
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Типоразмер:</span>
-                                    <span class="product-info__item-value">
-                                        185/75 R16
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Индекс нагрузки:</span>
-                                    <span class="product-info__item-value">
-                                        104/102
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Евроэтикетка:</span>
-                                    <div class="product-info__item-value">
-                                        <ul class="card__features">
-                                            <li class="card__feature card-feature card-feature--black">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#sun"></use>
-                                                </svg>
-                                            </li>
-                                            <li class="card__feature card-feature card-feature--orange">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#bx-fuel"></use>
-                                                </svg>
-                                                E
-                                            </li>
-                                            <li class="card__feature card-feature card-feature--blue">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#bx-rain"></use>
-                                                </svg>
-                                                B
-                                            </li>
-                                            <li class="card__feature card-feature card-feature--green">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#bx-volume"></use>
-                                                </svg>
-                                                70
-                                            </li>
+                                        <ul class="card-rating__stars">
+                                            <li class="card-rating__star"></li>
+                                            <li class="card-rating__star"></li>
+                                            <li class="card-rating__star"></li>
+                                            <li class="card-rating__star"></li>
+                                            <li class="card-rating__star"></li>
                                         </ul>
+
+                                        <a href="#" class="card-rating__counter blue-link">
+                                            999
+                                            <span class="card-rating__counter-text">
+                                                отзывов
+                                            </span>
+                                        </a>
                                     </div>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Сезон:</span>
-                                    <span class="product-info__item-value">
-                                        Всесезонные
-                                    </span>
-                                </li>
-                            </ul>
+                                </div>
+
+                                <ul class="product-info__list">
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Категория:</span>
+                                        <span class="product-info__item-value">
+                                            Легкогрузовые
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Бренд:</span>
+                                        <span class="product-info__item-value">
+                                            Westlake
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Модель:</span>
+                                        <span class="product-info__item-value">
+                                            SL309
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Профиль:</span>
+                                        <span class="product-info__item-value">
+                                            185.00
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Ширина шины:</span>
+                                        <span class="product-info__item-value">
+                                            75.00
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Диаметр:</span>
+                                        <span class="product-info__item-value">
+                                            16C
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Вес:</span>
+                                        <span class="product-info__item-value">
+                                            12 кг
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Типоразмер:</span>
+                                        <span class="product-info__item-value">
+                                            185/75 R16
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Индекс нагрузки:</span>
+                                        <span class="product-info__item-value">
+                                            104/102
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Евроэтикетка:</span>
+                                        <div class="product-info__item-value">
+                                            <ul class="card__features">
+                                                <li class="card__feature card-feature card-feature--black">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#type-summer"></use>
+                                                    </svg>
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--black">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#type-multi"></use>
+                                                    </svg>
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--black">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#type-s"></use>
+                                                    </svg>
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--black">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#type-winter"></use>
+                                                    </svg>
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--orange">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#bx-fuel"></use>
+                                                    </svg>
+                                                    E
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--blue">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#bx-rain"></use>
+                                                    </svg>
+                                                    B
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--green">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#bx-volume"></use>
+                                                    </svg>
+                                                    70
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Сезон:</span>
+                                        <span class="product-info__item-value">
+                                            Всесезонные
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="grid-layout__container">
-                <div class="grid-layout__small-cell"></div>
-                <div class="grid-layout__big-cell grid-layout__product-about product-about">
-                    <div class="product-about__navbar selection__navbar">
-                        <button type="button" class="selection__tab tab tab--active js-navbar-tab"
-                            data-navbutton="for-selection-about">
-                            Описание
-                        </button>
-                        <button type="button" class="selection__tab tab js-navbar-tab"
-                            data-navbutton="for-selection-chars">
-                            Характеристики
-                        </button>
-                        <button type="button" class="selection__tab tab js-navbar-tab"
-                            data-navbutton="for-selection-reviews">
-                            Отзывы
-                            <span class="tab__count">999</span>
-                        </button>
-                        <button type="button" class="selection__tab tab js-navbar-tab"
-                            data-navbutton="for-selection-media">
-                            Фото и видео
-                            <span class="tab__count">20</span>
-                        </button>
-                    </div>
+                    <div class="grid-layout__product-about product-about">
+                        <div class="product-about__navbar selection__navbar">
+                            <button type="button" class="selection__tab tab tab--active js-navbar-tab"
+                                data-navbutton="for-selection-about">
+                                Описание
+                            </button>
+                            <button type="button" class="selection__tab tab js-navbar-tab"
+                                data-navbutton="for-selection-chars">
+                                Характеристики
+                            </button>
+                            <button type="button" class="selection__tab tab js-navbar-tab"
+                                data-navbutton="for-selection-reviews">
+                                Отзывы
+                                <span class="tab__count">999</span>
+                            </button>
+                            <button type="button" class="selection__tab tab js-navbar-tab"
+                                data-navbutton="for-selection-media">
+                                Фото и видео
+                                <span class="tab__count">20</span>
+                            </button>
+                        </div>
 
-                    <div class="product-about__body">
-                        <div class="product-about__item product-about__desc" data-navwindow="for-selection-about">
-                            <h3>
-                                Описание WestLake SL309
-                            </h3>
-                            <ul>
-                                <li>
-                                    <h4>
-                                        Двойной металлокорд и брекер
-                                    </h4>
-                                    <p>
-                                        В отличие  от своих конкурентов, всесезонная шина для внедорожников WestLake
-                                        SL309 имеет более высокие эксплуатационные характеристики. Хороших показателей
-                                        характеристик шины удалось добиться благодаря использованию передовых
-                                        технологий, а также опыту и знаниям иностранных специалистов, принявших в ее
-                                        разработке активное участие.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>
-                                        Хорошие тягово-сцепные свойства на любом покрытии
-                                    </h4>
-                                    <p>
-                                        Дизайн протектора этой шины характеризуется наличием отдельно стоящих блоков. В
-                                        центральной части они расположены продольно, создавая хорошую курсовую
-                                        устойчивость, а также снижая сопротивление качению. Дизайн плечевых зон содержит
-                                        более крупные протекторные элементы. Поперечное расположение в паре с высокой
-                                        жесткостью позволяет этим блокам придавать шине устойчивость при маневрировании,
-                                        а также эффективность при ускорении и торможении.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>
-                                        Основные особенности WestLake SL309
-                                    </h4>
-                                    <ul>
-                                        <li>
-                                            усиленный каркас с двойными металлокордом и брекером;
+                        <div class="product-about__body">
+                            <div class="product-about__item product-about__desc" data-navwindow="for-selection-about">
+                                <h3>
+                                    Описание WestLake SL309
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <h4>
+                                            Двойной металлокорд и брекер
+                                        </h4>
+                                        <p>
+                                            В отличие  от своих конкурентов, всесезонная шина для внедорожников WestLake
+                                            SL309 имеет более высокие эксплуатационные характеристики. Хороших
+                                            показателей
+                                            характеристик шины удалось добиться благодаря использованию передовых
+                                            технологий, а также опыту и знаниям иностранных специалистов, принявших в ее
+                                            разработке активное участие.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            Хорошие тягово-сцепные свойства на любом покрытии
+                                        </h4>
+                                        <p>
+                                            Дизайн протектора этой шины характеризуется наличием отдельно стоящих
+                                            блоков. В
+                                            центральной части они расположены продольно, создавая хорошую курсовую
+                                            устойчивость, а также снижая сопротивление качению. Дизайн плечевых зон
+                                            содержит
+                                            более крупные протекторные элементы. Поперечное расположение в паре с
+                                            высокой
+                                            жесткостью позволяет этим блокам придавать шине устойчивость при
+                                            маневрировании,
+                                            а также эффективность при ускорении и торможении.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            Основные особенности WestLake SL309
+                                        </h4>
+                                        <ul>
+                                            <li>
+                                                усиленный каркас с двойными металлокордом и брекером;
+                                            </li>
+                                            <li>
+                                                универсальный протекторный рисунок, оптимизированный, как для шоссе, так
+                                                и
+                                                для грунтовых покрытий;
+                                            </li>
+                                            <li>
+                                                устойчивость к аквапланированию, благодаря множеству поперечных и
+                                                продольных
+                                                дренажных канавок.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-about__item product-about__table display-none"
+                                data-navwindow="for-selection-chars">
+                                <h3>
+                                    Характеристики
+                                </h3>
+
+                                <ul class="product-about__table-list product-info__list">
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Категория:</span>
+                                        <span class="product-info__item-value">
+                                            Легкогрузовые
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Бренд:</span>
+                                        <span class="product-info__item-value">
+                                            Westlake
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Модель:</span>
+                                        <span class="product-info__item-value">
+                                            SL309
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Профиль:</span>
+                                        <span class="product-info__item-value">
+                                            185.00
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Ширина шины:</span>
+                                        <span class="product-info__item-value">
+                                            75.00
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Диаметр:</span>
+                                        <span class="product-info__item-value">
+                                            16C
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Вес:</span>
+                                        <span class="product-info__item-value">
+                                            12 кг
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Типоразмер:</span>
+                                        <span class="product-info__item-value">
+                                            185/75 R16
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Индекс нагрузки:</span>
+                                        <span class="product-info__item-value">
+                                            104/102
+                                        </span>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Евроэтикетка:</span>
+                                        <div class="product-info__item-value">
+                                            <ul class="card__features">
+                                                <li class="card__feature card-feature card-feature--black">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#sun"></use>
+                                                    </svg>
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--orange">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#bx-fuel"></use>
+                                                    </svg>
+                                                    E
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--blue">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#bx-rain"></use>
+                                                    </svg>
+                                                    B
+                                                </li>
+                                                <li class="card__feature card-feature card-feature--green">
+                                                    <svg aria-hidden="true" class="icon">
+                                                        <use xlink:href="#bx-volume"></use>
+                                                    </svg>
+                                                    70
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="product-info__list-item">
+                                        <span class="product-info__item-key">Сезон:</span>
+                                        <span class="product-info__item-value">
+                                            Всесезонные
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-about__item product-about__reviews product-reviews display-none"
+                                data-navwindow="for-selection-reviews">
+                                <div class="product-reviews__header">
+                                    <div class="product-reviews__title">
+                                        Отзывы
+                                        <span class="product-reviews__title-counter">
+                                            999
+                                        </span>
+                                    </div>
+
+                                    <div class="product-reviews__controls">
+                                        <button type="button" class="product-reviews__add-review simple-btn">
+                                            Оставить отзыв
+                                        </button>
+
+                                        <div class="product-reviews__select-wrapper">
+                                            <button type="button"
+                                                class="product-reviews__sorting catalog-link catalog-link--icon">
+                                                <svg aria-hidden="true" class="catalog-link__icon">
+                                                    <use xlink:href="#bx-sort"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="product-reviews__select select select--grey js-select">
+                                                <button class="select__current" type="button">Сначала новые</button>
+                                                <div class="select__dropdown">
+                                                    <div class="select__header">
+                                                        <div class="select__title">
+                                                            Сначала новые
+                                                        </div>
+                                                        <svg aria-hidden="true" class="select__header-close icon">
+                                                            <use xlink:href="#bx-close"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="select__list">
+                                                        <li class="select__item">
+                                                            <label class="select__label" for="radio-select-sort-new">
+                                                                <input checked type="radio" name="sort-select"
+                                                                    id="radio-select-sort-new">
+                                                                <span class="select__text">
+                                                                    Сначала новые
+                                                                </span>
+                                                                <svg aria-hidden="true" class="icon select__tick">
+                                                                    <use xlink:href="#bx-check"></use>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                        <li class="select__item">
+                                                            <label class="select__label" for="radio-select-sort-old">
+                                                                <input type="radio" name="sort-select"
+                                                                    id="radio-select-sort-old">
+                                                                <span class="select__text">
+                                                                    Сначала старые
+                                                                </span>
+                                                                <svg aria-hidden="true" class="icon select__tick">
+                                                                    <use xlink:href="#bx-check"></use>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                        <li class="select__item">
+                                                            <label class="select__label"
+                                                                for="radio-select-sort-popular">
+                                                                <input type="radio" name="sort-select"
+                                                                    id="radio-select-sort-popular">
+                                                                <span class="select__text">
+                                                                    По популярности
+                                                                </span>
+                                                                <svg aria-hidden="true" class="icon select__tick">
+                                                                    <use xlink:href="#bx-check"></use>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                    <button type="button" class="select__accept simple-btn">
+                                                        Подтвердить
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="product-reviews__list">
+                                    <li class="product-reviews__item review-item">
+                                        <div class="review-item__body">
+                                            <div class="review-item__header">
+                                                <div class="review-item__user-info">
+                                                    <div class="review-item__userpic">
+                                                        <div class="review-item__userpic-letter">
+                                                            Д
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="review-item__username">
+                                                        Дмитрий Иванов
+                                                    </div>
+
+                                                    <div class="review-item__average">4.8</div>
+                                                </div>
+
+                                                <div class="review-item__date review-item__date--desktop">
+                                                    27 января 2023
+                                                </div>
+                                            </div>
+                                            <div class="review-item__text-wrapper">
+                                                <div class="review-item__date review-item__date--mobile">
+                                                    27 января 2023
+                                                </div>
+                                                <p class="review-item__text">
+                                                    Хорошая резина за эту цену. На машине передвигается жена, я тоже
+                                                    бывает
+                                                    иногда сажусь за руль , конечно же это не гоночный болид, но на этих
+                                                    колесах едет неплохо, предсказуемо. Колеса летние, поэтому все
+                                                    зимние
+                                                    характеристики хотел поставить одну звезду, но чтобы не портить
+                                                    средний
+                                                    бал , поставил пятерки.
+                                                </p>
+                                            </div>
+                                            <ul class="review-item__answers">
+                                                <li class="review-item__answer">
+                                                    <span class="review-item__answer-key">Автомобиль:</span>
+                                                    <span class="review-item__answer-value">Chevrolet</span>
+                                                </li>
+                                                <li class="review-item__answer">
+                                                    <span class="review-item__answer-key">Купите опять?:</span>
+                                                    <span class="review-item__answer-value">Скорее всего</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="review-item__ratings-wrapper">
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Управление на сухой дороге
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Комфорт при движении
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 80%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Стойкость к аквапланированию
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Качество изготовления
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 90%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Управление на мокрой дороге
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 80%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Бесшумность в движении
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Скоростные характеристики
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Курсовая устойчивость
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 60%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Эффективность торможения
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 95%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Износоустойчивость
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Оправданность цены
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="product-reviews__item review-item">
+                                        <div class="review-item__body">
+                                            <div class="review-item__header">
+                                                <div class="review-item__user-info">
+                                                    <div class="review-item__userpic">
+                                                        <div class="review-item__userpic-letter">
+                                                            Д
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="review-item__username">
+                                                        Дмитрий Иванов
+                                                    </div>
+
+                                                    <div class="review-item__average">4.8</div>
+                                                </div>
+
+                                                <div class="review-item__date review-item__date--desktop">
+                                                    27 января 2023
+                                                </div>
+                                            </div>
+                                            <div class="review-item__text-wrapper">
+                                                <div class="review-item__date review-item__date--mobile">
+                                                    27 января 2023
+                                                </div>
+                                                <p class="review-item__text">
+                                                    Хорошая резина за эту цену. На машине передвигается жена, я тоже
+                                                    бывает
+                                                    иногда сажусь за руль , конечно же это не гоночный болид, но на этих
+                                                    колесах едет неплохо, предсказуемо. Колеса летние, поэтому все
+                                                    зимние
+                                                    характеристики хотел поставить одну звезду, но чтобы не портить
+                                                    средний
+                                                    бал , поставил пятерки.
+                                                </p>
+                                            </div>
+                                            <ul class="review-item__answers">
+                                                <li class="review-item__answer">
+                                                    <span class="review-item__answer-key">Автомобиль:</span>
+                                                    <span class="review-item__answer-value">Chevrolet</span>
+                                                </li>
+                                                <li class="review-item__answer">
+                                                    <span class="review-item__answer-key">Купите опять?:</span>
+                                                    <span class="review-item__answer-value">Скорее всего</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="review-item__ratings-wrapper">
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Управление на сухой дороге
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Комфорт при движении
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 80%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Стойкость к аквапланированию
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Качество изготовления
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 90%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Управление на мокрой дороге
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 80%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Бесшумность в движении
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Скоростные характеристики
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Курсовая устойчивость
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 60%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Эффективность торможения
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 95%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Износоустойчивость
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Оправданность цены
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="product-reviews__item review-item">
+                                        <div class="review-item__body">
+                                            <div class="review-item__header">
+                                                <div class="review-item__user-info">
+                                                    <div class="review-item__userpic">
+                                                        <div class="review-item__userpic-letter">
+                                                            Д
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="review-item__username">
+                                                        Дмитрий Иванов
+                                                    </div>
+
+                                                    <div class="review-item__average">4.8</div>
+                                                </div>
+
+                                                <div class="review-item__date review-item__date--desktop">
+                                                    27 января 2023
+                                                </div>
+                                            </div>
+                                            <div class="review-item__text-wrapper">
+                                                <div class="review-item__date review-item__date--mobile">
+                                                    27 января 2023
+                                                </div>
+                                                <p class="review-item__text">
+                                                    Хорошая резина за эту цену. На машине передвигается жена, я тоже
+                                                    бывает
+                                                    иногда сажусь за руль , конечно же это не гоночный болид, но на этих
+                                                    колесах едет неплохо, предсказуемо. Колеса летние, поэтому все
+                                                    зимние
+                                                    характеристики хотел поставить одну звезду, но чтобы не портить
+                                                    средний
+                                                    бал , поставил пятерки.
+                                                </p>
+                                            </div>
+                                            <ul class="review-item__answers">
+                                                <li class="review-item__answer">
+                                                    <span class="review-item__answer-key">Автомобиль:</span>
+                                                    <span class="review-item__answer-value">Chevrolet</span>
+                                                </li>
+                                                <li class="review-item__answer">
+                                                    <span class="review-item__answer-key">Купите опять?:</span>
+                                                    <span class="review-item__answer-value">Скорее всего</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="review-item__ratings-wrapper">
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Управление на сухой дороге
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Комфорт при движении
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 80%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Стойкость к аквапланированию
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Качество изготовления
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 90%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Управление на мокрой дороге
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 80%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Бесшумность в движении
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Скоростные характеристики
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="review-item__ratings">
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 100%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Курсовая устойчивость
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 60%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Эффективность торможения
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 95%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Износоустойчивость
+                                                        </span>
+                                                    </div>
+                                                    <div class="review-item__rating">
+                                                        <span class="review-item__rating-line"
+                                                            style="--line-width: 70%;"></span>
+                                                        <span class="review-item__rating-text">
+                                                            Оправданность цены
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="product-about__item product-about__media product-media display-none"
+                                data-navwindow="for-selection-media">
+                                <div class="product-media__title product-reviews__title">
+                                    Фото и видео
+                                    <span class="product-reviews__title-counter">
+                                        20
+                                    </span>
+                                </div>
+                                <div class="product-media__item">
+                                    <div class="product-media__subtitle product-reviews__title">
+                                        Фото
+                                        <span class="product-reviews__title-counter">
+                                            13
+                                        </span>
+                                    </div>
+
+                                    <ul class="product-media__list">
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
                                         </li>
-                                        <li>
-                                            универсальный протекторный рисунок, оптимизированный, как для шоссе, так и
-                                            для грунтовых покрытий;
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
                                         </li>
-                                        <li>
-                                            устойчивость к аквапланированию, благодаря множеству поперечных и продольных
-                                            дренажных канавок.
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-1.png" alt="" data-fancybox>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--image">
+                                            <img class="lazy" src="./img/product/image-2.png" alt="" data-fancybox>
                                         </li>
                                     </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="product-about__item product-about__table display-none"
-                            data-navwindow="for-selection-chars">
-                            <h3>
-                                Характеристики
-                            </h3>
-
-                            <ul class="product-about__table-list product-info__list">
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Категория:</span>
-                                    <span class="product-info__item-value">
-                                        Легкогрузовые
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Бренд:</span>
-                                    <span class="product-info__item-value">
-                                        Westlake
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Модель:</span>
-                                    <span class="product-info__item-value">
-                                        SL309
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Профиль:</span>
-                                    <span class="product-info__item-value">
-                                        185.00
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Ширина шины:</span>
-                                    <span class="product-info__item-value">
-                                        75.00
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Диаметр:</span>
-                                    <span class="product-info__item-value">
-                                        16C
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Вес:</span>
-                                    <span class="product-info__item-value">
-                                        12 кг
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Типоразмер:</span>
-                                    <span class="product-info__item-value">
-                                        185/75 R16
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Индекс нагрузки:</span>
-                                    <span class="product-info__item-value">
-                                        104/102
-                                    </span>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Евроэтикетка:</span>
-                                    <div class="product-info__item-value">
-                                        <ul class="card__features">
-                                            <li class="card__feature card-feature card-feature--black">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#sun"></use>
-                                                </svg>
-                                            </li>
-                                            <li class="card__feature card-feature card-feature--orange">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#bx-fuel"></use>
-                                                </svg>
-                                                E
-                                            </li>
-                                            <li class="card__feature card-feature card-feature--blue">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#bx-rain"></use>
-                                                </svg>
-                                                B
-                                            </li>
-                                            <li class="card__feature card-feature card-feature--green">
-                                                <svg aria-hidden="true" class="icon">
-                                                    <use xlink:href="#bx-volume"></use>
-                                                </svg>
-                                                70
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="product-info__list-item">
-                                    <span class="product-info__item-key">Сезон:</span>
-                                    <span class="product-info__item-value">
-                                        Всесезонные
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="product-about__item product-about__reviews product-reviews display-none"
-                            data-navwindow="for-selection-reviews">
-                            <div class="product-reviews__header">
-                                <div class="product-reviews__title">
-                                    Отзывы
-                                    <span class="product-reviews__title-counter">
-                                        999
-                                    </span>
                                 </div>
-
-                                <div class="product-reviews__controls">
-                                    <button type="button" class="product-reviews__add-review simple-btn">
-                                        Оставить отзыв
-                                    </button>
-
-                                    <div class="product-reviews__select-wrapper">
-                                        <button type="button"
-                                            class="product-reviews__sorting catalog-link catalog-link--icon">
-                                            <svg aria-hidden="true" class="catalog-link__icon">
-                                                <use xlink:href="#bx-sort"></use>
-                                            </svg>
-                                        </button>
-                                        <div class="product-reviews__select select select--grey js-select">
-                                            <button class="select__current" type="button">Сначала новые</button>
-                                            <div class="select__dropdown">
-                                                <div class="select__header">
-                                                    <div class="select__title">
-                                                        Сначала новые
-                                                    </div>
-                                                    <svg aria-hidden="true" class="select__header-close icon">
-                                                        <use xlink:href="#bx-close"></use>
-                                                    </svg>
-                                                </div>
-                                                <ul class="select__list">
-                                                    <li class="select__item">
-                                                        <label class="select__label" for="radio-select-sort-new">
-                                                            <input checked type="radio" name="sort-select"
-                                                                id="radio-select-sort-new">
-                                                            <span class="select__text">
-                                                                Сначала новые
-                                                            </span>
-                                                            <svg aria-hidden="true" class="icon select__tick">
-                                                                <use xlink:href="#bx-check"></use>
-                                                            </svg>
-                                                        </label>
-                                                    </li>
-                                                    <li class="select__item">
-                                                        <label class="select__label" for="radio-select-sort-old">
-                                                            <input type="radio" name="sort-select"
-                                                                id="radio-select-sort-old">
-                                                            <span class="select__text">
-                                                                Сначала старые
-                                                            </span>
-                                                            <svg aria-hidden="true" class="icon select__tick">
-                                                                <use xlink:href="#bx-check"></use>
-                                                            </svg>
-                                                        </label>
-                                                    </li>
-                                                    <li class="select__item">
-                                                        <label class="select__label" for="radio-select-sort-popular">
-                                                            <input type="radio" name="sort-select"
-                                                                id="radio-select-sort-popular">
-                                                            <span class="select__text">
-                                                                По популярности
-                                                            </span>
-                                                            <svg aria-hidden="true" class="icon select__tick">
-                                                                <use xlink:href="#bx-check"></use>
-                                                            </svg>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="select__accept simple-btn">
-                                                    Подтвердить
-                                                </button>
-                                            </div>
-                                        </div>
+                                <div class="product-media__item">
+                                    <div class="product-media__subtitle product-reviews__title">
+                                        Видео
+                                        <span class="product-reviews__title-counter">
+                                            2
+                                        </span>
                                     </div>
+
+                                    <ul class="product-media__list">
+                                        <li class="product-media__media-item product-media__media--video video-box">
+                                            <label class="video-box__button">
+                                                <input type="checkbox" name="video-button-input" id="">
+                                                <svg aria-hidden="true" class="icon">
+                                                    <use xlink:href="#bx-play"></use>
+                                                </svg>
+                                            </label>
+                                            <div class="video-box__container">
+                                                <video poster="./img/product/poster.jpg" muted controls playsinline>
+                                                    <source src="./img/video.mp4" type="video/mp4">
+                                                    <source src="./img/video.webp" type="video/webp">
+                                                </video>
+                                            </div>
+                                        </li>
+                                        <li class="product-media__media-item product-media__media--video video-box">
+                                            <label class="video-box__button">
+                                                <input type="checkbox" name="video-button-input" id="">
+                                                <svg aria-hidden="true" class="icon">
+                                                    <use xlink:href="#bx-play"></use>
+                                                </svg>
+                                            </label>
+                                            <div class="video-box__container">
+                                                <video poster="./img/product/poster.jpg" muted controls playsinline>
+                                                    <source src="./img/video.mp4" type="video/mp4">
+                                                    <source src="./img/video.webp" type="video/webp">
+                                                </video>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <ul class="product-reviews__list">
-                                <li class="product-reviews__item review-item">
-                                    <div class="review-item__body">
-                                        <div class="review-item__header">
-                                            <div class="review-item__user-info">
-                                                <div class="review-item__userpic">
-                                                    <div class="review-item__userpic-letter">
-                                                        Д
-                                                    </div>
-                                                </div>
-
-                                                <div class="review-item__username">
-                                                    Дмитрий Иванов
-                                                </div>
-
-                                                <div class="review-item__average">4.8</div>
-                                            </div>
-
-                                            <div class="review-item__date review-item__date--desktop">
-                                                27 января 2023
-                                            </div>
-                                        </div>
-                                        <div class="review-item__text-wrapper">
-                                            <div class="review-item__date review-item__date--mobile">
-                                                27 января 2023
-                                            </div>
-                                            <p class="review-item__text">
-                                                Хорошая резина за эту цену. На машине передвигается жена, я тоже бывает
-                                                иногда сажусь за руль , конечно же это не гоночный болид, но на этих
-                                                колесах едет неплохо, предсказуемо. Колеса летние, поэтому все зимние
-                                                характеристики хотел поставить одну звезду, но чтобы не портить средний
-                                                бал , поставил пятерки.
-                                            </p>
-                                        </div>
-                                        <ul class="review-item__answers">
-                                            <li class="review-item__answer">
-                                                <span class="review-item__answer-key">Автомобиль:</span>
-                                                <span class="review-item__answer-value">Chevrolet</span>
-                                            </li>
-                                            <li class="review-item__answer">
-                                                <span class="review-item__answer-key">Купите опять?:</span>
-                                                <span class="review-item__answer-value">Скорее всего</span>
-                                            </li>
-                                        </ul>
-                                        <ul class="review-item__ratings">
-                                            <li class="review-item__rating">
-                                                <span class="review-item__rating-line" data-rating-value="100"></span>
-                                                <span class="review-item__rating-text">
-                                                    Управление на сухой дороге
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+</section>
+
+<section class="section section--white section__carousel-section carousel-section js-carousels-swiper"
+    data-slides-count="6">
+    <div class="carousel-section__site-container">
+        <div class="carousel-section__header">
+            <h2 class="carousel-section__title">
+                Лучшие предложения на шины
+            </h2>
+            <div class="carousel-section__navigation">
+                <button type="button" class="carousel-section__btn-prev carousel-btn carousel-btn--prev">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-prev"></use>
+                    </svg>
+                </button>
+                <button type="button" class="carousel-section__btn-next carousel-btn carousel-btn--next">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#bx-arrow-next"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel-section__body">
+            <div class="carousel-section__swiper swiper">
+                <ul class="carousel-section__swiper-wrappper swiper-wrapper">
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=true cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=true cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=true cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=true cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=false cardClass="carousel-section__card"}}
+                    </li>
+                    <li class="carousel-section__swiper-slide swiper-slide">
+                        {{>card discountCard=true cardClass="carousel-section__card"}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="carousel-section__link button button--outlined">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+            <span>Смотреть&nbsp;все</span>
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-arrow"></use>
+            </svg>
+        </a>
     </div>
 </section>
 

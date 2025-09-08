@@ -10,6 +10,7 @@
 @import 'blocks/search-bar';
 @import 'blocks/control-bar';
 @import 'blocks/header-catalog';
+@import 'blocks/breadcrumbs';
 @import 'components/logo';
 @import 'components/catalog-btn';
 @import 'components/icon-btn';
@@ -47,3 +48,11 @@
 @import 'components/selection-item';
 
 @import 'blocks/product-section';
+@import 'blocks/product-ordering';
+@import 'blocks/review-item';
+@import 'blocks/ordering-controls';
+@import 'blocks/product-media';
+@import 'blocks/video-box';
+
+@import 'blocks/empty-plug';
+@import 'blocks/cart-list';

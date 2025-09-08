@@ -1,4 +1,9 @@
 {
     "title": "Карточка товара",
-    "bodyClass": "catalog-page"
+    "bodyClass": "catalog-page",
+        "breadcrumbsList": [
+        "Главная",
+        "Каталог",
+        "WESTLAKE 710/70R42 173A8/173B"
+    ]
 }

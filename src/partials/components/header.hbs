@@ -225,4 +225,18 @@
             </div>
         </div>
     </div>
+
+    <div class="page-header__breadcrumbs">
+        <div class="page-header__site-container breadcrumbs">
+            <ul class="breadcrumbs__list">
+                {{#each breadcrumbsList}}
+                <li class="breadcrumbs__item">
+                    <a href="/" class="breadcrumbs__link">
+                        {{this}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </header>

@@ -1,6 +1,8 @@
 .card-checkbox {
     display: grid;
     place-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 
     width: 4rem;
     height: 4rem;
@@ -19,36 +21,75 @@
         border-radius: 0.8rem;
     }
 
+    &>input {
+        @include visuallyHidden();
+    }
+
     &__icon {
         width: 2rem;
         height: 2rem;
         fill: var(--Grey-1, #666);
 
-        transition-property: fill;
+        transition-property: fill, opacity;
         transition-duration: 0.3s;
         transition-timing-function: ease;
+
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
 
         @include breakpointMF(laptop) {
             width: 2.4rem;
             height: 2.4rem;
         }
-    }
 
-    &.card-checkbox--active {
-        background-color: var(--Dark-red, #A50D0D);
+        &.card-checkbox__icon--stroke {
+            opacity: 0;
 
-        .card-checkbox__icon {
-            fill: var(--White, #fff);
+            @include breakpoint(tablet) {
+                opacity: 1;
+            }
         }
     }
 
-    &.card-checkbox--oulined {
-        background-color: transparent;
-        border: 1px solid var(--Black, #141414);
-        border-radius: 0.8rem;
+    &.card-checkbox--active {
+        @include breakpointMF(laptop) {
+            background-color: var(--Red, #D42111);
 
+            .card-checkbox__icon {
+                fill: var(--White, #fff);
+
+                &.card-checkbox__icon--stroke {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include breakpoint(tablet) {
+            .card-checkbox__icon {
+                fill: var(--Red, #D42111);
+            }
+        }
+
+        @include hover {
+            @include breakpointMF(laptop) {
+                background-color: var(--Dark-red, #a50d0d);
+
+                .card-checkbox__icon {
+                    fill: var(--White, #fff);
+                }
+            }
+        }
+    }
+
+    &:has(input:checked) {
+        @extend .card-checkbox--active;
+    }
+
+    @include hover {
         .card-checkbox__icon {
-            fill: var(--Black, #141414);
+            fill: var(--Red, #D42111);
+
+
         }
     }
 }

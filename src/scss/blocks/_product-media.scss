@@ -1,0 +1,72 @@
+.product-media {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.6rem;
+
+    &__subtitle {
+        margin-bottom: 1.6rem;
+
+        &.product-reviews__title {
+            @include t1;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        &:has(.product-media__media--image) {
+            @include breakpointMF(laptop) {
+                gap: 1.6rem;
+            }
+        }
+
+        &:has(.product-media__media--video) {
+            @include breakpointMF(laptop) {
+                gap: 2.4rem;
+            }
+        }
+    }
+
+    &__media-item {
+        flex-shrink: 0;
+
+        &.product-media__media--image {
+            width: 6.4rem;
+            height: 6.4rem;
+            aspect-ratio: 1;
+            border-radius: 0.8rem;
+            overflow: hidden;
+
+            @include breakpointMF(laptop) {
+                width: 12.8rem;
+                height: 12.8rem;
+
+                border-radius: 1.2rem;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: unset;
+                min-height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &.product-media__media--video {
+            width: 100%;
+            aspect-ratio: 1.78 / 1;
+            overflow: hidden;
+
+            border-radius: 1.6rem;
+
+            @include breakpointMF(laptop) {
+                width: 45.6rem;
+            }
+        }
+    }
+}

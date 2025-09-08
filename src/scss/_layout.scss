@@ -5,6 +5,7 @@ body {
         background-color: var(--White, #FFF);
     }
 
+    &.favorites-page,
     &.catalog-page {
         .page-footer {
             .subscription {
@@ -66,6 +67,37 @@ body {
             display: block;
         }
     }
+
+    &.catalog-filters-is-open {
+        @extend .no-scroll;
+
+        .catalog-filters {
+            @extend ._intro-padding-top;
+
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+
+            display: flex;
+            height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            padding: calc(var(--header-height) + 3.6rem) 1.6rem 8rem;
+        }
+
+        .catalog-filters__list {
+            overflow: auto;
+        }
+    }
+
+
+    &.favorites-page {
+        &:has(.js-favorites) {
+            .js-favorites-empty {
+                @extend .display-none;
+            }
+        }
+    }
 }
 
 [class*="__site-container"] {
@@ -92,12 +124,26 @@ body {
     flex-direction: column;
 }
 
+.main-page {
+    .page-header__breadcrumbs {
+        display: none;
+    }
+}
+
 .section {
     &:not(:first-child) {
         padding-block: 1.8rem;
 
         @include breakpointMF(laptop) {
             padding-block: 6.4rem;
+        }
+    }
+
+    &:last-child {
+        padding-bottom: 3.6rem;
+
+        @include breakpointMF(laptop) {
+            padding-bottom: 4rem;
         }
     }
 
@@ -109,12 +155,28 @@ body {
         }
     }
 
+    &.section--white {
+
+        @include breakpointMF(laptop) {
+            background-color: var(--White, #FFF);
+        }
+    }
+
     &.section--double {
         display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 6.4rem;
     }
+
+    &__empty-plug {
+        margin-block: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            margin-block: 6.4rem;
+        }
+    }
+
 }
 
 ._intro-padding-top {

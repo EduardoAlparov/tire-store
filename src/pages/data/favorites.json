@@ -1,0 +1,8 @@
+{
+    "title": "Избранное",
+    "bodyClass": "favorites-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Избранное"
+    ]
+}

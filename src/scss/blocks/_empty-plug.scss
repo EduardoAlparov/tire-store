@@ -1,0 +1,49 @@
+.empty-plug {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.4rem;
+
+    padding: 2.4rem 1.6rem;
+
+    background-color: var(--White, #FFF);
+    border-radius: 1.6rem;
+
+    @include breakpointMF(laptop) {
+        gap: 3.6rem;
+
+        padding: 3.6rem 2.4rem;
+    }
+
+    &__title {
+        @include h3;
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.6rem;
+        }
+    }
+
+    &__message {
+        @include t1;
+        color: var(--Dark-gray, #242424);
+    }
+
+    &__text {
+        @include t2;
+        color: var(--Grey-1, #666);
+    }
+
+    &__link {
+        &.tab {
+            @include breakpointMF(laptop) {
+                width: max-content;
+            }
+        }
+    }
+}

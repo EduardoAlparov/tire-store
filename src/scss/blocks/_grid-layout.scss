@@ -32,6 +32,12 @@
 
     &__big-cell {
         grid-area: gl-big;
+
+        &.grid-layout__big-cell--contents {
+            @include breakpoint(tablet) {
+                display: contents;
+            }
+        }
     }
 
     &__catalog-nav {
@@ -44,5 +50,27 @@
         position: sticky;
         top: 10rem;
         align-self: flex-start;
+
+        @include breakpoint(tablet) {
+            position: static;
+            grid-area: product-order;
+        }
+    }
+
+    &__product-info {
+        @include breakpoint(tablet) {
+            grid-area: product-info;
+        }
+    }
+
+    &__product-about {
+
+        @include breakpointMF(laptop) {
+            margin-top: 2.4rem;
+        }
+
+        @include breakpoint(tablet) {
+            grid-area: product-about;
+        }
     }
 }

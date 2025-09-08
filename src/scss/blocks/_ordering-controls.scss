@@ -1,0 +1,95 @@
+.ordering-controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem;
+
+    @include breakpointMF(mobile) {
+        grid-template-columns: 0.5fr auto;
+    }
+
+    @include breakpointMF(laptop) {
+        gap: 1.6rem;
+        grid-template-columns: 1fr auto;
+    }
+
+    &__main-cell {
+        display: grid;
+        place-content: stretch;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        &>input[type="checkbox"] {
+            @include visuallyHidden();
+
+            &:checked {
+                &~.ordering-controls__to-cart-button {
+                    display: none;
+                }
+
+                &~.ordering-controls__counter {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__counter,
+    &__to-cart-button {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    &__counter {
+        display: none;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+
+    &__input {
+        flex: 1 1 100%;
+
+        &>input {
+            width: 100%;
+            height: 100%;
+
+            @include b2;
+
+            color: var(--Black, #141414);
+            text-align: center;
+
+            background-color: var(--Light-Grey, #F2F2F2);
+            border-radius: 0.8rem;
+        }
+    }
+
+    &__cell {
+        display: flex;
+        align-items: stretch;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.6rem;
+        }
+    }
+
+    &__btn {
+        &.card-checkbox {
+            background-color: transparent;
+            border: 1px solid var(--Black, #141414);
+            border-radius: 0.8rem;
+
+            .card-checkbox__icon {
+                fill: var(--Black, #141414);
+            }
+
+            @include hover {
+                background-color: var(--Black, #141414);
+
+                .card-checkbox__icon {
+                    fill: var(--White, #fff);
+                }
+
+            }
+        }
+    }
+}

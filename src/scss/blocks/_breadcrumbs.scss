@@ -1,0 +1,61 @@
+.breadcrumbs {
+
+    ul {
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+        flex-wrap: nowrap;
+
+        padding-block: 0.8rem;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            max-width: 100%;
+            overflow: auto;
+
+            @include noScrollbar();
+        }
+
+        li {
+            position: relative;
+            padding-right: 2.4rem;
+
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                transform: translateY(-50%);
+
+                transform: translateY(-50%);
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225%22%20height%3D%228%22%20viewBox%3D%220%200%205%208%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1.13798%207.80465L4.94265%203.99998L1.13798%200.195312L0.195312%201.13798L3.05731%203.99998L0.195312%206.86198L1.13798%207.80465Z%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: 0.5rem 0.8rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: '';
+            }
+
+            &:last-child {
+                padding-right: unset;
+                pointer-events: none;
+
+                &::after {
+                    content: none;
+                }
+
+                a {
+                    opacity: 1;
+                }
+            }
+
+            a {
+                color: var(--Grey-2, #B3B3B3);
+            }
+        }
+    }
+
+}

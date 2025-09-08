@@ -1,0 +1,67 @@
+.video-box {
+    position: relative;
+    overflow: hidden;
+
+    &__button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 200;
+
+        transform: translate(-50%, -50%);
+
+        display: block;
+        cursor: pointer;
+
+        .icon {
+            width: 1.7rem;
+            height: 2rem;
+            fill: #FFF;
+
+            @include breakpointMF(laptop) {
+                width: 2.7rem;
+                height: 3.1rem;
+            }
+        }
+
+        &>input {
+            @include visuallyHidden();
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+
+        &>video {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::before {
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+            content: "";
+        }
+    }
+
+    &:has(input:checked) {
+        .video-box__button {
+            display: none;
+        }
+
+        .video-box__container {
+            &::before {
+                content: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,206 @@
+.review-item {
+    &__body {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        padding: 2.4rem 1.6rem;
+        background-color: var(--Light-Grey, #F2F2F2);
+        border-radius: 1.2rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+            padding: 2.4rem;
+            border-radius: 1.6rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.6rem;
+        }
+    }
+
+    &__userpic {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        flex-shrink: 0;
+
+        background-color: var(--Grey-2, #B3B3B3);
+        border-radius: 0.8rem;
+    }
+
+    &__userpic-letter {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include h3;
+        color: var(--White, #FFF);
+        text-transform: uppercase;
+    }
+
+    &__username {
+        @include h3;
+    }
+
+    &__average {
+        display: grid;
+        place-items: center;
+
+        height: 2rem;
+        padding-inline: 0.4rem;
+
+        text-align: center;
+        white-space: nowrap;
+        @include b2;
+
+        color: var(--White, #FFF);
+        background-color: var(--Green, #52CC52);
+        border-radius: 0.4rem;
+
+        @include breakpointMF(laptop) {
+            height: 3.6rem;
+            padding-inline: 0.8rem;
+
+            border-radius: 0.8rem;
+        }
+    }
+
+    &__date {
+        color: var(--Grey-1, #666);
+        @include t2;
+
+        &.review-item__date--desktop {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+            }
+        }
+
+        &.review-item__date--mobile {
+            margin-bottom: 0.8rem;
+
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        @include t1;
+        color: var(--Dark-gray, #242424);
+    }
+
+    &__answers,
+    &__answer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include breakpointMF(laptop) {
+            flex-direction: row;
+        }
+    }
+
+    &__answers {
+        flex-direction: row;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            justify-content: flex-start;
+            gap: 2.4rem;
+        }
+    }
+
+    &__answer {
+        gap: 0.2rem;
+
+        @include breakpointMF(laptop) {
+            gap: 0.4rem;
+        }
+    }
+
+    &__answer-key {
+        color: var(--Grey-1, #666);
+    }
+
+    &__ratings-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+        }
+    }
+
+    &__ratings {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        flex: 1 1 100%;
+
+        @include breakpointMF(laptop) {
+            gap: 0.8rem;
+            flex: 1 1 calc(100% / 3 - (2.4rem * 2 / 3));
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    &__rating-line {
+        position: relative;
+
+        display: block;
+
+        width: 10rem;
+        height: 0.4rem;
+        overflow: hidden;
+
+        background-color: var(--White, #FFF);
+        border-radius: 0.2rem;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+
+            width: var(--line-width, 100%);
+            height: 100%;
+
+            background-color: var(--Green, #52CC52);
+            content: "";
+        }
+
+        @include breakpointMF(laptop) {
+            width: 10rem;
+        }
+    }
+
+    &__rating-text {
+        @include t3;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+}

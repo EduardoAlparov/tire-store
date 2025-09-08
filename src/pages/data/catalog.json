@@ -1,4 +1,8 @@
 {
     "title": "Каталог",
-    "bodyClass": "catalog-page"
+    "bodyClass": "catalog-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Каталог"
+    ]
 }

@@ -1,0 +1,1433 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="section catalog js-catalog js-favorites">
+    <div class="catalog__site-container">
+        <div class="catalog__layout grid-layout">
+            <div class="grid-layout__container">
+                <div class="grid-layout__small-cell">
+                    <div class="catalog-heading catalog-heading--mobile">
+                        <h3 class="catalog-heading__title">
+                            Избранное
+                        </h3>
+
+                        <p class="catalog-heading__counter">
+                            999 товаров
+                        </p>
+                    </div>
+
+                    <ul class="catalog-nav__list catalog-nav__list--space-btwn">
+                        <li>
+                            <button type="button"
+                                class="catalog-nav__button catalog-nav__button--sorting catalog-link catalog-link--icon">
+                                <svg aria-hidden="true" class="catalog-link__icon">
+                                    <use xlink:href="#bx-sort"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="catalog-nav__button catalog-nav__button--filter catalog-link catalog-link--icon">
+                                <svg aria-hidden="true" class="catalog-link__icon">
+                                    <use xlink:href="#bx-filter"></use>
+                                </svg>
+                                <span class="catalog-link__text">
+                                    Фильтр
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                    <form action="" class="grid-layout__catalog-filters catalog-filters">
+                        <div class="catalog-filters__header">
+                            <h3 class="catalog-filters__title">
+                                Фильтр
+
+                                <label class="catalog-filters__reset blue-link">
+                                    <input type="reset" value="" id="reset-all-catalog--filters">
+                                    Отмена
+                                </label>
+                            </h3>
+                            <div class="catalog-filters__selection">
+
+                            </div>
+                        </div>
+
+                        <div class="catalog-filters__selection"></div>
+
+                        <ul class="catalog-filters__list">
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Бренд
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--big">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Легковые шины"
+                                            name="checkbox-tire-types-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Легковые шины</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Легкогрузовые шины"
+                                            name="checkbox-tire-types-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Легкогрузовые шины</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Легкогрузовые шины"
+                                            name="checkbox-tire-types-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Грузовые шины</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Сельскохозяйственные шины"
+                                            name="checkbox-tire-types-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Сельскохозяйственные шины</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Сопутствующие товары"
+                                            name="checkbox-tire-types-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Сопутствующие товары</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item" id="catalog-filters-width">
+                                <h4 class="catalog-filters__label">
+                                    Ширина
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="195"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">195</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="205"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">205</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="225"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">225</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="225"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">225</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="185"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">185</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="190"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">190</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="220"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">220</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="230"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">230</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="240"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">240</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="190"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">190</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Профиль
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 1"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 1</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 2"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 2</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 3"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 3</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 4"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 4</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 4"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 4</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 5"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 5</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 6"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 6</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 7"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 7</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 8"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 8</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Профиль 9"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Профиль 9</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Диаметр
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Диаметр"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Сезон
+                                </h4>
+
+                                <div class="catalog-filters__checkboxes catalog-filters__checkboxes">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Летние"
+                                            name="checkbox-season-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Летние</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Всесезонные"
+                                            name="checkbox-season-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Всесезонные</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Зимние"
+                                            name="checkbox-season-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Зимние</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Шипованные"
+                                            name="checkbox-season-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Шипованные</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Шипы
+                                </h4>
+
+                                <div class="catalog-filters__checkboxes catalog-filters__checkboxes">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Шипы: Да"
+                                            name="checkbox-spikes-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Да</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Шипы: Нет"
+                                            name="checkbox-spikes-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Нет</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Индекс нагрузки
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="1"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="2"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="3"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="4"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="5"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="6"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="7"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="8"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="9"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="19"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Максимальная скорость
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Страна происхождения
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Параметр"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Параметр</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Бренд
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--collapsed">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 1"
+                                            name="checkbox-param-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 1</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 2"
+                                            name="checkbox-param-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 2</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 3"
+                                            name="checkbox-param-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 3</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 4"
+                                            name="checkbox-param-04">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 4</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 5"
+                                            name="checkbox-param-05">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 5</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 6"
+                                            name="checkbox-param-06">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 6</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 7"
+                                            name="checkbox-param-07">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 7</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 123"
+                                            name="checkbox-param-08">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 123</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 111"
+                                            name="checkbox-param-09">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 111</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Бренд 0"
+                                            name="checkbox-param-10">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Бренд 0</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item">
+                                <h4 class="catalog-filters__label">
+                                    Бренд
+                                </h4>
+
+                                <div
+                                    class="catalog-filters__checkboxes catalog-filters__checkboxes catalog-filters__checkboxes--big">
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Runflat"
+                                            name="checkbox-others-01">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">C/LT, Runflat, Seal, Silent</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Комплект"
+                                            name="checkbox-others-02">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">От комплекта (4 шт.)</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Спецпредложение"
+                                            name="checkbox-others-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">Спецпредложение</span>
+                                    </label>
+                                    <label tabindex="0" class="catalog-filters__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="В наличии"
+                                            name="checkbox-others-03">
+                                        <i>
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+                                        <span class="checkbox__value">В наличии</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="catalog-filters__expand blue-link">
+                                    Показать еще
+                                </button>
+                            </li>
+                            <li class="catalog-filters__item catalog-filters__item--counter">
+                                Найно
+                                <span class="catalog-filters__finded-value">
+                                    999
+                                </span>
+                                товаров
+                            </li>
+                        </ul>
+
+                        <button class="catalog-filters__button tab tab--red-outlined">
+                            Показать
+                        </button>
+                    </form>
+                </div>
+
+                <div class="grid-layout__big-cell">
+                    <div class="grid-layout__catalog-window catalog-window">
+                        <div class="catalog-window__header">
+                            <div class="catalog-window__catalog-heading catalog-heading catalog-heading--desktop">
+                                <h3 class="catalog-heading__title">
+                                    Легковые шины
+                                </h3>
+
+                                <p class="catalog-heading__counter">
+                                    999 товаров
+                                </p>
+                            </div>
+
+                            <div class="catalog-window__sorting">
+                                <div class="catalog-window__select select select--grey js-select">
+                                    <button class="select__current" type="button">По популярности</button>
+                                    <div class="select__dropdown">
+                                        <div class="select__header">
+                                            <div class="select__title">
+                                                По популярности
+                                            </div>
+                                            <svg aria-hidden="true" class="select__header-close icon">
+                                                <use xlink:href="#bx-close"></use>
+                                            </svg>
+                                        </div>
+                                        <ul class="select__list">
+                                            <li class="select__item">
+                                                <label class="select__label" for="radio-select-sort-poupular">
+                                                    <input checked type="radio" name="sort-select"
+                                                        id="radio-select-sort-poupular">
+                                                    <span class="select__text">
+                                                        По популярности
+                                                    </span>
+                                                    <svg aria-hidden="true" class="icon select__tick">
+                                                        <use xlink:href="#bx-check"></use>
+                                                    </svg>
+                                                </label>
+                                            </li>
+                                            <li class="select__item">
+                                                <label class="select__label" for="radio-select-sort-low-price">
+                                                    <input type="radio" name="sort-select"
+                                                        id="radio-select-sort-low-price">
+                                                    <span class="select__text">
+                                                        Сначала дешевле
+                                                    </span>
+                                                    <svg aria-hidden="true" class="icon select__tick">
+                                                        <use xlink:href="#bx-check"></use>
+                                                    </svg>
+                                                </label>
+                                            </li>
+                                            <li class="select__item">
+                                                <label class="select__label" for="radio-select-sort-high-price">
+                                                    <input type="radio" name="sort-select"
+                                                        id="radio-select-sort-high-price">
+                                                    <span class="select__text">
+                                                        Сначала дороже
+                                                    </span>
+                                                    <svg aria-hidden="true" class="icon select__tick">
+                                                        <use xlink:href="#bx-check"></use>
+                                                    </svg>
+                                                </label>
+                                            </li>
+                                            <li class="select__item">
+                                                <label class="select__label" for="radio-select-sort-high-rating">
+                                                    <input type="radio" name="sort-select"
+                                                        id="radio-select-sort-high-rating">
+                                                    <span class="select__text">
+                                                        Высокий рейтинг
+                                                    </span>
+                                                    <svg aria-hidden="true" class="icon select__tick">
+                                                        <use xlink:href="#bx-check"></use>
+                                                    </svg>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="select__accept simple-btn">
+                                            Подтвердить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-window__selection">
+                            <div class="catalog-window__selection-list">
+
+                            </div>
+                            <label for="reset-all-catalog--filters" class="catalog-window__reset tab tab--red-outlined">
+                                Сбросить фильтры
+                            </label>
+                        </div>
+                        <ul class="catalog-window__list">
+                            <li class="catalog-window__item">
+                                <div class="catalog-window__card card">
+                                    <div class="card__grid">
+                                        <div class="card__top">
+                                            <div class="card__picture">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                                                    <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                                </picture>
+                                            </div>
+                                            <ul class="card__tags">
+                                                <div class="card__tag card-feature card-feature--red">Хит</div>
+                                                <!--
+                                                <div class="card__tag card-feature card-feature--green">Новинка</div>
+                                                -->
+                                            </ul>
+                                            <div class="card__controls">
+                                                <label type="button" class="card__card-checkbox card-checkbox">
+                                                    <input type="checkbox" checked name="add-to-favorite" id="">
+                                                    <svg aria-hidden="true" class="card-checkbox__icon">
+                                                        <use xlink:href="#bx-heart"></use>
+                                                    </svg>
+                                                    <svg aria-hidden="true"
+                                                        class="card-checkbox__icon card-checkbox__icon--stroke">
+                                                        <use xlink:href="#bx-heart-stroke"></use>
+                                                    </svg>
+                                                </label>
+
+                                                <label type="button" class="card__card-checkbox card-checkbox">
+                                                    <input type="checkbox" name="add-to-compare" id="">
+                                                    <svg aria-hidden="true" class="card-checkbox__icon">
+                                                        <use xlink:href="#bx-bar-chart"></use>
+                                                    </svg>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="card__bottom">
+                                            <div class="card__center">
+                                                <div class="card__prices">
+                                                    <span class="card__actual-price">6 300</span>
+                                                    <span class="card__discont-price">5 500</span>
+                                                    <span class="card__old-price">6 300</span>
+                                                </div>
+
+                                                <a href="#" target="_blank" class="card__desc">
+                                                    WESTLAKE SL309 185/75 R16C 104/102R
+                                                </a>
+                                            </div>
+
+                                            <div class="card__chars">
+                                                <div class="card__types">
+                                                    <div class="card__type">Легкогрузовые</div>
+                                                </div>
+
+                                                <ul class="card__features">
+                                                    <!--
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-multi"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-winter"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-summer"></use>
+                                                        </svg>
+                                                    </li>
+                                                    -->
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-s"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--orange">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#bx-fuel"></use>
+                                                        </svg>
+                                                        E
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--blue">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#bx-rain"></use>
+                                                        </svg>
+                                                        B
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--green">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#bx-volume"></use>
+                                                        </svg>
+                                                        70
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="card__rating card-rating" data-rating="4.5">
+                                                <span class="card-rating__value">
+                                                    4.5
+                                                </span>
+                                                <ul class="card-rating__stars">
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                </ul>
+
+                                                <a href="#" class="card-rating__counter blue-link">
+                                                    999
+                                                    <span class="card-rating__counter-text">
+                                                        отзывов
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-window__item">
+                                <div class="catalog-window__card card">
+                                    <div class="card__grid">
+                                        <div class="card__top">
+                                            <div class="card__picture">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                                                    <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                                </picture>
+                                            </div>
+                                            <ul class="card__tags">
+                                                <div class="card__tag card-feature card-feature--red">Хит</div>
+                                                <!--
+                                                <div class="card__tag card-feature card-feature--green">Новинка</div>
+                                                -->
+                                            </ul>
+                                            <div class="card__controls">
+                                                <label type="button" class="card__card-checkbox card-checkbox">
+                                                    <input type="checkbox" checked name="add-to-favorite" id="">
+                                                    <svg aria-hidden="true" class="card-checkbox__icon">
+                                                        <use xlink:href="#bx-heart"></use>
+                                                    </svg>
+                                                    <svg aria-hidden="true"
+                                                        class="card-checkbox__icon card-checkbox__icon--stroke">
+                                                        <use xlink:href="#bx-heart-stroke"></use>
+                                                    </svg>
+                                                </label>
+
+                                                <label type="button" class="card__card-checkbox card-checkbox">
+                                                    <input type="checkbox" name="add-to-compare" id="">
+                                                    <svg aria-hidden="true" class="card-checkbox__icon">
+                                                        <use xlink:href="#bx-bar-chart"></use>
+                                                    </svg>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="card__bottom">
+                                            <div class="card__center">
+                                                <div class="card__prices">
+                                                    <span class="card__actual-price">6 300</span>
+                                                    <span class="card__discont-price">5 500</span>
+                                                    <span class="card__old-price">6 300</span>
+                                                </div>
+
+                                                <a href="#" target="_blank" class="card__desc">
+                                                    WESTLAKE SL309 185/75 R16C 104/102R
+                                                </a>
+                                            </div>
+
+                                            <div class="card__chars">
+                                                <div class="card__types">
+                                                    <div class="card__type">Легкогрузовые</div>
+                                                </div>
+
+                                                <ul class="card__features">
+                                                    <!--
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-multi"></use>
+                                                        </svg>
+                                                    </li>
+                                                    -->
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-winter"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <!--
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-summer"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--black">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#type-s"></use>
+                                                        </svg>
+                                                    </li>
+                                                    -->
+                                                    <li class="card__feature card-feature card-feature--orange">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#bx-fuel"></use>
+                                                        </svg>
+                                                        E
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--blue">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#bx-rain"></use>
+                                                        </svg>
+                                                        B
+                                                    </li>
+                                                    <li class="card__feature card-feature card-feature--green">
+                                                        <svg aria-hidden="true" class="icon">
+                                                            <use xlink:href="#bx-volume"></use>
+                                                        </svg>
+                                                        70
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="card__rating card-rating" data-rating="4.5">
+                                                <span class="card-rating__value">
+                                                    4.5
+                                                </span>
+                                                <ul class="card-rating__stars">
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                    <li class="card-rating__star"></li>
+                                                </ul>
+
+                                                <a href="#" class="card-rating__counter blue-link">
+                                                    999
+                                                    <span class="card-rating__counter-text">
+                                                        отзывов
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section home home--no-height js-favorites-empty">
+    <div class="home__site-container">
+        <div class="section__empty-plug empty-plug">
+            <h3 class="empty-plug__title">
+                Избранное
+            </h3>
+
+            <div class="empty-plug__center">
+                <p class="empty-plug__message">
+                    У&nbsp;вас пока нет товаров в избранном.
+                </p>
+                <p class="empty-plug__text">
+                    Перейдите в каталог и выберите понравившийся товар.
+                </p>
+            </div>
+
+            <a href="./catalog.html" class="empty-plug__link tab tab--red-outlined">
+                Перейти в каталог
+            </a>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

@@ -1,0 +1,8 @@
+{
+    "title": "Корзина",
+    "bodyClass": "favorites-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Корзина"
+    ]
+}
