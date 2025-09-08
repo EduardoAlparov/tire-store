@@ -1,31 +1,7 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-
-<section class="section home home--no-height js-favorites-empty">
-    <div class="home__site-container">
-        <div class="section__empty-plug empty-plug">
-            <h3 class="empty-plug__title">
-                Корзина
-            </h3>
-
-            <div class="empty-plug__center">
-                <p class="empty-plug__message">
-                    У&nbsp;вас пока нет товаров в корзине.
-                </p>
-                <p class="empty-plug__text">
-                    Перейдите в каталог и оформите выберите понравившийся товар и оформите свой первый заказ.
-                </p>
-            </div>
-
-            <a href="./catalog.html" class="empty-plug__link tab tab--red-outlined">
-                Перейти в каталог
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="section product-section">
+<section class="section section--cart product-section">
     <div class="product-section__site-container">
         <div class="product-section__layout grid-layout">
             <form action="" class="grid-layout__container">
@@ -62,59 +38,36 @@
                         </div>
 
                         <ul class="cart-list__list">
-                            <li class="cart-list__item cart-item">
-                                <div class="cart-item__main">
-                                    <div class="cart-item__image">
-                                        <img class="lazy" src="./img/carousel/wheel.png" alt="image">
-                                    </div>
-                                    <div class="cart-item__desc">
-                                        WESTLAKE 710/70R42 173A8/173B
-                                    </div>
-
-                                    <div class="cart-item__prices">
-                                        <div class="cart-item__prices-total">25 200</div>
-
-                                        <div class="cart-item__prices-multi">
-                                            <span class="cart-item__price-factor">
-                                                4
-                                            </span>
-                                            <span class="cart-item__price-value">
-                                                6 300
-                                            </span>
-                                        </div>
-                                    </div>
-                                    \
-                                    <div class="cart-item__counter ordering-controls__counter js-order-counter">
-                                        <button type="button"
-                                            class="ordering-controls__minus ordering-controls__btn card-checkbox">
-                                            <svg aria-hidden="true" class="card-checkbox__icon">
-                                                <use xlink:href="#bx-minus"></use>
-                                            </svg>
-                                        </button>
-                                        <div class="ordering-controls__input">
-                                            <input disabled type="number" name="order-counter-input"
-                                                id="order-counter-input" value="1">
-                                        </div>
-                                        <button type="button"
-                                            class="ordering-controls__plus ordering-controls__btn card-checkbox">
-                                            <svg aria-hidden="true" class="card-checkbox__icon">
-                                                <use xlink:href="#bx-plus"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <button type="button" class="cart-item__delete">
-                                        <svg aria-hidden="true" class="icon">
-                                            <use xlink:href="#bx-close"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </li>
+                            {{>cart-item cartItemClass="cart-list__item"}}
+                            {{>cart-item cartItemClass="cart-list__item"}}
                         </ul>
                     </div>
                 </div>
             </form>
         </div>
+</section>
+
+<section class="section section--empty-cart home home--no-height">
+    <div class="home__site-container">
+        <div class="section__empty-plug section__empty-plug--no-margins empty-plug">
+            <h3 class="empty-plug__title">
+                Корзина
+            </h3>
+
+            <div class="empty-plug__center">
+                <p class="empty-plug__message">
+                    У&nbsp;вас пока нет товаров в корзине.
+                </p>
+                <p class="empty-plug__text">
+                    Перейдите в каталог и оформите выберите понравившийся товар и оформите свой первый заказ.
+                </p>
+            </div>
+
+            <a href="./catalog.html" class="empty-plug__link tab tab--red-outlined">
+                Перейти в каталог
+            </a>
+        </div>
+    </div>
 </section>
 
 {{/content}}

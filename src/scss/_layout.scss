@@ -89,15 +89,6 @@ body {
             overflow: auto;
         }
     }
-
-
-    &.favorites-page {
-        &:has(.js-favorites) {
-            .js-favorites-empty {
-                @extend .display-none;
-            }
-        }
-    }
 }
 
 [class*="__site-container"] {
@@ -169,14 +160,29 @@ body {
         gap: 6.4rem;
     }
 
-    &__empty-plug {
-        margin-block: 2.4rem;
+    &.section--empty-cart {
+        display: none;
+    }
 
-        @include breakpointMF(laptop) {
-            margin-block: 6.4rem;
+    &.section--cart {
+        &:not(:has(.cart-list__item)) {
+            @include visuallyHidden();
+        }
+
+        &+.section--empty-cart {
+            display: block;
         }
     }
 
+    &.section--favorites {
+        &:not(:has(.catalog-window__item)) {
+            @include visuallyHidden();
+        }
+
+        &+.section--empty-favorites {
+            display: block;
+        }
+    }
 }
 
 ._intro-padding-top {

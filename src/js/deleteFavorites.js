@@ -7,10 +7,6 @@ export default () => {
         cardInputs.forEach((input) => {
             input.addEventListener('change', (e) => {
                 e.target.closest('.catalog-window__card').parentElement.remove();
-
-                if(favorite.querySelectorAll('.catalog-window__card').length < 1) {
-                    favorite.remove()
-                }
             })
         })
     })

@@ -25,22 +25,51 @@
         align-items: stretch;
         gap: 1.6rem;
     }
+
+
 }
 
 
 .cart-item {
+    position: relative;
+
     padding: 1.6rem;
 
     background-color: var(--Light-Grey, #F2F2F2);
     border-radius: 1.2rem;
 
     @include breakpointMF(laptop) {
-        padding: 2.4rem;
+        padding: unset;
 
+        background-color: transparent;
         border-radius: 1.6rem;
     }
 
+    &__main {
+        display: grid;
+        grid-template-areas: "ci-image ci-name ci-name"
+            "ci-image ci-prices ci-prices"
+            "ci-counter ci-counter ci-counter";
+        grid-template-columns: auto 0.5fr 0.5fr;
+        row-gap: 1.2rem;
+        column-gap: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            grid-template-areas: "ci-image ci-name ci-prices"
+                "ci-image ci-name ci-counter";
+            grid-template-columns: auto 1fr auto;
+
+            margin-right: 6.4rem;
+            padding: 2.4rem;
+
+            background-color: var(--Light-Grey, #F2F2F2);
+            border-radius: 1.6rem;
+        }
+    }
+
     &__image {
+        grid-area: ci-image;
+
         width: 6.4rem;
         height: 6.4rem;
         aspect-ratio: 1;
@@ -59,13 +88,74 @@
         }
     }
 
+    &__prices {
+        grid-area: ci-prices;
+
+        display: flex;
+        align-items: flex-end;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            justify-self: flex-end;
+        }
+    }
+
+    &__prices-total {
+        @include h3;
+
+        &::after {
+            content: " ₽";
+        }
+    }
+
+    &__prices-multi {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5ch;
+        flex-wrap: nowrap;
+
+        @include t3;
+    }
+
+    &__desc {
+        grid-area: ci-name;
+
+        @include b2;
+        @include maxSizeText(2);
+
+        @include breakpointMF(laptop) {
+            @include h3;
+        }
+    }
+
     &__counter {
+        grid-area: ci-counter;
+
+        padding-right: 5.6rem;
+        margin-top: 0.4rem;
+
+        @include breakpointMF(laptop) {
+            padding-right: unset;
+            margin-top: unset;
+        }
+
         &.ordering-controls__counter {
             display: flex;
+        }
+
+        .ordering-controls__input {
+            input {
+                background-color: #FFF;
+            }
         }
     }
 
     &__delete {
+        position: absolute;
+        bottom: 1.6rem;
+        right: 1.6rem;
+        z-index: 100;
+
         display: grid;
         place-items: center;
 
@@ -77,6 +167,8 @@
         border-radius: 0.8rem;
 
         @include breakpointMF(laptop) {
+            right: 0;
+            top: 0;
             width: 4.8rem;
             height: 4.8rem;
             border-radius: 0.8rem;

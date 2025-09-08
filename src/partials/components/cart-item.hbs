@@ -1,0 +1,49 @@
+<li class="cart-item {{#if cartItemClass}}{{cartItemClass}}{{/if}} js-cart-item">
+    <div class="cart-item__main">
+        <div class="cart-item__image">
+            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+        </div>
+        <div class="cart-item__desc">
+            WESTLAKE 710/70R42 173A8/173B
+        </div>
+
+        <div class="cart-item__prices">
+            <div class="cart-item__prices-total js-cart-item-total">25 200</div>
+
+            <div class="cart-item__prices-multi">
+                <span class="cart-item__price-factor js-cart-item-factor">
+                    4
+                </span>
+                <span class="cart-item__price-symbol">
+                    x
+                </span>
+                <span class="cart-item__price-value js-cart-item-price">
+                    6 300
+                </span>
+            </div>
+        </div>
+
+        <div class="cart-item__counter ordering-controls__counter js-order-counter">
+            <button type="button" class="ordering-controls__minus ordering-controls__btn card-checkbox">
+                <svg aria-hidden="true" class="card-checkbox__icon">
+                    <use xlink:href="#bx-minus"></use>
+                </svg>
+            </button>
+            <div class="ordering-controls__input">
+                <input disabled type="number" class="js-cart-item-input" name="order-counter-input"
+                    id="order-counter-input" value="4">
+            </div>
+            <button type="button" class="ordering-controls__plus ordering-controls__btn card-checkbox">
+                <svg aria-hidden="true" class="card-checkbox__icon">
+                    <use xlink:href="#bx-plus"></use>
+                </svg>
+            </button>
+        </div>
+
+        <button type="button" class="cart-item__delete">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#bx-close"></use>
+            </svg>
+        </button>
+    </div>
+</li>
