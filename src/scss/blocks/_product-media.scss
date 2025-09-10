@@ -10,6 +10,10 @@
         &.product-reviews__title {
             @include t1;
         }
+
+        &:not(.product-reviews__title) {
+            @include h3;
+        }
     }
 
     &__list {

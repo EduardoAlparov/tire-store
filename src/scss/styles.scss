@@ -44,6 +44,7 @@
 
 @import 'blocks/catalog';
 @import 'blocks/grid-layout';
+@import 'blocks/catalog-nav';
 @import 'components/checkbox';
 @import 'components/selection-item';
 
@@ -53,6 +54,10 @@
 @import 'blocks/ordering-controls';
 @import 'blocks/product-media';
 @import 'blocks/video-box';
+@import 'blocks/product-info';
 
 @import 'blocks/empty-plug';
 @import 'blocks/cart-list';
+
+@import 'blocks/info-block';
+@import 'blocks/image-block';

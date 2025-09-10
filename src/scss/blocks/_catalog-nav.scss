@@ -1,0 +1,66 @@
+.catalog-nav {
+    @extend ._round-white-frame;
+
+    &__title {
+        @include h3;
+
+        display: none;
+
+        @include breakpointMF(laptop) {
+            display: block;
+            margin-bottom: 3.6rem;
+        }
+
+        &.catalog-nav__title--all {
+            @include breakpoint(tablet) {
+                display: block;
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        &.catalog-nav__list--space-btwn {
+            @include breakpoint(tablet) {
+                justify-content: space-between;
+            }
+
+            @include breakpointMF(laptop) {
+                display: none;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            overflow: auto;
+            margin-inline: -1.6rem;
+            padding-inline: 1.6rem;
+
+            @include noScrollbar();
+        }
+
+        @include breakpointMF(laptop) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1.6rem;
+        }
+
+        &>li {
+            &:has(.catalog-nav__button.catalog-link) {
+                @include breakpointMF(laptop) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.catalog-nav--sticky {
+        @include breakpointMF(laptop) {
+            position: sticky;
+            top: 15rem;
+        }
+    }
+}

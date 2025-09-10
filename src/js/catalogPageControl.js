@@ -35,7 +35,7 @@ export default () => {
         const selectionWrapper = catalog.querySelector('.catalog-window__selection');
         const selectionWrapperMobile = catalog.querySelector('.catalog-filters__selection');
 
-        if(isMobile) {
+        if(isMobile && selectionWrapper && selectionWrapperMobile) {
             moveBlockOnMobile(selectionWrapper, selectionWrapperMobile);
         }
 
@@ -56,9 +56,11 @@ export default () => {
             })
         })
 
-        filtersForm.addEventListener('reset', () => {
-            removeAllChildren(selectionList);
-        })
+        if(filtersForm) {
+            filtersForm.addEventListener('reset', () => {
+                removeAllChildren(selectionList);
+            })
+        }
 
         catalog.addEventListener('click', (event) => {
             if(event.target.closest('.catalog-window__selection-item')) {

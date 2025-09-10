@@ -23,7 +23,7 @@
 }
 
 .hide-on-mobile {
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
         display: none !important;
     }
 }

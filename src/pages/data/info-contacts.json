@@ -1,0 +1,9 @@
+{
+    "title": "Информация - Контакты",
+    "bodyClass": "info-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Личный кабинет"
+    ],
+    "haveMap": true
+}

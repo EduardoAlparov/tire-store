@@ -6,6 +6,32 @@
         padding-block: 6.4rem;
     }
 
+    &:has(.grid-layout__info-block--white) {
+        padding-bottom: 0;
+    }
+
+    &.grid-layout--no-padding {
+        @include breakpoint(tablet) {
+            padding-top: 0;
+        }
+
+        .grid-layout__container {
+            @include breakpoint(tablet) {
+                gap: 0;
+            }
+
+        }
+    }
+
+    &__info-block--white {
+        @include breakpoint(tablet) {
+            background-color: var(--White, #FFF);
+            padding-block: 3.6rem;
+            padding-inline: 1.6rem;
+            margin-inline: -1.6rem;
+        }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;

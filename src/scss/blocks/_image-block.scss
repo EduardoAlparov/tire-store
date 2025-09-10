@@ -1,0 +1,113 @@
+.image-block {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    // aspect-ratio: 3.12 / 1;
+    min-height: calc(100vh - var(--header-height, 11rem));
+    min-height: calc(100dvh - var(--header-height, 11rem));
+
+    border-radius: 2.4rem;
+
+    @include breakpointMF(laptop) {
+        min-height: 40rem;
+    }
+
+    @include breakpoint(tablet) {
+        margin-inline: calc(var(--content-padding, 1.6rem) * -1) calc(var(--content-padding, 1.6rem) * -1);
+        padding-inline: var(--content-padding, 1.6rem) var(--content-padding, 1.6rem);
+
+        border-radius: unset;
+    }
+
+    &__picture {
+        position: absolute;
+        inset: -1px;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 100;
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            z-index: 200;
+
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+            content: "";
+        }
+    }
+
+    &__text-wrapper {
+        position: relative;
+        z-index: 300;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+
+        padding: 2.4rem 0;
+        color: var(--White, #FFF);
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+            margin-top: 15rem;
+            padding: 4.8rem 3.6rem;
+        }
+    }
+
+    &__title {
+        @include h2;
+    }
+
+    &__date {
+        position: relative;
+
+        padding-left: 2.4rem;
+        @include t3;
+
+        @include breakpointMF(laptop) {
+            padding-left: 2.8rem;
+        }
+
+        &::before {
+            position: absolute;
+            // top: 50%;
+            left: 0;
+            bottom: 0;
+
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            // transform: translateY(-50%);
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M10.0013%201.66699C5.4063%201.66699%201.66797%205.40533%201.66797%2010.0003C1.66797%2014.5953%205.4063%2018.3337%2010.0013%2018.3337C14.5963%2018.3337%2018.3346%2014.5953%2018.3346%2010.0003C18.3346%205.40533%2014.5963%201.66699%2010.0013%201.66699ZM10.0013%2016.667C6.32547%2016.667%203.33464%2013.6762%203.33464%2010.0003C3.33464%206.32449%206.32547%203.33366%2010.0013%203.33366C13.6771%203.33366%2016.668%206.32449%2016.668%2010.0003C16.668%2013.6762%2013.6771%2016.667%2010.0013%2016.667Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10.8346%205.83301H9.16797V10.833H14.168V9.16634H10.8346V5.83301Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            content: "";
+
+            @include breakpointMF(laptop) {
+                width: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+}

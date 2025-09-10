@@ -1,0 +1,8 @@
+{
+    "title": "Информация - новости",
+    "bodyClass": "info-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Личный кабинет"
+    ]
+}

@@ -1,0 +1,94 @@
+.product-info {
+    @extend ._round-white-frame;
+
+    @include breakpoint(tablet) {
+        background-color: var(--White, #FFF);
+    }
+
+    &__header {
+        &.product-ordering__header {
+            display: none;
+
+            @include breakpointMF(laptop) {
+                display: block;
+            }
+
+            .product-ordering__article {
+                display: none;
+            }
+
+            .product-ordering__rating,
+            .product-ordering__name {
+                @include breakpointMF(laptop) {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__grid {
+        width: 100%;
+
+        @include breakpointMF(laptop) {
+            display: grid;
+            gap: 4.8rem;
+            grid-template-columns: 36rem auto;
+        }
+    }
+
+    &__table {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3.6rem;
+
+        &.product-info__table--desktop {
+            @include breakpointMF(laptop) {
+                display: grid;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.4rem;
+
+        @include breakpointMF(laptop) {
+            gap: 0.8rem;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 3.6rem;
+        padding: 0.75rem 0.8rem;
+
+        &:nth-child(odd) {
+            background: var(--Light-Grey, #F2F2F2);
+            border-radius: 4px;
+        }
+    }
+
+    &__item-key,
+    &__item-value {
+        flex: 1 1 calc(100% / 2 - 0.8rem);
+
+        @include breakpointMF(laptop) {
+            flex: 1 1 calc(100% / 2 - 1.8rem);
+        }
+    }
+
+    &__item-value {
+        .blue-link {
+            max-width: max-content;
+        }
+
+        span {
+            color: var(--Grey-1, #666);
+        }
+    }
+}

@@ -1,0 +1,301 @@
+.info-block {
+    @extend ._round-white-frame;
+
+    &__body {
+        &.info-block__body--flex {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 2.4rem;
+
+            @include breakpointMF(laptop) {
+                gap: 3.6rem;
+            }
+
+            &>.info-block__title {
+                margin-bottom: 0;
+            }
+        }
+
+        &:has(.info-block__back-header) {
+            position: relative;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+        @include h2;
+
+        @include breakpointMF(laptop) {
+            margin-bottom: 3.6rem;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 0.8rem;
+
+        &.info-block__list--full-column {
+            grid-template-columns: 100%;
+            gap: 0.8rem;
+
+            @include breakpointMF(laptop) {
+                row-gap: 1.6rem;
+            }
+        }
+
+        &.info-block__list--smaller-column {
+            grid-template-columns: 100%;
+            row-gap: 1.6rem;
+
+            @include breakpointMF(laptop) {
+                row-gap: 2.4rem;
+            }
+        }
+
+        @include breakpointMF(small-tablet) {
+            grid-template-columns: repeat(2, minmax(auto, calc(100% / 2 - (1.6rem / 2))));
+            gap: 2.4rem 1.6rem;
+        }
+
+        @include breakpointMF(laptop) {
+            grid-template-columns: repeat(3, minmax(auto, calc(100% / 3 - (2.4rem * 2 / 3))));
+            gap: 3.6rem 2.4rem;
+        }
+
+        &:is(ol) {
+            counter-reset: my-info-list-counter;
+
+            &>li {
+                counter-increment: my-info-list-counter;
+            }
+        }
+    }
+
+    &__grey-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        padding: 1.6rem;
+
+        border-radius: 1.2rem;
+        background-color: #F5F5F5;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+
+            padding: 2.4rem;
+
+            border-radius: 1.6rem;
+        }
+
+        &::before {
+            content: none;
+        }
+
+        &.info-block__grey-item--white {
+            gap: 1.2rem;
+            padding: unset;
+            background-color: transparent;
+            border-radius: unset;
+
+            @include breakpointMF(laptop) {
+                gap: 1.6rem;
+            }
+        }
+
+        &>h3 {
+            @include h3;
+
+            &::before {
+                content: counter(my-info-list-counter) ". ";
+            }
+        }
+    }
+
+    &__row,
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            flex-direction: row;
+            gap: 2.4rem;
+        }
+    }
+
+    &__row {
+        flex-direction: column;
+    }
+
+    &__col {
+        @include breakpointMF(laptop) {
+            gap: 3.6rem;
+        }
+
+        &>p {
+            @include breakpointMF(laptop) {
+                flex: 0 1 50%;
+            }
+
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+            padding-bottom: 1.6rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+            @include breakpointMF(laptop) {
+                margin-bottom: unset;
+                padding-bottom: 2.4rem;
+            }
+        }
+    }
+
+    &__text {
+        color: var(--Grey-1, #666);
+
+        &>a {
+            display: inline;
+            color: var(--Red, #D42111);
+            cursor: pointer;
+        }
+
+        &.info-block__text--black {
+            color: var(--Black, #141414);
+        }
+    }
+
+    &__list-link {
+        &.news-link {
+            max-width: unset;
+        }
+    }
+
+    &__about-slogan {
+        @include t1;
+
+        color: #000;
+        text-align: center;
+    }
+
+    &__picture {
+        img {
+            display: block;
+            width: 100%;
+
+            border-radius: 0.8rem;
+        }
+
+        figcaption {
+            display: block;
+            margin-top: 0.8rem;
+
+            @include t3;
+            color: var(--Grey-1, #666);
+
+            @include breakpointMF(laptop) {
+                margin-top: 2.4rem;
+            }
+        }
+    }
+
+    &__back-header {
+        &.product-section__back-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 500;
+
+            color: var(--White, #FFF);
+        }
+    }
+
+    &__image-block {
+        margin-bottom: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            margin-bottom: unset;
+        }
+    }
+
+    &__article {
+        &>* {
+            &:not(:last-child) {
+                margin-bottom: 1.6rem;
+
+                @include breakpointMF(laptop) {
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+
+        &>h1 {
+            @include h1;
+        }
+
+        &>h2 {
+            @include h2;
+        }
+
+        &>h3 {
+            @include h3;
+        }
+
+        &>h4 {
+            @include t1;
+        }
+
+        ul {
+            &>li {
+                padding-left: 0.8rem;
+                list-style-type: disc;
+                list-style-position: inside;
+                color: #000;
+            }
+        }
+    }
+
+    &__carousel-section {
+
+        @include breakpointMF(laptop) {
+            margin-block: -2.4rem;
+            padding-block: 2.4rem;
+        }
+    }
+
+    &__table {
+        .product-info__list-item {
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 4.4rem;
+            height: auto;
+
+            @include breakpointMF(laptop) {
+                flex-direction: row;
+            }
+        }
+
+        .product-info__item-key {
+            color: var(--Grey-1, #666);
+        }
+    }
+
+    &__map {
+        width: 100%;
+        aspect-ratio: 1;
+
+        background: var(--Light-Grey, #F2F2F2);
+        border-radius: 1.2rem;
+
+        @include breakpointMF(laptop) {
+            aspect-ratio: 2.78 / 1;
+
+            border-radius: 1.6rem;
+        }
+    }
+}

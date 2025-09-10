@@ -29,7 +29,7 @@ export default () => {
                     spaceBetween: 12
                 },
                 1201: {
-                    slidesPerView: counter,
+                    slidesPerView: (counter <= 6 && counter > 4) ? 6 : 4,
                     spaceBetween: 24
                 },
             }

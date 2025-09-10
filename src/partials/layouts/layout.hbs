@@ -10,6 +10,10 @@
     <title>
         {{ title }}
     </title>
+
+    {{#if haveMap}}
+    <script src="https://api-maps.yandex.ru/3.0/?apikey=&lang=ru_RU"></script>
+    {{/if}}
 </head>
 
 <body class="no-touch {{#if bodyClass}}{{bodyClass}}{{/if}} " ontouchstart="">
@@ -33,6 +37,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
     <script src="assets/js/backend.js"></script>
+
+    {{#if haveMap}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2ed48992-eeaa-4386-9cfa-5ba8379fe2b1&lang=ru_RU"
+        type="text/javascript">
+        </script>
+
+    <script>
+
+        ymaps.ready(() => {
+            // Your code that uses ymaps3 goes here
+            const map = new ymaps.Map(document.getElementById('yamap'), {
+                // Координаты центра карты
+                center: [59.882622, 30.427295],
+
+                // Уровень масштабирования
+                zoom: 17
+            });
+
+            const placemark = new ymaps.Placemark(
+                [59.882622, 30.427295],
+                {},
+                {
+                    preset: 'islands#redIcon'
+                }
+            );
+
+            map.geoObjects.add(placemark);
+
+        });
+    </script>
+    {{/if}}
 </body>
 
 </html>
