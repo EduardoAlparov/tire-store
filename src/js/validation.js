@@ -50,6 +50,18 @@ window.Parsley.addValidator('date', {
     },
 });
 
+window.Parsley.addValidator('email', {
+    requirementType: 'string',
+    validateString: function (value) {
+      if (value.trim() === '') return true;
+      return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+    },
+    messages: {
+      en: 'Email field',
+      ru: 'Введите корректный email',
+    },
+});
+
 Parsley.addMessages('ru', {
     defaultMessage: 'Некорректное значение.',
     type: {

@@ -1,0 +1,294 @@
+.order-placing {
+    &__title {
+        @include h2;
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            margin-bottom: 3.6rem;
+        }
+    }
+
+    &__label {
+        @include h3;
+        margin-bottom: 2.4rem;
+
+        &.order-placing__select-wrapper {
+            margin-bottom: unset;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 2.4rem 1.6rem;
+
+        background-color: var(--White, #FFF);
+        border-radius: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            padding: 3.6rem 2.4rem;
+
+            border-radius: 2.4rem;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+
+            @include breakpointMF(laptop) {
+                margin-bottom: 2.4rem;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 1.6rem 3.6rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem 3.6rem;
+        }
+
+        &:has(.order-placing__select-wrapper--third) {
+            gap: 0.8rem 3.6rem;
+
+            @include breakpointMF(laptop) {
+                gap: 2.4rem 1.6rem;
+            }
+        }
+    }
+
+    &__select-wrapper {
+        flex: 1 1 100%;
+
+        @include breakpointMF(laptop) {
+            flex: 0 1 calc(50% - 1.8rem);
+        }
+
+        &>h4 {
+            @include t2;
+        }
+
+        &.order-placing__select-wrapper--text {
+            flex: 1 1 100%;
+            color: var(--Grey-1, #666);
+        }
+
+        &.order-placing__select-wrapper--third {
+            @include breakpointMF(laptop) {
+                flex: 0 1 calc(100% / 3 - (1.6rem * 2 / 3));
+            }
+        }
+    }
+
+    &__tooltip,
+    &__select {
+        margin-top: 0.8rem;
+
+        &.select {
+            width: 100%;
+
+            .select__list,
+            .select__current {
+                background-color: var(--Light-Grey, #F2F2F2);
+
+                @include breakpointMF(laptop) {}
+            }
+        }
+    }
+
+    &__tooltip {
+        @include t3;
+        color: var(--Grey-1, #666);
+    }
+
+    &__methods {
+        margin-top: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            margin-top: 3.6rem;
+        }
+    }
+
+    &__methods-title {
+        @include t1;
+        margin-bottom: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__methods-item {
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__aside-col {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+    }
+
+    &__promocode,
+    &__summation {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+
+        padding: 2.4rem 1.6rem;
+
+        background-color: var(--White, #FFF);
+        border-radius: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+
+            padding: 2.4rem;
+
+            border-radius: 2.4rem;
+        }
+    }
+
+    &__promocode {
+        gap: 2.4rem;
+    }
+
+    &__row-line {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.6rem;
+
+        &>h4 {
+            @include h3;
+        }
+
+        &>p {
+            color: var(--Grey-1, #666);
+        }
+    }
+
+    &__total-count {
+        color: var(--Black, #141414);
+
+        &::after {
+            content: " шт.";
+        }
+    }
+
+    &__product {
+        display: grid;
+        grid-template-areas: "op-image op-desc"
+            "op-image op-prices";
+        grid-template-columns: auto 1fr;
+        gap: 0.4rem 1.6rem;
+        padding: 0.8rem;
+
+        background-color: var(--Light-Grey, #F2F2F2);
+        border-radius: 1.2rem;
+
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+
+
+            @include breakpointMF(laptop) {
+                gap: 0.8rem 1.6rem;
+                padding: 1.6rem;
+                border-radius: 1.6rem;
+            }
+        }
+    }
+
+    &__product-image {
+        &.cart-item__image {
+            grid-area: op-image;
+
+            width: 6.4rem;
+            height: 6.4rem;
+
+            @include breakpointMF(mobile) {
+                width: 9.6rem;
+                height: 9.6rem;
+            }
+        }
+    }
+
+    &__product-prices {
+        &.cart-item__prices-multi {
+            grid-area: op-prices;
+
+            color: var(--Grey-1, #666);
+
+            span {
+                @include t3;
+
+                @include breakpointMF(laptop) {
+                    @include t2;
+                }
+            }
+        }
+    }
+
+    &__product-desc {
+        &.cart-item__desc {
+            grid-area: op-desc;
+            @include maxSizeText(2);
+            @include t2;
+            color: var(--Black, #141414);
+
+
+            @include breakpointMF(laptop) {
+                @include t1;
+            }
+        }
+    }
+
+    &__total-sum {
+        @include h3;
+
+        &::after {
+            content: " ₽";
+        }
+    }
+
+    &__confirm {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            gap: 2.4rem;
+        }
+
+        @include breakpoint(tablet) {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 2000;
+
+            width: 100%;
+            padding: 1.6rem 1.6rem 9rem;
+
+            background-color: var(--White, #FFF);
+            border-top: 1px solid var(--Light-Grey, #F2F2F2);
+        }
+    }
+
+    &__agreement {
+        @include t3;
+        color: var(--Grey-1, #666);
+    }
+}

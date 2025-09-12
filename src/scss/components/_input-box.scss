@@ -1,4 +1,6 @@
 .input-box {
+
+    &>textarea,
     &>input {
         height: 100%;
         width: 100%;
@@ -17,7 +19,7 @@
         @include breakpointMF(laptop) {
             height: 4.8rem;
             min-height: 4.8rem;
-            padding: 1.4rem 2rem;
+            padding: 1.2rem 2rem;
         }
 
         @include placeholder {
@@ -34,5 +36,13 @@
             border-color: var(--Red, #D42111);
             caret-color: var(--Red, #D42111);
         }
+    }
+
+    &>textarea {
+        resize: none;
+        overflow: auto;
+        outline: none;
+
+        @include noScrollbar()
     }
 }

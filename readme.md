@@ -30,6 +30,8 @@ npm run build
 ## Страница - [Каталог.](https://eduardoalparov.github.io/tire-store/catalog.html)
 ## Страница - [Карточка товара.](https://eduardoalparov.github.io/tire-store/product.html)
 
+## Страница - [Оформить заказ.](https://eduardoalparov.github.io/tire-store/order-placing.html)
+
 # - в двух состояниях:
 ## Страница - [Избранное.](https://eduardoalparov.github.io/tire-store/favorites.html)
 ## Избранное Пустое состояние - после удаления из избранного карточки.

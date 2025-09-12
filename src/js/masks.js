@@ -1,10 +1,13 @@
 import Inputmask from 'inputmask';
 
 export default function masks() {
-    const phoneInputs = Array.from(document.querySelectorAll('.js-phone-input'));
+    const phoneInputs = Array.from(document.querySelectorAll('[name="recipient-phone"]'));
+    const emailInputs = document.querySelectorAll('[name="recipient-email"]');
 
     phoneInputs.forEach(input => {
-        const instance = new Inputmask({ mask: '+7 (999) 999-99-99' });
+        const instance = new Inputmask({
+            mask: '+7 (999) 999-99-99'
+        });
         instance.mask(input);
     });
 
@@ -23,7 +26,7 @@ export default function masks() {
     });
 
     const onlyNumericInputsNoFormatting = Array.from(document.querySelectorAll('.js-numeric-input'));
-    
+
     onlyNumericInputsNoFormatting.forEach(input => {
         input.addEventListener('input', () => {
             const value = input.value;
@@ -35,4 +38,13 @@ export default function masks() {
             }
         });
     });
+
+
+    emailInputs.forEach(emailInput => {
+        const emailMask = new Inputmask(emailInput, {
+            mask: /^\S*@?\S*$/,
+        });
+    })
+
+
 }

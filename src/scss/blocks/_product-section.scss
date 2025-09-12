@@ -7,9 +7,11 @@
         flex-direction: column;
         gap: 2.4rem;
 
-        &.grid-layout {
-            @include breakpoint(tablet) {
-                padding-block: 0 3.6rem;
+        &:not(.product-section__layout--padding-top) {
+            &.grid-layout {
+                @include breakpoint(tablet) {
+                    padding-block: 0 3.6rem;
+                }
             }
         }
 

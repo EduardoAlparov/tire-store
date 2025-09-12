@@ -1,0 +1,167 @@
+.method-radio {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    padding: 1.6rem;
+
+    background-color: var(--Light-Grey, #F2F2F2);
+    border-radius: 1.2rem;
+
+    @include breakpointMF(laptop) {
+        border-radius: 1.6rem;
+    }
+
+    &__label {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+
+        border: 1px solid transparent;
+        border-radius: 1.2rem;
+
+        transition-property: border;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+        @include breakpointMF(laptop) {
+            border-radius: 1.6rem;
+        }
+    }
+
+    &__title {
+        @include t2;
+        color: var(--Dark-gray, #242424);
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+
+
+        @include breakpointMF(laptop) {
+            gap: 0.8rem;
+        }
+
+    }
+
+    &__table,
+    &__text {
+        color: var(--Grey-1, #666);
+        @include t3;
+    }
+
+    &__table {
+        margin-top: 0.4rem;
+
+        @include breakpointMF(laptop) {
+            margin-top: 0.8rem;
+        }
+
+        &>li {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+
+            span {
+                white-space: nowrap;
+                color: var(--Grey-2, #B3B3B3);
+            }
+        }
+    }
+
+    &__checkbox {
+        display: grid;
+        place-items: center;
+
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+
+        background-color: var(--Grey-2, #B3B3B3);
+        border-radius: 0.4rem;
+
+        transition-property: background;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+
+        @include breakpointMF(laptop) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            fill: var(--Grey-2, #B3B3B3);
+            opacity: 0;
+        }
+    }
+
+
+    &__input {
+        @include visuallyHidden();
+    }
+
+
+    &__input {
+        &:checked {
+            &+.method-radio__checkbox {
+                background-color: var(--Green, #52CC52);
+
+                .icon {
+                    fill: var(--White, #fff);
+                    opacity: 1;
+                }
+            }
+
+            &~.method-radio__label {
+                border-color: var(--Green, #52CC52);
+            }
+        }
+    }
+
+    &.method-radio--simple {
+        padding: 0;
+        background-color: transparent;
+        border-radius: unset;
+
+        .method-radio__checkbox {
+            background-color: var(--Light-Grey, #F2F2F2);
+            border: 1px solid var(--Grey-2, #B3B3B3);
+        }
+
+        .method-radio__column {
+            gap: 0.4rem;
+        }
+
+        .method-radio__text {
+            color: var(--Grey-1, #666);
+        }
+
+        .method-radio__input {
+            &:checked {
+                &+.method-radio__checkbox {
+                    background-color: var(--Green, #52CC52);
+                    border-color: transparent;
+
+                    .icon {
+                        fill: var(--White, #fff);
+                        opacity: 1;
+                    }
+                }
+
+                &~.method-radio__label {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}

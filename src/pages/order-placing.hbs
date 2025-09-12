@@ -1,0 +1,551 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="section product-section">
+    <div class="product-section__site-container">
+
+        <div class="product-section__layout product-section__layout--padding-top grid-layout">
+            <form class="grid-layout__container order-placing" data-need-validation>
+                <div class="grid-layout__small-cell order-placing__aside-col">
+                    <div class="order-placing__summation">
+                        <div class="order-placing__row-line">
+                            <h4>Состав заказа</h4>
+                            <a href="#" class="blue-link">Изменить</a>
+                        </div>
+
+                        <div class="order-placing__row-line">
+                            <p>Товаров:</p>
+                            <div class="order-placing__total-count">
+                                8
+                            </div>
+                        </div>
+
+                        <ul class="order-placing__products">
+                            <li class="order-placing__product">
+                                <div class="cart-item__image order-placing__product-image">
+                                    <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                </div>
+                                <div class="cart-item__desc order-placing__product-desc">
+                                    WESTLAKE 710/70R42 173A8/173B
+                                </div>
+
+                                <div class="cart-item__prices-multi order-placing__product-prices">
+                                    <span class="cart-item__price-factor js-cart-item-factor">
+                                        4
+                                    </span>
+                                    <span class="cart-item__price-symbol">
+                                        x
+                                    </span>
+                                    <span class="cart-item__price-value js-cart-item-price">
+                                        6 300₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="order-placing__product">
+                                <div class="cart-item__image order-placing__product-image">
+                                    <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                </div>
+                                <div class="cart-item__desc order-placing__product-desc">
+                                    WESTLAKE 710/70R42 173A8/173B
+                                </div>
+
+                                <div class="cart-item__prices-multi order-placing__product-prices">
+                                    <span class="cart-item__price-factor js-cart-item-factor">
+                                        4
+                                    </span>
+                                    <span class="cart-item__price-symbol">
+                                        x
+                                    </span>
+                                    <span class="cart-item__price-value js-cart-item-price">
+                                        6 300₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="order-placing__product">
+                                <div class="cart-item__image order-placing__product-image">
+                                    <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                </div>
+                                <div class="cart-item__desc order-placing__product-desc">
+                                    WESTLAKE 710/70R42 173A8/173B
+                                </div>
+
+                                <div class="cart-item__prices-multi order-placing__product-prices">
+                                    <span class="cart-item__price-factor js-cart-item-factor">
+                                        4
+                                    </span>
+                                    <span class="cart-item__price-symbol">
+                                        x
+                                    </span>
+                                    <span class="cart-item__price-value js-cart-item-price">
+                                        6 300₽
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="order-placing__confirm">
+                            <div class="order-placing__row-line">
+                                <p>Итоговая сумма:</p>
+                                <div class="order-placing__total-sum">
+                                    50 400
+                                </div>
+                            </div>
+
+                            <button type="submit" class="order-placing__submit simple-btn">
+                                Оформить заказ
+                            </button>
+
+                            <p class="order-placing__agreement">
+                                Нажимая «Подтвердить заказ», вы соглашаетесь на обработку персональных данных и
+                                подтверждаете ознакомление с пользовательским соглашением, условиями продажи
+                                товаров и политикой о конфиденциальности.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="order-placing__promocode">
+                        <div class="order-placing__row-line">
+                            <h4>Промокод</h4>
+                        </div>
+
+                        <div class="order-placing__promocode-input input-box">
+                            <input type="text" name="recipient-promocode" id="recipient-promocode-value" value=""
+                                placeholder="Промокод">
+                        </div>
+
+                        <button type="button" class="order-placing__promo-submit simple-btn">
+                            Применить
+                        </button>
+                    </div>
+                </div>
+
+                <ul class="grid-layout__big-cell order-placing__list">
+                    <li class="order-placing__item">
+                        <h2 class="order-placing__title">
+                            Оформление заказа
+                        </h2>
+
+                        <div class="order-placing__coluumn">
+                            <div class="order-placing__label">
+                                Регион получения
+                            </div>
+
+                            <div class="order-placing__row">
+                                <div class="order-placing__select-wrapper">
+                                    <h4>Регион</h4>
+                                    <div class="order-placing__select select select--grey js-select">
+                                        <button class="select__current" type="button">Санкт-Петербург и область</button>
+                                        <div class="select__dropdown">
+                                            <div class="select__header">
+                                                <div class="select__title">
+                                                    Санкт-Петербург и область
+                                                </div>
+                                                <svg aria-hidden="true" class="select__header-close icon">
+                                                    <use xlink:href="#bx-close"></use>
+                                                </svg>
+                                            </div>
+                                            <ul class="select__list">
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-region-444">
+                                                        <input checked type="radio" name="region-select"
+                                                            id="radio-select-region-444">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-region-333">
+                                                        <input type="radio" name="region-select"
+                                                            id="radio-select-region-333">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-region-222">
+                                                        <input type="radio" name="region-select"
+                                                            id="radio-select-region-222">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-region-111">
+                                                        <input type="radio" name="region-select"
+                                                            id="radio-select-region-111">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="select__accept simple-btn">
+                                                Подтвердить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-placing__select-wrapper">
+                                    <h4>Населенный пункт</h4>
+                                    <div class="order-placing__select select select--grey js-select">
+                                        <button class="select__current" type="button">Санкт-Петербург и область</button>
+                                        <div class="select__dropdown">
+                                            <div class="select__header">
+                                                <div class="select__title">
+                                                    Санкт-Петербург и область
+                                                </div>
+                                                <svg aria-hidden="true" class="select__header-close icon">
+                                                    <use xlink:href="#bx-close"></use>
+                                                </svg>
+                                            </div>
+                                            <ul class="select__list">
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-city-444">
+                                                        <input checked type="radio" name="city-select"
+                                                            id="radio-select-city-444">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-city-333">
+                                                        <input type="radio" name="city-select"
+                                                            id="radio-select-city-333">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-city-222">
+                                                        <input type="radio" name="city-select"
+                                                            id="radio-select-city-222">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                                <li class="select__item">
+                                                    <label class="select__label" for="radio-select-city-111">
+                                                        <input type="radio" name="city-select"
+                                                            id="radio-select-city-111">
+                                                        <span class="select__text">
+                                                            Санкт-Петербург и область
+                                                        </span>
+                                                        <svg aria-hidden="true" class="icon select__tick">
+                                                            <use xlink:href="#bx-check"></use>
+                                                        </svg>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="select__accept simple-btn">
+                                                Подтвердить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="order-placing__select-wrapper order-placing__select-wrapper--text">
+                                    Если вашего города нет в списке — выберите областной центр и напишите город в
+                                    комментарии к заказу
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="order-placing__item">
+                        <div class="order-placing__coluumn">
+                            <div class="order-placing__label">
+                                Способ получения
+                            </div>
+
+                            <ul class="order-placing__row">
+                                <li class="order-placing__select-wrapper order-placing__select-wrapper--third">
+                                    <div class="order-placing__checkbox method-radio">
+                                        <input class="method-radio__input" type="radio" value="Самовывоз"
+                                            name="radio-address" id="radio-address-001" checked>
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Самовывоз
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Железнодорожный проспект, 20 ,ст. м. Ломоносовская
+                                            </p>
+                                            <ul class="method-radio__table">
+                                                <li>
+                                                    <span>Пн-Пт</span>
+                                                    <span>10:00 — 18:00</span>
+                                                </li>
+                                                <li>
+                                                    <span>Сб-Вс</span>
+                                                    <span>Выходной</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <label for="radio-address-001" class="method-radio__label"></label>
+                                    </div>
+                                </li>
+                                <li class="order-placing__select-wrapper order-placing__select-wrapper--third">
+                                    <div class="order-placing__checkbox method-radio">
+                                        <input class="method-radio__input" type="radio" value="Мой дом 1"
+                                            name="radio-address" id="radio-address-002">
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Мой дом
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Санкт-Петербург, Комендантский пр-т, д. 12, кв/офис 812
+                                            </p>
+                                        </div>
+                                        <label for="radio-address-002" class="method-radio__label"></label>
+                                    </div>
+                                </li>
+                                <li class="order-placing__select-wrapper order-placing__select-wrapper--third">
+                                    <div class="order-placing__checkbox method-radio">
+                                        <input class="method-radio__input" type="radio" value="Мой дом 2"
+                                            name="radio-address" id="radio-address-003">
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Мой адрес 2
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Санкт-Петербург, Комендантский пр-т, д. 12, кв/офис 812
+                                            </p>
+                                        </div>
+                                        <label for="radio-address-003" class="method-radio__label"></label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="order-placing__item">
+                        <div class="order-placing__coluumn">
+                            <div class="order-placing__row">
+                                <div
+                                    class="order-placing__label order-placing__select-wrapper order-placing__select-wrapper--third">
+                                    Оплата
+                                </div>
+                                <p class="order-placing__select-wrapper order-placing__select-wrapper--text">
+                                    При оплате заказа банковским переводом от юридического лица — выберите способ оплаты
+                                    «Юридическим лицом»
+                                </p>
+                            </div>
+
+                            <div class="order-placing__methods">
+                                <p class="order-placing__methods-title">
+                                    Способ оплаты:
+                                </p>
+                                <ul class="order-placing__methods-list">
+                                    <li class="order-placing__methods-item method-radio method-radio--simple">
+                                        <input class="method-radio__input" type="radio" value="Оплата наличными"
+                                            name="radio-methods" id="radio-methods-001">
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Оплата наличными
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Для покупателей из регионов, где есть магазины Хочу шину
+                                            </p>
+                                        </div>
+                                        <label for="radio-methods-001" class="method-radio__label"></label>
+                                    </li>
+                                    <li class="order-placing__methods-item method-radio method-radio--simple">
+                                        <input class="method-radio__input" type="radio" value="Оплата картой"
+                                            name="radio-methods" id="radio-methods-002" checked>
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Оплата онлайн (Visa, Mastercard, МИР, SberPay)
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Оплата заказа картами Visa и MasterCard в режиме онлайн
+                                            </p>
+                                        </div>
+                                        <label for="radio-methods-002" class="method-radio__label"></label>
+                                    </li>
+                                    <li class="order-placing__methods-item method-radio method-radio--simple">
+                                        <input class="method-radio__input" type="radio"
+                                            value="Оплата Банковским переводом" name="radio-methods"
+                                            id="radio-methods-003">
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Банковским переводом
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Оплата заказа в любом банке, действующем на территории России
+                                            </p>
+                                        </div>
+                                        <label for="radio-methods-003" class="method-radio__label"></label>
+                                    </li>
+                                    <li class="order-placing__methods-item method-radio method-radio--simple">
+                                        <input class="method-radio__input" type="radio" value="Оплата в кредит"
+                                            name="radio-methods" id="radio-methods-004">
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Купить в кредит
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Услуга предоставляется АО «ОТП Банк» и АО «Тинькофф Банк»
+                                            </p>
+                                        </div>
+                                        <label for="radio-methods-004" class="method-radio__label"></label>
+                                    </li>
+                                    <li class="order-placing__methods-item method-radio method-radio--simple">
+                                        <input class="method-radio__input" type="radio" value="Оплата в рассрочку"
+                                            name="radio-methods" id="radio-methods-005">
+
+                                        <i class="method-radio__checkbox">
+                                            <svg aria-hidden="true" class="icon">
+                                                <use xlink:href="#bx-check"></use>
+                                            </svg>
+                                        </i>
+
+                                        <div class="method-radio__column">
+                                            <h5 class="method-radio__title">
+                                                Купить в рассрочку (Яндекс.Сплит)
+                                            </h5>
+                                            <p class="method-radio__text">
+                                                Услуга предоставляется сервисом Яндекс.Сплит
+                                            </p>
+                                        </div>
+                                        <label for="radio-methods-005" class="method-radio__label"></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="order-placing__item">
+                        <div class="order-placing__coluumn">
+                            <div class="order-placing__label">
+                                Данные получателя
+                            </div>
+
+                            <div class="order-placing__row">
+                                <div class="order-placing__select-wrapper">
+                                    <h4>ФИО*</h4>
+                                    <div class="order-placing__select input-box">
+                                        <input type="text" name="recipient-name" id="recipient-name-value" value=""
+                                            placeholder="ФИО" required data-parsley-required="">
+                                    </div>
+                                    <div class="order-placing__tooltip">
+                                        Например: Иванов Пётр Сергеевич<br>
+                                        Обязательно заполните ФИО для оплаты банковским
+                                        переводом или пластиковой картой.
+                                    </div>
+                                </div>
+                                <div class="order-placing__select-wrapper">
+                                    <h4>Телефон*</h4>
+                                    <div class="order-placing__select input-box">
+                                        <input type="phone" name="recipient-phone" id="recipient-phone-value" value=""
+                                            placeholder="+7 (ххх) ххх-хх-хх" required>
+                                    </div>
+                                    <div class="order-placing__tooltip">
+                                        Например: +7 961 234-56-78<br>
+                                        СМС-уведомления о статусе заказа будут приходить на
+                                        данный номер.
+                                    </div>
+                                </div>
+                                <div class="order-placing__select-wrapper">
+                                    <h4>Электронная почта*</h4>
+                                    <div class="order-placing__select input-box">
+                                        <input type="phone" name="recipient-email" id="recipient-email-value" value=""
+                                            placeholder="Электронная почта" required data-parsley-email="">
+                                    </div>
+                                    <div class="order-placing__tooltip">
+                                        Почту необходимо указать для получения банковского счёта на оплату.
+                                    </div>
+                                </div>
+                                <div class="order-placing__select-wrapper">
+                                    <h4>Комментарий к заказу</h4>
+                                    <div class="order-placing__select input-box">
+                                        <textarea name="recipient-comment" id="recipient-comment-value"
+                                            placeholder="Комментарий"></textarea>
+                                    </div>
+                                    <div class="order-placing__tooltip">
+                                        Если у вас есть пожелания к заказу, например, необходимость в заглушках или
+                                        крепежах — укажите это здесь.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
