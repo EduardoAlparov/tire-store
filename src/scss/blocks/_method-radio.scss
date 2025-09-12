@@ -73,6 +73,20 @@
                 white-space: nowrap;
                 color: var(--Grey-2, #B3B3B3);
             }
+
+            a {
+                position: relative;
+                z-index: 200;
+                @include t2;
+
+                &:not(.blue-link) {
+                    color: var(--Grey-2, #B3B3B3);
+
+                    @include hoverActive {
+                        color: var(--Black, #141414);
+                    }
+                }
+            }
         }
     }
 

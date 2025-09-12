@@ -1,0 +1,49 @@
+.switcher {
+    display: grid;
+    place-items: center;
+    place-content: center;
+
+    width: 4.8rem;
+    height: 2.8rem;
+    padding: 1rem 0.4rem;
+
+    background-color: var(--Black, #141414);
+    border-radius: 0.8rem;
+    cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &>i {
+        position: relative;
+        transform: translateX(-50%);
+
+        display: block;
+        width: 2rem;
+        height: 2rem;
+
+        background: var(--White, #FFF);
+        border-radius: 0.4rem;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+
+    &>input {
+        @include visuallyHidden();
+    }
+
+    &>input {
+        &:checked {
+            &+i {
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    &:has(input:checked) {
+        background-color: var(--Red, #D42111);
+    }
+}

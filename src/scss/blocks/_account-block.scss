@@ -1,0 +1,95 @@
+.account-block {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.6rem;
+
+    @include breakpointMF(laptop) {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 2.4rem;
+    }
+
+    &__border {
+        padding: 2.4rem 1.6rem;
+        background-color: var(--White, #FFF);
+        border-radius: 1.6rem;
+
+        @include breakpointMF(laptop) {
+            padding: 3.6rem 2.4rem;
+            border-radius: 2.4rem;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            gap: 3.6rem;
+        }
+    }
+
+    &__title {
+        @include h3;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+    }
+
+    &__input {
+        &.account-block__input--triple {
+            @include breakpointMF(laptop) {
+                flex: 0 1 calc(100% / 3 - (1.6rem * 2 / 3));
+            }
+        }
+    }
+
+    &__form {
+        @include breakpointMF(laptop) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__empty-plug {
+        @include breakpointMF(laptop) {
+            flex: 0 0 56rem;
+        }
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__text {
+        color: var(--Grey-1, #666);
+    }
+
+    &__question {
+        @include t1;
+    }
+
+    &__radios {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+
+        @include breakpointMF(laptop) {
+            gap: 3.6rem;
+        }
+    }
+
+    &__save--content {
+        width: 100%;
+
+        @include breakpointMF(laptop) {
+            width: max-content;
+        }
+    }
+}

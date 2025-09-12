@@ -1,0 +1,42 @@
+<div class="{{#if slideClass}}{{slideClass}}{{/if}} product-slide">
+    <div class="product-slide__top">
+        <div class="product-slide__image">
+            <picture>
+                <source type="image/webp" srcset="./img/carousel/wheel.webp" />
+                <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+            </picture>
+        </div>
+        <div class="product-slide__controls">
+            <label type="button" class="card__card-checkbox card-checkbox">
+                <input type="checkbox" name="add-to-favorite" id="">
+                <svg aria-hidden="true" class="card-checkbox__icon">
+                    <use xlink:href="#bx-heart"></use>
+                </svg>
+                <svg aria-hidden="true" class="card-checkbox__icon card-checkbox__icon--stroke">
+                    <use xlink:href="#bx-heart-stroke"></use>
+                </svg>
+            </label>
+
+            <label type="button" class="card__card-checkbox card-checkbox">
+                <input type="checkbox" name="remove-from-compare" id="">
+                <svg aria-hidden="true" class="card-checkbox__icon">
+                    <use xlink:href="#bx-trash"></use>
+                </svg>
+            </label>
+        </div>
+    </div>
+    <div class="product-slide__info">
+        <div class="product-slide__price">
+            24 500
+        </div>
+        <p class="product-slide__text">
+            Kapsen HS202 315/70 R22,5 154/150M PR20 TL (Ведущая ось)
+        </p>
+    </div>
+
+    <div class="product-slide__pagination">
+        <span class="product-slide__pagination-value">1</span>
+        <span>из</span>
+        <span class="product-slide__pagination-total">4</span>
+    </div>
+</div>

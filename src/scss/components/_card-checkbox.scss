@@ -46,7 +46,7 @@
             opacity: 0;
 
             @include breakpoint(tablet) {
-                opacity: 1;
+                // opacity: 1;
             }
         }
     }
@@ -67,6 +67,10 @@
         @include breakpoint(tablet) {
             .card-checkbox__icon {
                 fill: var(--Red, #D42111);
+
+                &.card-checkbox__icon--stroke {
+                    opacity: 1;
+                }
             }
         }
 

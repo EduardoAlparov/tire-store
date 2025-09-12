@@ -1,0 +1,240 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="section section--comparison comparison-section js-compare-carouseel">
+    <div class="comparison-section__site-container">
+        <div class="comparison-section__grid">
+            <div class="comparison-section__header">
+                <h3 class="comparison-section__title">
+                    Сравнение
+                </h3>
+                <div class="comparison-section__navigation carousel-section__navigation">
+                    <button type="button" class="comparison-section__btn-prev carousel-btn carousel-btn--prev">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-prev"></use>
+                        </svg>
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-prev"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="comparison-section__btn-next carousel-btn carousel-btn--next">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-next"></use>
+                        </svg>
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#bx-arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="comparison-section__navbar">
+                <div class="comparison-section__catalog-nav catalog-nav">
+                    <ul class="catalog-nav__list">
+                        <li>
+                            <a href="#" class="catalog-nav__link catalog-link catalog-link--active">
+                                <div class="catalog-link__text">
+                                    Шины
+                                    <span class="catalog-link__number">4</span>
+                                </div>
+                                <svg aria-hidden="true" class="catalog-link__arrow">
+                                    <use xlink:href="#bx-chevron"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="catalog-nav__link catalog-link">
+                                <div class="catalog-link__text">
+                                    Сопутствующие товары
+                                    <span class="catalog-link__number">2</span>
+                                </div>
+                                <svg aria-hidden="true" class="catalog-link__arrow">
+                                    <use xlink:href="#bx-chevron"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="catalog-nav__link catalog-link">
+                                <div class="catalog-link__text">
+                                    Все
+                                    <span class="catalog-link__number">6</span>
+                                </div>
+                                <svg aria-hidden="true" class="catalog-link__arrow">
+                                    <use xlink:href="#bx-chevron"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="comparison-section__compare-table">
+                <ul class="comparison-section__compare-list">
+                    <li class="comparison-section__compare-list-value">Индекс скорости</li>
+                    <li class="comparison-section__compare-list-value">Категория</li>
+                    <li class="comparison-section__compare-list-value">Бренд</li>
+                    <li class="comparison-section__compare-list-value">Модель</li>
+                    <li class="comparison-section__compare-list-value">Ширина шины</li>
+                    <li class="comparison-section__compare-list-value">Профиль</li>
+                    <li class="comparison-section__compare-list-value">Диаметр</li>
+                    <li class="comparison-section__compare-list-value">Вес</li>
+                    <li class="comparison-section__compare-list-value">Типоразмер</li>
+                    <li class="comparison-section__compare-list-value">Индекс нагрузки</li>
+                    <li class="comparison-section__compare-list-value">Ось</li>
+                    <li class="comparison-section__compare-list-value">Сезон</li>
+                    <li class="comparison-section__compare-list-value">Страна</li>
+                    <li class="comparison-section__compare-list-value">Слойность</li>
+                </ul>
+            </div>
+
+            <div class="comparison-section__compare-controls">
+                <div class="comparison-section__compare-toggle">
+                    <span>Только различающиеся</span>
+                    <label class="comparison-section__compare-checkbox switcher">
+                        <input type="checkbox" name="compare-toggle" id="">
+                        <i></i>
+                    </label>
+                </div>
+                <button type="button"
+                    class="comparison-section__btn tab tab--red-outlined hide-on-mobile js-remove-all-compare">
+                    Очистить список
+                </button>
+            </div>
+
+            <div class="comparison-section__products-carousel">
+                <div class="comparison-section__products-swiper swiper">
+                    <div class="comparison-section__products-swiper-wrapper swiper-wrapper">
+                        {{>product-slide slideClass="comparison-section__products-slide swiper-slide"}}
+                        {{>product-slide slideClass="comparison-section__products-slide swiper-slide"}}
+                        {{>product-slide slideClass="comparison-section__products-slide swiper-slide"}}
+                        {{>product-slide slideClass="comparison-section__products-slide swiper-slide"}}
+                        {{>product-slide slideClass="comparison-section__products-slide swiper-slide"}}
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-section__tables-carousel">
+                <div class="comparison-section__tables-swiper swiper">
+                    <ul class="comparison-section__products-swiper-wrapper swiper-wrapper">
+                        <li class="comparison-section__products-slide swiper-slide">
+                            <ul class="comparison-section__compare-list">
+                                <li class="">M (до 130 км/ч)</li>
+                                <li class="">Грузовые</li>
+                                <li class="">Kapsen</li>
+                                <li class="">HS202</li>
+                                <li class="">315.00</li>
+                                <li class="">70.00</li>
+                                <li class="">22.50</li>
+                                <li class="">61.5 кг</li>
+                                <li class="">315/70 R22.5</li>
+                                <li class="">154 (до 3750 кг)</li>
+                                <li class="">Ведущая</li>
+                                <li class="">Всесезонные</li>
+                                <li class="">Китай</li>
+                                <li class="">20</li>
+                            </ul>
+                        </li>
+                        <li class="comparison-section__products-slide swiper-slide">
+                            <ul class="comparison-section__compare-list">
+                                <li class="">M (до 130 км/ч)</li>
+                                <li class="">Грузовые</li>
+                                <li class="">Kapsen</li>
+                                <li class="">HS202</li>
+                                <li class="">315.00</li>
+                                <li class="">70.00</li>
+                                <li class="">22.50</li>
+                                <li class="">61.5 кг</li>
+                                <li class="">315/70 R22.5</li>
+                                <li class="">154 (до 3750 кг)</li>
+                                <li class="">Ведущая</li>
+                                <li class="">Всесезонные</li>
+                                <li class="">Китай</li>
+                                <li class="">20</li>
+                            </ul>
+                        </li>
+                        <li class="comparison-section__products-slide swiper-slide">
+                            <ul class="comparison-section__compare-list">
+                                <li class="">M (до 130 км/ч)</li>
+                                <li class="">Грузовые</li>
+                                <li class="">Kapsen</li>
+                                <li class="">HS202</li>
+                                <li class="">315.00</li>
+                                <li class="">70.00</li>
+                                <li class="">22.50</li>
+                                <li class="">61.5 кг</li>
+                                <li class="">315/70 R22.5</li>
+                                <li class="">154 (до 3750 кг)</li>
+                                <li class="">Ведущая</li>
+                                <li class="">Всесезонные</li>
+                                <li class="">Китай</li>
+                                <li class="">20</li>
+                            </ul>
+                        </li>
+                        <li class="comparison-section__products-slide swiper-slide">
+                            <ul class="comparison-section__compare-list">
+                                <li class="">M (до 130 км/ч)</li>
+                                <li class="">Грузовые</li>
+                                <li class="">Kapsen</li>
+                                <li class="">HS202</li>
+                                <li class="">315.00</li>
+                                <li class="">70.00</li>
+                                <li class="">22.50</li>
+                                <li class="">61.5 кг</li>
+                                <li class="">315/70 R22.5</li>
+                                <li class="">154 (до 3750 кг)</li>
+                                <li class="">Ведущая</li>
+                                <li class="">Всесезонные</li>
+                                <li class="">Китай</li>
+                                <li class="">20</li>
+                            </ul>
+                        </li>
+                        <li class="comparison-section__products-slide swiper-slide">
+                            <ul class="comparison-section__compare-list">
+                                <li class="">M (до 130 км/ч)</li>
+                                <li class="">Грузовые</li>
+                                <li class="">Kapsen</li>
+                                <li class="">HS202</li>
+                                <li class="">315.00</li>
+                                <li class="">70.00</li>
+                                <li class="">22.50</li>
+                                <li class="">61.5 кг</li>
+                                <li class="">315/70 R22.5</li>
+                                <li class="">154 (до 3750 кг)</li>
+                                <li class="">Ведущая</li>
+                                <li class="">Всесезонные</li>
+                                <li class="">Китай</li>
+                                <li class="">20</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--empty-comparison home home--no-height">
+    <div class="home__site-container">
+        <div class="section__empty-plug section__empty-plug--no-margins empty-plug">
+            <h3 class="empty-plug__title">
+                Сравнение
+            </h3>
+
+            <div class="empty-plug__center">
+                <p class="empty-plug__message">
+                    У&nbsp;вас пока нет товаров в сравнении.
+                </p>
+                <p class="empty-plug__text">
+                    Перейдите в каталог и выберите интересующие вас товары для сравнения.
+                </p>
+            </div>
+
+            <a href="./catalog.html" class="empty-plug__link tab tab--red-outlined">
+                Перейти в каталог
+            </a>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

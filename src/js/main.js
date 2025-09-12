@@ -25,6 +25,7 @@ import productSwiper from './productSwiper';
 import counterProducts from './counterProducts';
 import deleteFavorites from './deleteFavorites';
 import deleteCartItem from './deleteCartItem';
+import compareCarousel from './compareCarousel';
 
 import fancybox from './fancybox';
 
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     counterProducts();
     deleteFavorites();
     deleteCartItem();
+    compareCarousel();
 
     fancybox();
 });

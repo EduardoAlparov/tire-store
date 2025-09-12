@@ -6,7 +6,7 @@ export default function modals() {
     function openModal(id, event) {
         const modal = document.querySelector(`.js-modal${id}`);
         if (!modal) {
-            // console.error(`Modal with ID: ${id} not found`);
+            console.error(`Modal with ID: ${id} not found`);
             return;
         }
 
@@ -17,8 +17,6 @@ export default function modals() {
         if (event) {
             event.preventDefault();
         }
-
-        console.log('Opening modal', modal);
 
         const openHandler = () => {
             lockScroll(modal, {

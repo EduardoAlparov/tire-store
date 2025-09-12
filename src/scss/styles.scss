@@ -45,6 +45,7 @@
 @import 'blocks/catalog';
 @import 'blocks/grid-layout';
 @import 'blocks/catalog-nav';
+@import 'blocks/catalog-link';
 @import 'components/checkbox';
 @import 'components/selection-item';
 
@@ -64,3 +65,11 @@
 
 @import 'blocks/order-placing';
 @import 'blocks/method-radio';
+@import 'blocks/ready-popup';
+
+@import 'blocks/comparison-section';
+@import 'blocks/product-slide';
+@import 'components/switcher';
+
+@import 'blocks/account-block';
+@import 'blocks/modal';

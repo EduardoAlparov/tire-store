@@ -1,0 +1,317 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="section section--full-height catalog">
+    <div class="catalog__site-container">
+        <div class="catalog__layout grid-layout">
+            <div class="grid-layout__container">
+                <div class="grid-layout__small-cell">
+                    <div class="grid-layout__catalog-nav catalog-nav catalog-nav--sticky">
+                        <h3 class="catalog-nav__title catalog-nav__title--all">
+                            Личный кабинет
+                        </h3>
+
+                        <ul class="catalog-nav__list">
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link catalog-link--active">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-user"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Профиль
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-cube"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои заказы
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-bell"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои подписки
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#exit-account" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-logout"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Выйти
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-layout__big-cell grid-layout__account-block account-block">
+                    <form action="" class="account-block__form account-block__flex account-block__border"
+                        data-need-validation>
+                        <h3 class="account-block__title">Личные данные</h3>
+
+                        <ul class="account-block__inputs">
+                            <li class="account-block__input account-block__input--triple order-placing__select-wrapper">
+                                <h4>Имя*</h4>
+                                <div class="order-placing__select input-box">
+                                    <input type="text" name="user-name" id="user-name-value" value="Иван" required
+                                        data-parsley-required="">
+                                </div>
+                            </li>
+
+                            <li class="account-block__input account-block__input--triple order-placing__select-wrapper">
+                                <h4>Фамилия*</h4>
+                                <div class="order-placing__select input-box">
+                                    <input type="text" name="user-secondname" id="user-secondname-value" value="Иванов"
+                                        required data-parsley-required="">
+                                </div>
+                            </li>
+
+                            <li class="account-block__input account-block__input--triple order-placing__select-wrapper">
+                                <h4>Отчество</h4>
+                                <div class="order-placing__select input-box">
+                                    <input type="text" name="user-surname" id="user-surname-value" value="Иванович">
+                                </div>
+                            </li>
+
+                            <li class="account-block__input account-block__input--double order-placing__select-wrapper">
+                                <h4>Email*</h4>
+                                <div class="order-placing__select input-box">
+                                    <input type="phone" name="user-email" id="user-email-value"
+                                        value="example@email.com" required data-parsley-email="">
+                                </div>
+                            </li>
+
+                            <li class="account-block__input account-block__input--double order-placing__select-wrapper">
+                                <h4>Телефон*</h4>
+                                <div class="order-placing__select input-box">
+                                    <input type="phone" name="user-phone" id="user-phone-value"
+                                        value="+7 (999) 123-45-67" required>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button type="submit" disabled class="account-block__save tab tab--red-outlined">
+                            Сохранить
+                        </button>
+                    </form>
+
+                    <div class="account-block__empty-plug empty-plug">
+                        <h3 class="empty-plug__title">
+                            Мои адреса
+                        </h3>
+
+                        <div class="empty-plug__center">
+                            <div class="order-placing__select-wrapper order-placing__select-wrapper--third">
+                                <div class="order-placing__checkbox method-radio">
+                                    <input class="method-radio__input" type="radio" value="Мой дом" name="radio-address"
+                                        id="radio-address-003" checked>
+
+                                    <i class="method-radio__checkbox">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#bx-check"></use>
+                                        </svg>
+                                    </i>
+
+                                    <div class="method-radio__column">
+                                        <h5 class="method-radio__title">
+                                            Мой дом
+                                        </h5>
+                                        <p class="method-radio__text">
+                                            Санкт-Петербург, Комендантский пр-т, д. 12, кв/офис 812
+                                        </p>
+                                        <ul class="method-radio__table">
+                                            <li>
+                                                <a href="#edit-address" class="method-radio__edit blue-link">
+                                                    Изменить
+                                                </a>
+                                                <a href="#remove-address" class="method-radio__remove">
+                                                    Удалить
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <label for="radio-address-003" class="method-radio__label"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#new-address" class="empty-plug__button tab tab--red-outlined">
+                            Добавить адрес
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal js-modal" id="new-address">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h2 class="modal__title">Новый адрес</h2>
+            <ul class="account-block__inputs modal__inputs">
+                <li class="modal__input modal__input--double order-placing__select-wrapper">
+                    <h4>Название</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-new-title" id="user-new-title-value" value="" required
+                            data-parsley-required="" placeholder="Название">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--double order-placing__select-wrapper">
+                    <h4>Город*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-new-city" id="user-new-city-value" value="" required
+                            data-parsley-required="" placeholder="Город">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--full order-placing__select-wrapper">
+                    <h4>Улица*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-new-street" id="user-new-street-value" value="" required
+                            data-parsley-required="" placeholder="Улица">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--triple order-placing__select-wrapper">
+                    <h4>Дом*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-new-house" id="user-new-house-value" value="" required
+                            data-parsley-required="" placeholder="Дом">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--triple order-placing__select-wrapper">
+                    <h4>Кв/офис*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-new-flat" id="user-new-flat-value" value="" required
+                            data-parsley-required="" placeholder="Кв/офис">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--triple order-placing__select-wrapper">
+                    <h4>Домофон</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-new-flat" id="user-new-flat-value" value="" placeholder="Пароль">
+                    </div>
+                </li>
+            </ul>
+            <button type="submit" class="modal__submit simple-btn">
+                Добавить адрес
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal js-modal" id="edit-address">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h2 class="modal__title">Мой дом</h2>
+            <ul class="account-block__inputs modal__inputs">
+                <li class="modal__input modal__input--double order-placing__select-wrapper">
+                    <h4>Название</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-edit-title" id="user-edit-title-value" value="Мой дом" required
+                            data-parsley-required="" placeholder="">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--double order-placing__select-wrapper">
+                    <h4>Город*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-edit-city" id="user-edit-city-value" value="Санкт-Петербург"
+                            required data-parsley-required="" placeholder="">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--full order-placing__select-wrapper">
+                    <h4>Улица*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-edit-street" id="user-edit-street-value"
+                            value="Комендантский пр-т" required data-parsley-required="" placeholder="">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--triple order-placing__select-wrapper">
+                    <h4>Дом*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-edit-house" id="user-edit-house-value" value="12" required
+                            data-parsley-required="" placeholder="">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--triple order-placing__select-wrapper">
+                    <h4>Кв/офис*</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-edit-flat" id="user-edit-flat-value" value="812" required
+                            data-parsley-required="" placeholder="">
+                    </div>
+                </li>
+                <li class="modal__input modal__input--triple order-placing__select-wrapper">
+                    <h4>Домофон</h4>
+                    <div class="order-placing__select input-box">
+                        <input type="text" name="user-edit-flat" id="user-edit-flat-value" value=""
+                            placeholder="Пароль">
+                    </div>
+                </li>
+            </ul>
+            <button type="submit" class="modal__submit tab tab--red-outlined">
+                Сохранить
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal js-modal" id="remove-address">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h3 class="modal__subtitle">Удалить адрес</h3>
+
+            <p class="modal__text">
+                Вы действительно хотите удалить адрес <span class="modal__address-name">«Мой дом»?</span>
+            </p>
+
+            <button type="submit" class="modal__submit tab tab--red-outlined">
+                Удалить
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal js-modal" id="exit-account">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h3 class="modal__subtitle">Выйти</h3>
+
+            <p class="modal__text">
+                Вы действительно хотите выйти из акаунта?
+            </p>
+
+            <button type="submit" class="modal__submit tab tab--red-outlined">
+                Выйти
+            </button>
+        </form>
+    </div>
+</div>
+
+
+{{/content}}
+{{/extend}}

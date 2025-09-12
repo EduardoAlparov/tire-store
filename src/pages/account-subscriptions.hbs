@@ -1,0 +1,137 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="section section--full-height catalog">
+    <div class="catalog__site-container">
+        <div class="catalog__layout grid-layout">
+            <div class="grid-layout__container">
+                <div class="grid-layout__small-cell">
+                    <div class="grid-layout__catalog-nav catalog-nav catalog-nav--sticky">
+                        <h3 class="catalog-nav__title catalog-nav__title--all">
+                            Личный кабинет
+                        </h3>
+
+                        <ul class="catalog-nav__list">
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link catalog-link--active">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-user"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Профиль
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-cube"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои заказы
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-bell"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои подписки
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#exit-account" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-logout"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Выйти
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-layout__big-cell grid-layout__account-block account-block">
+                    <div class="account-block__form account-block__flex account-block__border">
+                        <h3 class="account-block__title">Мои подписки</h3>
+
+                        <div class="account-block__center">
+                            <p class="account-block__text">
+                                Получайте актуальную информацию о новых поступлениях, акциях и специальных предложениях
+                                прямо на вашу электронную почту. Это позволит вам всегда быть в курсе наших предложений
+                                и возможностей сэкономить на покупках.
+                            </p>
+                            <p class="account-block__question">Подписаться?</p>
+                            <div class="account-block__radios">
+                                <label tabindex="0" class="account-block__checkbox checkbox">
+                                    <input class="checkbox__input" type="radio" value="да" name="answer-subscriptions"
+                                        id="answer-subscriptions-yes" checked>
+                                    <i>
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#bx-check"></use>
+                                        </svg>
+                                    </i>
+                                    <span class="checkbox__value">Да</span>
+                                </label>
+                                <label tabindex="0" class="account-block__checkbox checkbox">
+                                    <input class="checkbox__input" type="radio" value="нет" name="answer-subscriptions"
+                                        id="answer-subscriptions-no">
+                                    <i>
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#bx-check"></use>
+                                        </svg>
+                                    </i>
+                                    <span class="checkbox__value">Нет</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="account-block__save account-block__save--content tab tab--red-outlined">
+                            Сохранить
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal js-modal" id="exit-account">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h3 class="modal__subtitle">Выйти</h3>
+
+            <p class="modal__text">
+                Вы действительно хотите выйти из акаунта?
+            </p>
+
+            <button type="submit" class="modal__submit tab tab--red-outlined">
+                Выйти
+            </button>
+        </form>
+    </div>
+</div>
+
+{{/content}}
+{{/extend}}

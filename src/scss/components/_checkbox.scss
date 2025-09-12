@@ -46,6 +46,7 @@
         @include t2;
     }
 
+    &>input[type="radio"],
     &>input[type="checkbox"] {
         @include visuallyHidden();
 
