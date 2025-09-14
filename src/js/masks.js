@@ -2,7 +2,7 @@ import Inputmask from 'inputmask';
 
 export default function masks() {
     const phoneInputs = Array.from(document.querySelectorAll('[name="recipient-phone"]'));
-    const emailInputs = document.querySelectorAll('[name="recipient-email"]');
+    const emailInputs = document.querySelectorAll('[name="recipient-email"], [name="new-user-email"]');
 
     phoneInputs.forEach(input => {
         const instance = new Inputmask({

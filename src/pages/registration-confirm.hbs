@@ -1,0 +1,36 @@
+{{#extend "auth"}}
+{{#content "main"}}
+
+<section class="section auth-section">
+    <div class="auth-section__container">
+        <div class="auth-section__picture">
+            <picture>
+                <source media="(max-aspect-ratio: 4/3)" type="image/webp" srcset="./img/back-svg-m.svg" />
+                <source media="(min-aspect-ratio: 4/3)" type="image/webp" srcset="./img/back-svg.svg" />
+                <img class="lazy" src="./img/back-svg.svg" alt="">
+            </picture>
+        </div>
+
+        <div class="auth-section__from-wrapper">
+            <div class="modal__body account-block__flex">
+                <a href="/" class="ready-popup__logo logo">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <div class="auth-section__flex">
+                    <h3 class="auth-section__subtitle">Подтверждение</h3>
+                    <p class="auth-section__text">
+                        Для подтверждения регистрации перейдите по ссылке, указанной в письме, которое мы отправили
+                        на ваш электронный адрес. Это позволит нам завершить процесс регистрации и предоставить вам
+                        доступ к нашему сервису.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

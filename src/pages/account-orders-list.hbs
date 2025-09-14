@@ -1,0 +1,251 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="section section--full-height catalog">
+    <div class="catalog__site-container">
+        <div class="catalog__layout grid-layout">
+            <div class="grid-layout__container">
+                <div class="grid-layout__small-cell">
+                    <div class="grid-layout__catalog-nav catalog-nav catalog-nav--sticky">
+                        <h3 class="catalog-nav__title catalog-nav__title--all">
+                            Личный кабинет
+                        </h3>
+
+                        <ul class="catalog-nav__list">
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-user"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Профиль
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link  catalog-link--active">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-cube"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои заказы
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-bell"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои подписки
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#exit-account" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-logout"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Выйти
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-layout__big-cell grid-layout__account-block account-block">
+                    <div class="account-block__form account-block__flex account-block__border">
+                        <h3 class="account-block__title">Мои заказы</h3>
+
+                        <ul class="account-block__orders">
+                            <li class="account-block__order account-order">
+                                <div class="account-order__header account-order__row">
+                                    <div class="account-order__number">
+                                        Заказ №123456
+                                    </div>
+                                    <a href="./account-orders-item.html" class="account-order__about-link blue-link">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Дата:
+                                        </span>
+                                        <div class="account-order__value account-order__date">
+                                            10.05.2024
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Товаров:
+                                        </span>
+                                        <div class="account-order__value account-order__count">
+                                            8
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="account-order__list">
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Сумма заказа:
+                                        </span>
+                                        <div class="account-order__value account-order__sum">
+                                            50 400
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Статус оплаты:
+                                        </span>
+                                        <div class="account-order__value account-order__status">
+                                            Оплачено
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="account-block__order account-order">
+                                <div class="account-order__header account-order__row">
+                                    <div class="account-order__number">
+                                        Заказ №123456
+                                    </div>
+                                    <a href="./account-orders-item.html" class="account-order__about-link blue-link">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Дата:
+                                        </span>
+                                        <div class="account-order__value account-order__date">
+                                            10.05.2024
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Товаров:
+                                        </span>
+                                        <div class="account-order__value account-order__count">
+                                            8
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="account-order__list">
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                    <li class="account-order__item">
+                                        <div class="account-order__image cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Сумма заказа:
+                                        </span>
+                                        <div class="account-order__value account-order__sum">
+                                            50 400
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Статус оплаты:
+                                        </span>
+                                        <div class="account-order__value account-order__status">
+                                            Оплачено
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <a href="./catalog.html"
+                            class="account-block__save account-block__save--content tab tab--red-outlined">
+                            Перейти в каталог
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal js-modal" id="exit-account">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h3 class="modal__subtitle">Выйти</h3>
+
+            <p class="modal__text">
+                Вы действительно хотите выйти из акаунта?
+            </p>
+
+            <button type="submit" class="modal__submit tab tab--red-outlined">
+                Выйти
+            </button>
+        </form>
+    </div>
+</div>
+
+{{/content}}
+{{/extend}}

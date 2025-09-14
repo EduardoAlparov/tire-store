@@ -162,6 +162,7 @@ a {
     background-color: transparent;
     text-decoration: none;
     transition: color 0.2s;
+    user-select: none;
 }
 
 a:is(:not[class]) {

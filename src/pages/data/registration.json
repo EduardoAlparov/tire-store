@@ -1,0 +1,8 @@
+{
+    "title": "Регистрация",
+    "bodyClass": "auth-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Регистрация"
+    ]
+}

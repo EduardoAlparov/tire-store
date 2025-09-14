@@ -1,0 +1,8 @@
+{
+    "title": "Личный кабинет_профиль",
+    "bodyClass": "account-page",
+    "breadcrumbsList": [
+        "Главная",
+        "Личный кабинет"
+    ]
+}

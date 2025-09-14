@@ -1,0 +1,68 @@
+{{#extend "auth"}}
+{{#content "main"}}
+
+<section class="section auth-section">
+    <div class="auth-section__container">
+        <div class="auth-section__picture">
+            <picture>
+                <source media="(max-aspect-ratio: 4/3)" type="image/webp" srcset="./img/back-svg-m.svg" />
+                <source media="(min-aspect-ratio: 4/3)" type="image/webp" srcset="./img/back-svg.svg" />
+                <img class="lazy" src="./img/back-svg.svg" alt="">
+            </picture>
+        </div>
+
+        <div class="auth-section__from-wrapper">
+            <form action="" class="modal__body account-block__flex" data-need-validation="">
+                <div class="ready-popup__logo logo">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </div>
+                <h2 class="modal__title">Авторизация</h2>
+                <ul class="account-block__inputs modal__inputs">
+                    <li class="modal__input modal__input--full-width order-placing__select-wrapper">
+                        <h4>Email*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="emial" name="auth-user-email" id="auth-user-email" value="" placeholder="Email"
+                                required data-parsley-email="">
+                        </div>
+                    </li>
+                    <li class="modal__input modal__input--full-width order-placing__select-wrapper">
+                        <h4>Пароль*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="password" name="auth-user-password" id="auth-user-password" value=""
+                                placeholder="Пароль" required data-parsley="">
+                        </div>
+                    </li>
+                    <li class="modal__input modal__input--full-width order-placing__select-wrapper">
+                        <h4>Анти-спам*</h4>
+                        <div class="order-placing__select input-box input-box--flex">
+                            <input type="text" name="auth-user-captcha" id="auth-user-captcha" value=""
+                                placeholder="Код с картинки" required>
+
+                            <div class="input-box__captcha"></div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="modal__controls">
+                    <button type="submit" class="modal__submit simple-btn">
+                        Войти
+                    </button>
+
+                    <a href="./registration.html" class="modal__reg-btn tab tab--red-outlined">
+                        Регистация
+                    </a>
+                </div>
+
+                <a href="#pass-form" class="modal__pass-link blue-link">
+                    Забыли пароль?
+                </a>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

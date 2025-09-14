@@ -1,6 +1,7 @@
 body {
     background-color: var(--Light-Grey, #F2F2F2);
 
+    &.auth-page,
     &.main-page {
         background-color: var(--White, #FFF);
     }

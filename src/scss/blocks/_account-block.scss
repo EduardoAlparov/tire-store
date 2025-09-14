@@ -92,4 +92,15 @@
             width: max-content;
         }
     }
+
+    &__orders {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.6rem;
+        }
+    }
 }

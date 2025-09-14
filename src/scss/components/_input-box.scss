@@ -45,4 +45,25 @@
 
         @include noScrollbar()
     }
+
+    &.input-box--flex {
+        display: flex;
+        align-items: stretch;
+        gap: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            gap: 1.6rem;
+        }
+    }
+
+    &__captcha {
+        width: 12rem;
+
+        background-color: lightgray;
+        border-radius: 0.8rem;
+
+        @include breakpointMF(laptop) {
+            width: 14rem;
+        }
+    }
 }

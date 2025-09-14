@@ -1,0 +1,272 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="section section--full-height catalog">
+    <div class="catalog__site-container">
+        <div class="catalog__layout grid-layout">
+            <div class="grid-layout__container">
+                <div class="grid-layout__small-cell">
+                    <div class="grid-layout__catalog-nav catalog-nav catalog-nav--sticky">
+                        <h3 class="catalog-nav__title catalog-nav__title--all">
+                            Личный кабинет
+                        </h3>
+
+                        <ul class="catalog-nav__list">
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-user"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Профиль
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-cube"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои заказы
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-bell"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Мои подписки
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#exit-account" class="catalog-nav__link catalog-link">
+                                    <svg aria-hidden="true" class="catalog-link__icon">
+                                        <use xlink:href="#bx-logout"></use>
+                                    </svg>
+                                    <span class="catalog-link__text">
+                                        Выйти
+                                    </span>
+                                    <svg aria-hidden="true" class="catalog-link__arrow">
+                                        <use xlink:href="#bx-chevron"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-layout__big-cell grid-layout__account-block account-block">
+                    <div class="account-block__form account-block__flex account-block__border">
+                        <h3 class="account-block__title account-block__order-number">Заказ №123456</h3>
+
+                        <ul class="account-block__orders">
+                            <li class="account-block__order account-order">
+                                <div class="account-order__header account-order__row">
+                                    <div class="account-order__title">
+                                        Информация о заказе
+                                    </div>
+                                </div>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row account-order__row--divider">
+                                        <span class="account-order__key">
+                                            Дата:
+                                        </span>
+                                        <div class="account-order__value account-order__date">
+                                            10.05.2024
+                                        </div>
+                                    </li>
+
+                                    <li class="account-order__row account-order__row--divider">
+                                        <span class="account-order__key">
+                                            Данные получателя:
+                                        </span>
+                                        <div class="account-order__value account-order__column">
+                                            <span class="account-order__recipient-name">
+                                                Иванов Иван Иванович
+                                            </span>
+                                            <span class="account-order__recipient-email">
+                                                example@email.com
+                                            </span>
+                                            <span class="account-order__recipient-phone">
+                                                +79991234567
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row account-order__row--divider">
+                                        <span class="account-order__key">
+                                            Способ получения:
+                                        </span>
+                                        <div class="account-order__value account-order__column">
+                                            <span class="account-order__delivery-method">
+                                                Самовывоз
+                                            </span>
+                                            <span class="account-order__delivery-address">
+                                                Железнодорожный проспект, 20<br>
+                                                ст. м. Ломоносовская
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row account-order__row--divider">
+                                        <span class="account-order__key">
+                                            Способ оплаты:
+                                        </span>
+                                        <div class="account-order__value account-order__column">
+                                            <span class="account-order__payment-method">
+                                                Оплата наличными
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="account-block__order account-order">
+                                <div class="account-order__header account-order__row">
+                                    <div class="account-order__title">
+                                        Состав заказа
+                                    </div>
+                                </div>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Товаров:
+                                        </span>
+                                        <div class="account-order__value account-order__count">
+                                            8
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul
+                                    class="account-order__list account-order__order-products account-order__list--column">
+                                    <li class="account-order__order-product order-placing__product">
+                                        <div class="cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                        <div class="cart-item__desc order-placing__product-desc">
+                                            WESTLAKE 710/70R42 173A8/173B
+                                        </div>
+
+                                        <div class="cart-item__prices-multi order-placing__product-prices">
+                                            <span class="cart-item__price-factor js-cart-item-factor">
+                                                4
+                                            </span>
+                                            <span class="cart-item__price-symbol">
+                                                x
+                                            </span>
+                                            <span class="cart-item__price-value js-cart-item-price">
+                                                6 300₽
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="account-order__order-product order-placing__product">
+                                        <div class="cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                        <div class="cart-item__desc order-placing__product-desc">
+                                            WESTLAKE 710/70R42 173A8/173B
+                                        </div>
+
+                                        <div class="cart-item__prices-multi order-placing__product-prices">
+                                            <span class="cart-item__price-factor js-cart-item-factor">
+                                                4
+                                            </span>
+                                            <span class="cart-item__price-symbol">
+                                                x
+                                            </span>
+                                            <span class="cart-item__price-value js-cart-item-price">
+                                                6 300₽
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="account-order__order-product order-placing__product">
+                                        <div class="cart-item__image order-placing__product-image">
+                                            <img class="lazy" src="./img/carousel/wheel.png" alt="image">
+                                        </div>
+                                        <div class="cart-item__desc order-placing__product-desc">
+                                            WESTLAKE 710/70R42 173A8/173B
+                                        </div>
+
+                                        <div class="cart-item__prices-multi order-placing__product-prices">
+                                            <span class="cart-item__price-factor js-cart-item-factor">
+                                                4
+                                            </span>
+                                            <span class="cart-item__price-symbol">
+                                                x
+                                            </span>
+                                            <span class="cart-item__price-value js-cart-item-price">
+                                                6 300₽
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="account-order__table">
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Сумма заказа:
+                                        </span>
+                                        <div class="account-order__value account-order__sum">
+                                            50 400
+                                        </div>
+                                    </li>
+                                    <li class="account-order__row">
+                                        <span class="account-order__key">
+                                            Статус оплаты:
+                                        </span>
+                                        <div class="account-order__value account-order__status">
+                                            Оплачено
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <a href="./cart.html"
+                            class="account-block__save account-block__save--content tab tab--red-outlined">
+                            Повторить
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal js-modal" id="exit-account">
+    <div class="modal__inner-wrapper">
+        <form action="" class="modal__body account-block__flex" data-need-validation="">
+            <h3 class="modal__subtitle">Выйти</h3>
+
+            <p class="modal__text">
+                Вы действительно хотите выйти из акаунта?
+            </p>
+
+            <button type="submit" class="modal__submit tab tab--red-outlined">
+                Выйти
+            </button>
+        </form>
+    </div>
+</div>
+
+{{/content}}
+{{/extend}}

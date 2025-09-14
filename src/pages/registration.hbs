@@ -1,0 +1,95 @@
+{{#extend "auth"}}
+{{#content "main"}}
+
+<section class="section auth-section">
+    <div class="auth-section__container">
+        <div class="auth-section__picture">
+            <picture>
+                <source media="(max-aspect-ratio: 4/3)" type="image/webp" srcset="./img/back-svg-m.svg" />
+                <source media="(min-aspect-ratio: 4/3)" type="image/webp" srcset="./img/back-svg.svg" />
+                <img class="lazy" src="./img/back-svg.svg" alt="">
+            </picture>
+        </div>
+
+        <div class="auth-section__from-wrapper">
+            <form action="" class="modal__body account-block__flex" data-need-validation="">
+                <a href="/" class="ready-popup__logo logo">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <h2 class="modal__title">Регистрация</h2>
+                <ul class="account-block__inputs modal__inputs">
+                    <li class="modal__input modal__input--half-width order-placing__select-wrapper">
+                        <h4>Имя*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="text" name="new-user-name" id="new-user-name-value" value="" required
+                                placeholder="Имя" data-parsley-required="">
+                        </div>
+                    </li>
+                    <li class="modal__input modal__input--half-width order-placing__select-wrapper">
+                        <h4>Фамилия*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="text" name="new-user-secondname" id="new-user-secondname-value" value=""
+                                placeholder="Фамилия" required data-parsley-required="">
+                        </div>
+                    </li>
+                    <li class="modal__input modal__input--half-width modal__input--full order-placing__select-wrapper">
+                        <h4>Email*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="phone" name="new-user-email" id="new-user-email-value" value="" required
+                                placeholder="Email" data-parsley-email="">
+                        </div>
+                    </li>
+
+                    <li class="modal__input modal__input--half-width modal__input--full order-placing__select-wrapper">
+                        <h4>Телефон*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="phone" name="new-user-phone" id="new-user-phone-value" value=""
+                                placeholder="+7 (ххх) ххх-хх-хх" required>
+                        </div>
+                    </li>
+
+                    <li class="modal__input modal__input--half-width order-placing__select-wrapper">
+                        <h4>Пароль*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="password" name="new-user-password" id="new-user-password" value=""
+                                placeholder="Пароль" required data-parsley="">
+                        </div>
+                    </li>
+
+                    <li class="modal__input modal__input--half-width order-placing__select-wrapper">
+                        <h4>Повторите пароль*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="password" name="new-user-password-confirm" id="new-user-password-confirm"
+                                value="" placeholder="Пароль" required data-parsley="">
+                        </div>
+                    </li>
+                    <li class="modal__input modal__input--full-width order-placing__select-wrapper">
+                        <h4>Анти-спам*</h4>
+                        <div class="order-placing__select input-box input-box--flex">
+                            <input type="text" name="new-user-captcha" id="new-user-captcha" value=""
+                                placeholder="Код с картинки" required>
+
+                            <div class="input-box__captcha"></div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="modal__controls">
+                    <button type="submit" class="modal__submit simple-btn">
+                        Регистрация
+                    </button>
+
+                    <a href="./auth-main.html" class="modal__reg-btn tab tab--red-outlined">
+                        Авторизация
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}
