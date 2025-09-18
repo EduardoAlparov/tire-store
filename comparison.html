@@ -838,9 +838,9 @@
                                     +7 (495) 740-20-19
                                 </a>
         
-                                <button type="button" class="footer-contacts__button simple-btn">
+                                <a href="#callback-form" class="footer-contacts__button simple-btn">
                                     Заказать звонок
-                                </button>
+                                </a>
                             </div>
         
                             <div class="footer-contacts__item">
@@ -978,6 +978,48 @@
                     Войти
                 </span>
             </a>
+        </div>
+    </div>
+    <div class="modal js-modal" id="callback-form">
+        <div class="modal__inner-wrapper">
+            <form action="" class="modal__body account-block__flex" data-need-validation="">
+                <h2 class="modal__title">Заполните форму</h2>
+    
+                <div class="auth-section__flex">
+                    <h3 class="auth-section__subtitle">
+                        Менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время!
+                    </h3>
+    
+                    <div class="auth-section__input order-placing__select-wrapper">
+                        <h4>Имя*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="emial" name="callback-name" id="callback-name" value="" placeholder="Имя" required
+                                data-parsley-required="">
+                        </div>
+                    </div>
+    
+                    <div class="auth-section__input order-placing__select-wrapper">
+                        <h4>Телефон*</h4>
+                        <div class="order-placing__select input-box">
+                            <input type="tel" name="callback-phone" id="callback-phone" value="" placeholder="Телефон"
+                                required data-parsley-required="">
+                        </div>
+                    </div>
+    
+                    <div class="auth-section__input order-placing__select-wrapper">
+                        <h4>Комментарий</h4>
+                        <div class="order-placing__select input-box">
+                            <textarea cols="2" name="callback-comment" value="" placeholder="Комментарий"></textarea>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="modal__controls">
+                    <button type="submit" class="modal__back-link simple-btn">
+                        Отправить
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
