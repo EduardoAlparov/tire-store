@@ -63,6 +63,7 @@
         }
 
         &.header-catalog__button--active {
+            pointer-events: none;
             background-color: var(--Grey-2, #B3B3B3);
 
             &::before {

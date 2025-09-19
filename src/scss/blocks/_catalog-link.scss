@@ -68,6 +68,17 @@
         }
     }
 
+    &.catalog-link--red {
+        max-width: 100%;
+        color: var(--White, #FFF);
+        background-color: var(--Red, #D42111);
+
+        .catalog-link__arrow {
+            display: block;
+            opacity: 1;
+        }
+    }
+
     &.catalog-link--active {
         color: var(--White, #FFF);
         background-color: var(--Red, #D42111);

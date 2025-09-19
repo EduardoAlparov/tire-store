@@ -64,8 +64,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 2.4rem;
+
         min-height: 3.6rem;
-        padding: 0.75rem 0.8rem;
+        padding: 1rem 0.8rem;
 
         &:nth-child(odd) {
             background: var(--Light-Grey, #F2F2F2);

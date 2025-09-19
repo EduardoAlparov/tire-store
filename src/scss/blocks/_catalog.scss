@@ -14,7 +14,7 @@
 
     @include breakpointMF(laptop) {
         display: flex;
-        gap: 2.4rem;
+        gap: 2rem;
     }
 
     &__header {
@@ -71,7 +71,7 @@
             margin-bottom: 1.6rem;
 
             @include breakpointMF(laptop) {
-                margin-bottom: 2.4rem;
+                margin-bottom: 2.2rem;
             }
         }
 
@@ -254,6 +254,10 @@
             .catalog-window__reset {
                 display: grid;
             }
+        }
+
+        &:not(:has(.catalog-window__selection-item)) {
+            @include visuallyHidden();
         }
     }
 

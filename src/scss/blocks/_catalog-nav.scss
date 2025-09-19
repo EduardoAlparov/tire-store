@@ -34,6 +34,12 @@
             }
         }
 
+        &.catalog-nav__list--column {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1.6rem;
+        }
+
         @include breakpoint(tablet) {
             overflow: auto;
             margin-inline: -1.6rem;

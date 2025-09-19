@@ -16,11 +16,24 @@ body {
         }
     }
 
+    &.mobile-menu-open,
     &.mobile-search-open,
     &.catalog-is-open {
         @extend .no-scroll;
 
         .page-main {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                inset: 0;
+                z-index: 1000;
+
+                background: rgba(20, 20, 20, 0.10);
+                backdrop-filter: blur(2px);
+                content: '';
+            }
+
             @include breakpoint(tablet) {
                 pointer-events: none;
             }
@@ -92,6 +105,7 @@ body {
         }
     }
 
+    &.mobile-menu-open,
     &.modal-open {
         .page-header {
             position: fixed;
@@ -104,6 +118,20 @@ body {
 
         .mobile-navigation {
             z-index: 5000;
+        }
+    }
+
+    &.mobile-menu-open {
+        .page-header {
+            border-bottom: 1px solid var(--Light-Grey, #F2F2F2);
+        }
+
+        .page-header__burger-menu {
+            @extend .simple-btn--active;
+        }
+
+        .mobile-menu {
+            @extend .active;
         }
     }
 }

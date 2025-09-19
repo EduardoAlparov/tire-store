@@ -48,7 +48,7 @@
             transform: translate(-50%, -50%);
 
             display: block;
-            width: 60%;
+            width: 65%;
             max-width: unset;
             min-height: 100%;
             object-fit: contain;
@@ -58,14 +58,24 @@
 
     &__tags {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: 0;
+        left: 0;
         z-index: 200;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.4rem;
+    }
+
+    &__tag {
+        &.card-feature {
+            height: 2rem;
+
+            @include breakpointMF(laptop) {
+                height: 2.4rem;
+            }
+        }
     }
 
     &__controls {

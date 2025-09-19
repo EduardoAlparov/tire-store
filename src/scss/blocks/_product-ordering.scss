@@ -1,5 +1,6 @@
 .product-ordering {
-    @extend ._round-white-frame;
+    padding: 2.4rem;
+    background-color: var(--White, #FFF);
 
     display: flex;
     flex-direction: column;

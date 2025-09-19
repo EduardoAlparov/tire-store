@@ -1,0 +1,46 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3500;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--White, #fff);
+
+    &.active {
+        display: block;
+
+        .mobile-menu__inner-wrapper {
+            animation: slideFromBottom 0.3s ease-out 0s 1 forwards;
+        }
+    }
+
+    &__inner-wrapper {
+        @extend ._intro-padding-top;
+        flex-grow: 1;
+    }
+
+    &__body {
+        padding: 8rem 1.6rem;
+    }
+}
+
+
+
+@keyframes slideToTop {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}

@@ -92,7 +92,7 @@
     &__product-about {
 
         @include breakpointMF(laptop) {
-            margin-top: 2.4rem;
+            margin-top: 2.1rem;
         }
 
         @include breakpoint(tablet) {
