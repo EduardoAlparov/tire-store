@@ -1,3 +1,5 @@
+import { IS_TABLET } from './utils';
+
 export default () => {
 	const selects = document.querySelectorAll('.js-select');
 
@@ -6,7 +8,11 @@ export default () => {
 			select.classList.add('select--open');
 
 			window.addEventListener('click', (e) => {
-				if(  (!e.target.closest('.select__current') || !e.target.closest('.select') || e.target.closest('.select__header-close') || e.target.closest('.select__accept'))) {
+                if( IS_TABLET && (e.target.closest('.select__header-close') ||
+                e.target.closest('.select__accept')) ){
+                    select.classList.remove('select--open');
+                } else if(  (!e.target.closest('.select__current') ||
+                !e.target.closest('.select'))) {
 					selects.forEach((select) => {
 						select.classList.remove('select--open');
 					})

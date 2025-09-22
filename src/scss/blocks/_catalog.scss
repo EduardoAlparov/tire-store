@@ -106,7 +106,7 @@
 
         &.catalog-filters__checkboxes--collapsed {
             .catalog-filters__checkbox {
-                &:nth-child(8n+1) {
+                &:nth-child(n+9) {
                     @include visuallyHidden();
                 }
             }

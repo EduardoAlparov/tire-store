@@ -34,10 +34,22 @@ export default () => {
     catalogs.forEach((catalog) => {
         const selectionWrapper = catalog.querySelector('.catalog-window__selection');
         const selectionWrapperMobile = catalog.querySelector('.catalog-filters__selection');
+        const sortingSelect = catalog.querySelector('.catalog-window__sorting');
+        const sortingMobileBtn = catalog.querySelector('.catalog-nav__button--sorting').parentElement;
 
         if(isMobile && selectionWrapper && selectionWrapperMobile) {
             moveBlockOnMobile(selectionWrapper, selectionWrapperMobile);
         }
+
+        if(isMobile && sortingSelect && sortingMobileBtn) {
+            moveBlockOnMobile(sortingSelect, sortingMobileBtn);
+        }
+
+        sortingMobileBtn.addEventListener('click', () => {
+            const sortingBtn = sortingMobileBtn.querySelector('.catalog-window__select.js-select');
+
+            sortingBtn.click()
+        })
 
         const filtersForm = catalog.querySelector('.grid-layout__catalog-filters.catalog-filters');
         const selectionList = catalog.querySelector('.catalog-window__selection-list');
@@ -77,6 +89,22 @@ export default () => {
 
             if(event.target.closest('.catalog-nav__button--filter')) {
                 document.body.classList.add('catalog-filters-is-open');
+            }
+
+            if(event.target.closest('.catalog-nav__button--sorting')) {
+                const sortingBtn = catalog.querySelector('.catalog-window__select.js-select');
+                sortingBtn.classList.add('select--open');
+
+                window.addEventListener('click', (e) => {
+                    if( isMobile && (e.target.closest('.select__header-close') ||
+                    e.target.closest('.select__accept')) ){
+                        sortingBtn.classList.remove('select--open');
+                    }
+                })
+            }
+
+            if(event.target.closest('.catalog-filters__reset') && isMobile) {
+                document.body.classList.remove('catalog-filters-is-open');
             }
         })
     })

@@ -13,6 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import setHeaderPadding from './setHeaderPadding';
 import openCatalog from './openCatalog';
+import expandFilters from './expandFilters';
 import openMobileSearch from './openMobileSearch';
 import homeSwiper from './homeSwiper';
 import emailFormSubmit from './emailFormSubmit';
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setHeaderPadding();
     openCatalog();
+    expandFilters();
     openMobileSearch();
     homeSwiper();
     emailFormSubmit();
