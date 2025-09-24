@@ -7,7 +7,6 @@
     z-index: 3500;
 
     display: none;
-    align-items: center;
     justify-content: center;
 
     width: 100%;
@@ -16,7 +15,7 @@
     background-color: var(--White, #fff);
 
     &.active {
-        display: block;
+        display: flex;
 
         .mobile-menu__inner-wrapper {
             animation: slideFromBottom 0.3s ease-out 0s 1 forwards;
@@ -24,12 +23,95 @@
     }
 
     &__inner-wrapper {
-        @extend ._intro-padding-top;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
         flex-grow: 1;
+
+        &.modal__inner-wrapper {
+            max-width: unset;
+            padding-top: unset;
+        }
     }
 
     &__body {
-        padding: 8rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+
+        flex-grow: 1;
+        padding: 14rem 1.6rem 1.6rem;
+    }
+
+    &__catalog-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+
+        padding-bottom: 1.6rem;
+        border: 1px solid #F2F2F2;
+
+        &.mobile-menu__catalog-links--collapsed {
+            .mobile-menu__list {
+                display: none;
+            }
+        }
+
+        &:not(.mobile-menu__catalog-links--collapsed) {
+            .mobile-menu__catalog-open {
+                @extend .catalog-btn--active;
+            }
+        }
+    }
+
+    &__catalog-open {
+        &.catalog-btn {
+            width: 100%;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            @include breakpoint(tablet) {
+                height: 4rem;
+                padding: 1rem;
+            }
+
+            .icon {
+                @include breakpoint(tablet) {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+
+    &__list {
+        .catalog-nav__link {
+            width: 100%;
+        }
+    }
+
+    &__submenu {
+        background-color: var(--White, #fff);
+
+    }
+
+    &__backward {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        height: 4rem;
+
+        @include b1;
+
+        &>svg {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }
 

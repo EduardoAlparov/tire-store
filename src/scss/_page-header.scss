@@ -24,10 +24,13 @@
     }
 
     &__top-line {
+        display: none;
         overflow: hidden;
 
         @include breakpointMF(laptop) {
+            display: block;
             padding-block: 1.2rem;
+
             background-color: var(--Light-Grey, #F2F2F2);
         }
     }

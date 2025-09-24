@@ -133,6 +133,37 @@ body {
         .mobile-menu {
             @extend .active;
         }
+
+        .page-header__search-bar {
+            &.search-bar {
+                @include breakpoint(tablet) {
+                    display: flex;
+                }
+            }
+        }
+
+        .page-header__mobile-search {
+
+            @include breakpoint(tablet) {
+                display: none;
+
+                .icon-active {
+                    opacity: 0;
+                }
+
+                .icon-close {
+                    opacity: 1;
+                }
+
+                &.simple-btn--black {
+                    background-color: var(--Light-Grey, #F2F2F2);
+
+                    .icon-close {
+                        fill: var(--Black, #141414);
+                    }
+                }
+            }
+        }
     }
 
     &:has(.select.select--open) {

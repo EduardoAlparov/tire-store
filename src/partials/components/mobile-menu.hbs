@@ -1,63 +1,180 @@
 <div class="mobile-menu">
     <div class="mobile-menu__inner-wrapper">
-        <div class="mobile-menu__body">
-            <div class="mobile-menu__catalog-nav catalog-nav">
-                <h3 class="catalog-nav__title">
+        <div class="mobile-menu__body" data-navwindow="mobile-main-menu">
+            <div class="mobile-menu__catalog-links mobile-menu__catalog-links--collapsed">
+                <button type="button" class="mobile-menu__catalog-open catalog-btn js-open-catalog">
+                    <svg aria-hidden="true" class="icon icon-menu">
+                        <use xlink:href="#bx-menu"></use>
+                    </svg>
+
+                    <svg aria-hidden="true" class="icon icon-close">
+                        <use xlink:href="#bx-close"></use>
+                    </svg>
+
                     Каталог
-                </h3>
-                <ul class="catalog-nav__list catalog-nav__list--column">
+                </button>
+
+                <ul class="mobile-menu__list catalog-nav__list catalog-nav__list--column">
                     <li>
-                        <a href="#" class="catalog-nav__link catalog-link catalog-link--red">
+                        <button type="button" class="catalog-nav__link catalog-link catalog-link--grey js-navbar-tab" data-navbutton="mobile-submenu">
                             <span class="catalog-link__text">
-                                Легковые шины
+                                Шины
                             </span>
                             <svg aria-hidden="true" class="catalog-link__arrow">
-                                <use xlink:href="#bx-chevron"></use>
+                                <use xlink:href="#bx-back"></use>
                             </svg>
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a href="#" class="catalog-nav__link catalog-link catalog-link--red">
-                            <span class="catalog-link__text">
-                                Легкогрузовые шины
-                            </span>
-                            <svg aria-hidden="true" class="catalog-link__arrow">
-                                <use xlink:href="#bx-chevron"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="catalog-nav__link catalog-link catalog-link--red">
-                            <span class="catalog-link__text">
-                                Грузовые шины
-                            </span>
-                            <svg aria-hidden="true" class="catalog-link__arrow">
-                                <use xlink:href="#bx-chevron"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="catalog-nav__link catalog-link catalog-link--red">
-                            <span class="catalog-link__text">
-                                Сельскохозяйственные шины
-                            </span>
-                            <svg aria-hidden="true" class="catalog-link__arrow">
-                                <use xlink:href="#bx-chevron"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="catalog-nav__link catalog-link catalog-link--red">
+                        <a href="./catalog.html" class="catalog-nav__link catalog-link catalog-link--grey">
                             <span class="catalog-link__text">
                                 Сопутствующие товары
                             </span>
                             <svg aria-hidden="true" class="catalog-link__arrow">
-                                <use xlink:href="#bx-chevron"></use>
+                                <use xlink:href="#bx-back"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
+
+            <div class="mobile-menu__menu-links catalog-nav">
+                <ul class="mobile-menu__list catalog-nav__list catalog-nav__list--column">
+                    <li>
+                        <a href="./info-promo.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                            <svg aria-hidden="true" class="catalog-link__icon">
+                                <use xlink:href="#bx-percent"></use>
+                            </svg>
+                            <span class="catalog-link__text">
+                                Акции
+                            </span>
+                            <svg aria-hidden="true" class="catalog-link__arrow">
+                                <use xlink:href="#bx-back"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./info-delivery.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                            <svg aria-hidden="true" class="catalog-link__icon">
+                                <use xlink:href="#bx-card"></use>
+                            </svg>
+                            <span class="catalog-link__text">
+                                Оплата и Доставка
+                            </span>
+                            <svg aria-hidden="true" class="catalog-link__arrow">
+                                <use xlink:href="#bx-back"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./info-about.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                            <svg aria-hidden="true" class="catalog-link__icon">
+                                <use xlink:href="#bx-briefcase"></use>
+                            </svg>
+                            <span class="catalog-link__text">
+                                О нас
+                            </span>
+                            <svg aria-hidden="true" class="catalog-link__arrow">
+                                <use xlink:href="#bx-back"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./info-news.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                            <svg aria-hidden="true" class="catalog-link__icon">
+                                <use xlink:href="#bx-news"></use>
+                            </svg>
+                            <span class="catalog-link__text">
+                                Новости
+                            </span>
+                            <svg aria-hidden="true" class="catalog-link__arrow">
+                                <use xlink:href="#bx-back"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./info-news.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                            <svg aria-hidden="true" class="catalog-link__icon">
+                                <use xlink:href="#bx-star"></use>
+                            </svg>
+                            <span class="catalog-link__text">
+                                Отзывы
+                            </span>
+                            <svg aria-hidden="true" class="catalog-link__arrow">
+                                <use xlink:href="#bx-back"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./info-news.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                            <svg aria-hidden="true" class="catalog-link__icon">
+                                <use xlink:href="#bx-support"></use>
+                            </svg>
+                            <span class="catalog-link__text">
+                                Контакты
+                            </span>
+                            <svg aria-hidden="true" class="catalog-link__arrow">
+                                <use xlink:href="#bx-back"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mobile-menu__body display-none" data-navwindow="mobile-submenu">
+            <button type="button" class="mobile-menu__backward  js-navbar-tab" data-navbutton="mobile-main-menu">
+                <svg aria-hidden="true" class="mobile-menu__backward-icon">
+                    <use xlink:href="#bx-back"></use>
+                </svg>
+
+                <span class="mobile-menu__backward-text">
+                    Шины
+                </span>
+            </button>
+
+            <ul class="mobile-menu__list catalog-nav__list catalog-nav__list--column">
+                <li>
+                    <a href="./catalog.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                        <span class="catalog-link__text">
+                            Грузовые
+                        </span>
+                        <svg aria-hidden="true" class="catalog-link__arrow">
+                            <use xlink:href="#bx-back"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="./catalog.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                        <span class="catalog-link__text">
+                            Легковые
+                        </span>
+                        <svg aria-hidden="true" class="catalog-link__arrow">
+                            <use xlink:href="#bx-back"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="./catalog.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                        <span class="catalog-link__text">
+                            Легкогрузовые
+                        </span>
+                        <svg aria-hidden="true" class="catalog-link__arrow">
+                            <use xlink:href="#bx-back"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="./catalog.html" class="catalog-nav__link catalog-link catalog-link--grey">
+                        <span class="catalog-link__text">
+                            Сельскохозяйственные
+                        </span>
+                        <svg aria-hidden="true" class="catalog-link__arrow">
+                            <use xlink:href="#bx-back"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

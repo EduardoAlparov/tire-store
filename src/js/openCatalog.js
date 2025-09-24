@@ -1,18 +1,23 @@
 export default () => {
     const catalogBtns = document.querySelectorAll('.js-open-catalog');
     const innersCatalogBtns = document.querySelectorAll('.js-catalog-button');
+    const isMobile = window.matchMedia("(width < 1024px)").matches;
 
     catalogBtns.forEach( (btn) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
 
-            document.body.classList.toggle('catalog-is-open');
+            if(isMobile) {
+                btn.parentElement.classList.toggle('mobile-menu__catalog-links--collapsed');
+            } else {
+                document.body.classList.toggle('catalog-is-open');
 
-            document.addEventListener('click', (e) => {
-                if(!e.target.closest('.page-header__catalog') && !e.target.closest('.page-header__catalog-open')) {
-                    document.body.classList.remove('catalog-is-open');
-                }
-            })
+                document.addEventListener('click', (e) => {
+                    if(!e.target.closest('.page-header__catalog') && !e.target.closest('.page-header__catalog-open')) {
+                        document.body.classList.remove('catalog-is-open');
+                    }
+                })
+            }
         })
     })
 

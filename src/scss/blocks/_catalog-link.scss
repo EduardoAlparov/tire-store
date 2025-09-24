@@ -79,6 +79,31 @@
         }
     }
 
+    &.catalog-link--grey {
+        max-width: 100%;
+        height: 4rem;
+        padding: 0.85rem 1.2rem;
+
+        color: var(--Black, #141414);
+        background-color: var(--Light-Grey, #F2F2F2);
+
+        .catalog-link__icon {
+            fill: var(--Black, #141414);
+        }
+
+        .catalog-link__text {
+            font-weight: 500;
+        }
+
+        .catalog-link__arrow {
+            display: block;
+
+            fill: var(--Grey-2, #b3b3b3);
+            opacity: 1;
+            transform: rotate(180deg);
+        }
+    }
+
     &.catalog-link--active {
         color: var(--White, #FFF);
         background-color: var(--Red, #D42111);

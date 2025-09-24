@@ -6,7 +6,6 @@ export default function modals() {
     function openModal(id, event) {
         const modal = document.querySelector(`.js-modal${id}`);
         if (!modal) {
-            console.error(`Modal with ID: ${id} not found`);
             return;
         }
 
